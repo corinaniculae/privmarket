@@ -45,7 +45,14 @@ def get_all_tube_stops():
             raise TFLError(result['httpStatusCode'] + ': ' +
                            result['httpStatus'])
         for stop in result:
-            stops_set.add((stop['id'], stop['commonName']))
+            if 'lat' in stop and 'lon' in stop:
+                lat, lon = stop['lat'], stop['lon']
+            else:
+                lat, lon = 0, 0
+            stops_set.add((stop['id'],
+                           stop['commonName'],
+                           lat,
+                           lon))
     return stops_set
 
 
@@ -105,15 +112,23 @@ def write_to_csv_files(stops_set):
         weekday_writer.writerow([user_id,
                                  start_point[0],
                                  start_point[1],
+                                 start_point[2],
+                                 start_point[3],
                                  weekday_point[0],
-                                 weekday_point[1]])
+                                 weekday_point[1],
+                                 weekday_point[2],
+                                 weekday_point[3]])
         if random.uniform(0, 1):
             weekend_point = start_point
         weekend_writer.writerow([user_id,
                                  start_point[0],
                                  start_point[1],
-                                 weekend_point[0],
-                                 weekend_point[1]])
+                                 start_point[2],
+                                 start_point[3],
+                                 weekday_point[0],
+                                 weekday_point[1],
+                                 weekday_point[2],
+                                 weekday_point[3]])
 
 
 def main():
