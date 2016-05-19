@@ -1,0 +1,43 @@
+\chapter{Introduction}
+
+\section{Motivation}
+\begin{center}
+'\textit{We click through to a digital emporium where we sacrifice our privacy.} \cite{guardian}'
+\end{center}
+
+Current times have offered individuals a great source of information via the online environment, creating a new communication medium that provides a fast, real-time, and cheap communication link as opposed to the traditional means. This led to a genuinely broad variety of services and platforms with irresistible advantages and possibilities.
+
+However, while the internet appears to be free, each individual leaves digital crumbs on the internet that are picked up by companies for profit. Almost every page fetch comes at the cost of giving back a little information about oneself that can range from the browser type, or the IP, to the latest Facebook like. All these data create your (partially incomplete) digital profile that is mined by the 'aggregating' companies. By further derivation of various conclusions about the individuals, targeted advertising is carried out for financial profit. 
+
+These companies mainly act as predefined collection points of the users' data. Oracle's BlueKai alone sees around 750 million unique profiles per month, with an average of 10-15 attributes per profile. \cite{bluekai} Facebook collects a tremendously big amount of user data \cite{facebook} that can partially be made available to third parties (e.g. mobile app developers), if granted permission by the users \cite{facebookprivacy}.
+
+Lately, there seems to be an increasing concern about the digital leak of the user data, with more and more people seeking for alternatives. As a result, there has also been an increase in systems that restore the user data back to their rightful owner. One such solution is offered by the personal data markets, which aim to eventually replace all other user data traffic. Such trading platforms will empower the online users by giving them the opportunity to actively choose what user data to share, and when.
+
+On further analysis, it is evident that these newly emerged markets are in charge of extremely sensitive information, representing an attractive target for online threats. Such terrible leaks can be avoided if the collected information is anonymised before the collection point.
+
+This project would like to focus on the exploration of new techniques that can ensure anonymity in a data trading network, preserving the individual's privacy.
+
+\section{Challenges}
+\subsection{Collecting User Data Anonymously}
+The first challenge is given by the user data collection process, when anonymity and privacy are wanted to be enforced at this step.  Currently, a great amount of data is being collected that is either directly linked to the individual, or can be easily reverse-engineered in order to find its corresponding person. In the United Kingdom, the Data Protection Act allows companies to store user data if it is relevant to their business, and if it cannot be tracked back the human individual. However, there is a blurred line between the general user data and the personally identifiable information (PII). Furthermore, there are increasingly advanced techniques for identifying a person. A study in 2000 \cite{sweeney} has revealed that only the 5-digit ZIP code, the gender and the date of birth are enough to uniquely identify 87\% of the population in the US. While it might seem sensible for one to classify such information as PII, the reverse-engineering techniques for tracking down people become more and more innovative. One such example is offered by a study in 2013 that constantly collected location data over 15 months and managed to uniquely identify people with a 95\% accuracy \cite{datalocation}. This clearly makes us rethink what pieces of information should be labeled as sensitive, and what data can be given away in order to preserve the user's anonymity.
+
+\subsection{Running Privacy Preserving, Aggregating Queries}
+
+Another challenge is given by the data mining step. There are entities interested in learning various outcomes or statistics  about the user data that is being produced. However, the challenge consists of the ability to run some data mining techniques while keeping the raw data hidden, in order not to leak any potentially sensitive data. On top of that, there is a high risk when dealing with aggregated queries as consequent such results can be further computed and might leak some information that describes a small group, or a single individual that can, ultimately, be identified.
+
+\subsection{Users' Incentive}
+A final challenge is to consider a reward for the users' active involvement in the user data market. Since financial rewards seem the most sensible as well as highly attractive, the main challenge here is to develop a payment system that can reward the users without exposing their real identity. Fortunately, such systems exist; thus, it is only a matter of being able to integrate such existing technologies with the project's contribution without breaking any component, or weakening the overall system.
+
+\section{Contributions}
+
+The idea behind this project is to investigate and propose new ways to address the challenges presented above.
+\subsection{End-to-End proof of concept of performing a transaction between an data inferencer and a user.}
+
+The proof of concept will simulate an artificial user data market, where interested parties (inferrers) will be able to run encrypted queries on anonymous sets of user data, under the form of a transaction. Each transaction will be represented by running an encrypted query over a set of location data that belong to specific demographics in order to achieve an aggregated result. The inferrer will have to be able to specify the targeted demographics and have access to the final result, while the user will receive an incentive when deciding to get involved into the analysis. The users might also learn their relative position against the final result.
+
+\subsection{Sharing location data in a private and anonymous way.}
+Another contribution of the present project will be the ability of sharing location in a private and anonymous way. Thus, the project aims to build a system that achieves location privacy. The client side will collect users' location data, but it will not share it to the server in its fine, raw form. Instead, some levels of abstraction must be used in order not to share the raw data while preserving its value for the system.
+
+\subsection{Rewarding the users while empowering them.}
+
+One final objective of this project is to showcase a reward system that can incentivise the actively involved users in an anonymous way. The chosen rewarding system will be a lottery, where any user partaking into the statistical queries will be entitled to join the lottery.  This solution presents the further challenge that the recipient must be identified back to some extent in order to be rewarded by the system.
