@@ -25,10 +25,10 @@ def sanitize_CSV_files():
     # PRE: The CSV files are downloaded from CSV_FILES_URL.
     
     for source in os.listdir(CSV_FILES_SOURCE):
-	if source.endswith(".csv"):
+    if source.endswith(".csv"):
             print source
              with open(CSV_FILES_SOURCE + source, 'rb') as f:
-	         reader = csv.reader(f, delimiter=';', quotechar="'", quoting=csv.QUOTE_ALL)
+             reader = csv.reader(f, delimiter=';', quotechar="'", quoting=csv.QUOTE_ALL)
                  with open(CSV_FILES_SOURCE + source[:-4] + "_result.csv","wb") as result:
                      wtr = csv.writer(result, delimiter=';', quotechar="'", quoting=csv.QUOTE_ALL)
                      for r in reader:
@@ -52,7 +52,7 @@ def main(argv=None):
         cur = db.cursor() # Cursor object for executing MySQL queries.
 
         # Create the MySQL database.
-	print 'Creating/Fetching the database and the table...'
+        print 'Creating/Fetching the database and the table...'
         create_db_query = "CREATE DATABASE IF NOT EXISTS " + MYSQL_DATABASE + ";"
         use_db_query = "USE " + MYSQL_DATABASE + ";"
         create_table_query = "CREATE TABLE IF NOT EXISTS " + MYSQL_TABLE + "( \
@@ -69,12 +69,12 @@ def main(argv=None):
         print 'Populating the table...'
         for source in os.listdir(CSV_FILES_SOURCE):
             if source.endswith("_result.csv"):
-		source = CSV_FILES_SOURCE + source
+        source = CSV_FILES_SOURCE + source
                 add_csv_query = "LOAD DATA LOCAL INFILE \'" + source + "\' into table " + MYSQL_TABLE + " fields terminated by ';' \
                                  lines terminated by '\n' \
                                  (RecordId, Timestamp, Location);"
                 cur.execute(add_csv_query)
-	db.commit()
+    db.commit()
 
     except MySQLdb.Error, e:
         print "Error %d: %s" % (e.args[0],e.args[1])
