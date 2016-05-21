@@ -14,11 +14,11 @@ from create_synthetic_paths import TFLManager
 
 
 parser = argparse.ArgumentParser(description='Puts CSV files into MySQL table.')
-parser.add_argument('--all',
-                    dest='all_files',
-                    type=bool,
-                    default=False,
-                    help='All generated CSV files from the TFL API.')
+parser.add_argument('--file',
+                    dest='file_name',
+                    type=str,
+                    default='daily_2016_05_20.csv',
+                    help='The CSV file to be loaded into the table.')
 parser.add_argument('--db',
                     dest='db',
                     type=str,
@@ -36,15 +36,7 @@ def main():
 
     tfl_manager = TFLManager()
     logging.basicConfig(stream=sys.stdout, level=logging.WARNING)
-    logger = logging.getLogger('daily_paths')
-
-    # Generate the file of used stop points.
-    if not os.path.isfile(datalib.CSV_FOLDER + datalib.STOP_POINTS_FILE):
-        tfl_manager.print_tube_stops_to_file()
-
-    # Generate today's daily path file.
-    if not os.path.isfile(tfl_manager.get_today_paths_file_name()):
-        tfl_manager.generate_and_print_daily_paths()
+    logger = logging.getLogger('load_csv_file')
 
     # Write the records into the database.
     try:
@@ -67,23 +59,18 @@ def main():
 
         logging.info('Created/Fetched the database and the table.')
 
+        print 'database: ' + args.db + '; table: ' + args.table + '; file: ' + args.file_name
         # Insert CSV file
-        files_to_be_added = []
-        if args.all_files:
-            for file_name in os.listdir(datalib.CSV_FOLDER):
-                if file_name.endswith('.csv'):
-                    files_to_be_added.append(file_name)
-        else:
-            files_to_be_added.append(tfl_manager.get_today_paths_file_name())
-
-        for file_name in files_to_be_added:
-            source = (os.getcwd() + '/' + datalib.CSV_FOLDER_GENERATED + file_name)
-            add_csv_query = (datalib.MYSQL_LOAD_GENERATED_FILE % (source, args.table))
-            cur.execute(add_csv_query)
+        source = (os.getcwd() +
+                  '/' +
+                  datalib.CSV_FOLDER_GENERATED +
+                  args.file_name)
+        add_csv_query = (datalib.MYSQL_LOAD_GENERATED_FILE % (source, args.table))
+        print add_csv_query 
+        cur.execute(add_csv_query)
         db.commit()
 
-        logger.info('Populated the table with CSV file: ' +
-                    tfl_manager.get_today_paths_file_name)
+        logger.info('Populated the table with CSV file: ' + args.file_name)
 
     except MySQLdb.Error, e:
         logger.error("Error %d: %s" % (e.args[0], e.args[1]))

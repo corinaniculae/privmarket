@@ -7,14 +7,16 @@ import datetime
 # Data Files.
 WEEKDAY_PATHS_CSV = 'weekday_paths.csv'
 WEEKEND_PATHS_CSV = 'weekend_paths_%s.csv'
-CSV_FOLDER = 'csv_files'
+CSV_FOLDER = 'data/csv_files/'
+CSV_FOLDER_GENERATED = 'data/csv_files/generated/'
 STOP_POINTS_FILE = 'stop_points.csv'
 
 
-# TFL API Related.
+# TFL API Related Misc.
 APP_ID = 'ec039efe'
 APP_KEY = 'fb265b0c73f86b5835afcde5d3585c18'
-
+API_LIMIT = 450
+SLEEP_API = 60
 
 # TFL API Requests.
 REQUEST_AUTHENTICATION_VARS = 'app_id=' + APP_ID + '&app_key=' + APP_KEY
@@ -62,15 +64,24 @@ MYSQL_TABLE = 'generated'
 MYSQL_CREATE_DB = 'CREATE DATABASE IF NOT EXISTS %s ;'
 MYSQL_USE_DB = 'USE %s;'
 MYSQL_CREATE_TABLE = """CREATE TABLE IF NOT EXISTS %s (
-                                ID int(11) AUTO_INCREMENT,
                                 RecordId VARCHAR(60) NOT NULL,
                                 Timestamp VARCHAR(60) NOT NULL,
-                                Location VARCHAR(60) NOT NULL,
-                                PRIMARY KEY (ID));"""
-MYSQL_LOAD_FILE = """LOAD DATA LOCAL INFILE %s into table %s
+                                Location VARCHAR(60) NOT NULL
+                                );"""
+MYSQL_CREATE_GENERATED_TABLE = """CREATE TABLE IF NOT EXISTS %s (
+                                RecordId VARCHAR(60) NOT NULL,
+                                Latitude VARCHAR(60) NOT NULL,
+                                Longitude VARCHAR(60) NOT NULL,
+                                Timestamp VARCHAR(60) NOT NULL
+                                );"""
+MYSQL_LOAD_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
                                 fields terminated by ';'
                                 lines terminated by '\n'
                                 (RecordId, Timestamp, Location); """
+MYSQL_LOAD_GENERATED_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
+                                fields terminated by ';'
+                                lines terminated by '\n'
+                                (RecordId, Latitude, Longitude, Timestamp); """
 
 
 def is_weekend():

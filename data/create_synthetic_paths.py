@@ -65,6 +65,7 @@ class TFLManager:
         self._weekday_paths_file = weekday_paths_file
         self._weekend_paths_file = weekend_paths_file
         self._no_users = no_users
+        self._counter = 0
         self.__get_all_tube_stops()
 
     """ Gets a set of all tube stops.
@@ -81,10 +82,20 @@ class TFLManager:
         self._stops_set = set([])
         for line_id in datalib.TUBE_LINES_IDS:
             request = (datalib.REQUEST_LINE_STOP_POINTS % line_id)
-            result = requests.get(request).json()
+            if self._counter > datalib.API_LIMIT:
+                self._counter = 0
+                time.sleep(datalib.SLEEP_API)
+            result = requests.get(request)
+            self._counter += 1
+            try:
+                result = result.json()
+            except ValueError:
+                self._logger.error('No valid JSON response from TFL API.')
+                continue
             if 'type' in result and datalib.TFL_REQUEST_ERROR in result['type']:
                 self._logger.error(TFLError(result['httpStatusCode'] + ': ' +
                                             result['httpStatus']))
+                continue
             self._logger.info('GET stop points for line: %s.' % line_id)
             for stop in result:
                 if 'lat' in stop and 'lon' in stop:
@@ -124,29 +135,26 @@ class TFLManager:
         from_stop = random.sample(self._stops_set, 1)[0]
         to_stop = random.sample(self._stops_set, 1)[0]
 
-        i = 0
-        while i < len(self._stops_set):
-            # Check if they have a valid path.
-            from_stop_pos = (from_stop[STOP_LAT] + ',' + from_stop[STOP_LON])
-            to_stop_pos = to_stop[STOP_LAT] + ',' + to_stop[STOP_LON]
-            request = (datalib.REQUEST_JOURNEY % from_stop_pos, to_stop_pos)
+        # Check if they have a valid path.
+        while True:
+            from_stop_pos = ('%d,%d' % (from_stop[STOP_LAT],
+                                        from_stop[STOP_LON]))
+            to_stop_pos = ('%d,%d' % (to_stop[STOP_LAT], to_stop[STOP_LON]))
+            request = (datalib.REQUEST_JOURNEY % (from_stop_pos, to_stop_pos))
+            if self._counter > datalib.API_LIMIT:
+                self._counter = 0
+                time.sleep(datalib.SLEEP_API)
             result = requests.get(request)
-            i += 1
+            self._counter += 1
             try:
-                result = json.loads(result)
+                result = result.json()
                 if 'type' in result and datalib.TFL_DISAM in result['type']:
-                    from_stop = random.sample(self._stops_set, 1)[0]
-                    to_stop = random.sample(self._stops_set, 1)[0]
-                    continue
+                    raise ValueError()
             except ValueError:
                 from_stop = random.sample(self._stops_set, 1)[0]
                 to_stop = random.sample(self._stops_set, 1)[0]
                 continue
-
-        if i == len(self._stops_set):
-            self._logger.error('No valid path found.')
-            return None, None
-
+            break
         return from_stop, to_stop
 
     """ Generates and prints in file a weekday path for each user. """
@@ -159,7 +167,7 @@ class TFLManager:
                             quoting=csv.QUOTE_MINIMAL)
         for user_id in range(0, args.n):
             (start_point, weekday_point) = self.__get_valid_path()
-            writer.writerow({user_id,
+            writer.writerow([user_id,
                              start_point[STOP_ID],
                              start_point[STOP_NAME],
                              start_point[STOP_LAT],
@@ -167,21 +175,20 @@ class TFLManager:
                              weekday_point[STOP_ID],
                              weekday_point[STOP_NAME],
                              weekday_point[STOP_LAT],
-                             weekday_point[STOP_LON]})
+                             weekday_point[STOP_LON]])
         weekday_paths_file.close()
-        self._logger('The weekday paths file has been generated.')
+        self._logger.info('The weekday paths file has been generated.')
 
     """ Get the full name of the current"""
     def get_today_paths_file_name(self):
         if datalib.is_weekend():
-            return self._weekend_paths_file % str(time.strftime("%Y_%m_%d"))
+            return self._weekend_paths_file % str(time.strftime("_%Y_%m_%d"))
         return self._weekday_paths_file
 
     """ Generates and prints in file a weekend day path for each user. """
     def generate_and_print_weekend_paths(self):
         # Get current date to name the file accordingly.
-        file_name = (self._weekend_paths_file % str(time.strftime("%Y_%m_%d")))
-
+        file_name = (self._weekend_paths_file % str(time.strftime("_%Y_%m_%d")))
         weekend_paths_file_path = datalib.CSV_FOLDER + file_name
         weekend_paths_file = file(weekend_paths_file_path, 'wb')
         writer = csv.writer(weekend_paths_file,
@@ -190,7 +197,7 @@ class TFLManager:
                             quoting=csv.QUOTE_MINIMAL)
         for user_id in range(0, args.n):
             (start_point, weekend_point) = self.__get_valid_path()
-            writer.writerow({user_id,
+            writer.writerow([user_id,
                              start_point[STOP_ID],
                              start_point[STOP_NAME],
                              start_point[STOP_LAT],
@@ -198,7 +205,7 @@ class TFLManager:
                              weekend_point[STOP_ID],
                              weekend_point[STOP_NAME],
                              weekend_point[STOP_LAT],
-                             weekend_point[STOP_LON]})
+                             weekend_point[STOP_LON]])
         self._logger('The weekend paths file has been generated.')
 
     """ Generate the needed path file to be used today. """
@@ -226,21 +233,25 @@ class TFLManager:
                             quoting=csv.QUOTE_MINIMAL)
         # Create the corresponding daily path file.
         daily_file_name = ('daily_%s.csv' % str(time.strftime("%Y_%m_%d")))
-        daily_file = file(datalib.CSV_FOLDER + daily_file_name, 'wb')
+        daily_file = file(datalib.CSV_FOLDER_GENERATED + daily_file_name, 'wb')
         writer = csv.writer(daily_file,
                             delimiter=';',
                             quotechar='"',
                             quoting=csv.QUOTE_MINIMAL)
         # Generate and write the paths.
         for record in reader:
-            from_stop_pos = (record[FROM_LAT] + ',' + record[FROM_LON])
-            to_stop_pos = record[FROM_LAT] + ',' + record[TO_LON]
+            from_stop_pos = ('%s,%s' % (record[FROM_LAT], record[FROM_LON]))
+            to_stop_pos = ('%s,%s' % (record[FROM_LAT], record[TO_LON]))
             # TODO(corinan): Add departure time to the request.
-            request = (datalib.REQUEST_JOURNEY % from_stop_pos, to_stop_pos)
+            request = (datalib.REQUEST_JOURNEY % (from_stop_pos, to_stop_pos))
+            if self._counter > datalib.API_LIMIT:
+                self._counter = 0
+                time.sleep(datalib.SLEEP_API)
             result = requests.get(request)
+            self._counter += 1
             try:
-                result = json.loads(result)
-                if 'journeys' not in result or 'legs' in result['journey']:
+                result = result.json()
+                if 'journeys' not in result or 'legs' in result['journeys']:
                     raise ValueError('No "journey" param in the json response.')
             except ValueError:
                 self._logger.error('No journey for user ' + record[USER_ID])
@@ -255,16 +266,21 @@ class TFLManager:
                     curr_time = leg['departureTime']
                     line_string = json.loads(leg['path']['lineString'])
                     total = len(line_string)
-                    freq = (total / duration if total > duration else 1)
+                    if duration > 0 and total > duration:
+                        freq = total / duration
+                    else:
+                        freq = 1
                     count = 0
                     i = 0
+                    if total == 0:
+                        continue
                     while count < duration and i < total:
                         lat_lon = line_string[i]
                         curr_time = datalib.get_next_time(curr_time, duration)
-                        writer.writerow({record[USER_ID],
+                        writer.writerow([record[USER_ID],
                                          lat_lon[0],
                                          lat_lon[1],
-                                         curr_time})
+                                         curr_time])
                         count += 1
                         i += freq
 
