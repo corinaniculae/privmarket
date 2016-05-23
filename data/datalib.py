@@ -18,6 +18,7 @@ APP_KEY = 'fb265b0c73f86b5835afcde5d3585c18'
 API_LIMIT = 450
 SLEEP_API = 60
 
+
 # TFL API Requests.
 REQUEST_AUTHENTICATION_VARS = 'app_id=' + APP_ID + '&app_key=' + APP_KEY
 REQUEST_LINE_STOP_POINTS = ('https://api.tfl.gov.uk/Line/%s' +
@@ -58,6 +59,10 @@ TUBE_LINES_IDS = ['bakerloo',
 # MYSQL variables.
 MYSQL_DB = 'priv_proxy'
 MYSQL_TABLE = 'generated'
+MYSQL_HOST = 'localhost'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'letmein'
+MYSQL_LOCAL_INFILE = 1
 
 
 #MYSQL queries.
@@ -68,7 +73,7 @@ MYSQL_CREATE_TABLE = """CREATE TABLE IF NOT EXISTS %s (
                                 Timestamp VARCHAR(60) NOT NULL,
                                 Location VARCHAR(60) NOT NULL
                                 );"""
-MYSQL_CREATE_GENERATED_TABLE = """CREATE TABLE IF NOT EXISTS %s (
+MYSQL_CREATE_GEN_TABLE = """CREATE TABLE IF NOT EXISTS %s (
                                 RecordId VARCHAR(60) NOT NULL,
                                 Latitude VARCHAR(60) NOT NULL,
                                 Longitude VARCHAR(60) NOT NULL,
@@ -78,10 +83,14 @@ MYSQL_LOAD_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
                                 fields terminated by ';'
                                 lines terminated by '\n'
                                 (RecordId, Timestamp, Location); """
-MYSQL_LOAD_GENERATED_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
+MYSQL_LOAD_GEN_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
                                 fields terminated by ';'
                                 lines terminated by '\n'
                                 (RecordId, Latitude, Longitude, Timestamp); """
+
+
+#Daily path generation related.
+TIME_GET_DAILY_PATHS = '5:00'
 
 
 def is_weekend():
