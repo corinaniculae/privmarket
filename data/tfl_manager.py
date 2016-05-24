@@ -6,7 +6,6 @@ in order to create a synthetic weekday and weekend path for n users. """
 import argparse
 import csv
 import json
-import logging
 import os
 import random
 import requests
@@ -60,7 +59,7 @@ class TFLManager:
                  weekday_paths_file=datalib.WEEKDAY_PATHS_CSV,
                  weekend_paths_file=datalib.WEEKEND_PATHS_CSV,
                  no_users=args.n):
-        self._logger = logging.getLogger('TFLLogger')
+        self._logger = datalib.get_new_logger('TFLManager')
         self._stop_points_file = stop_points_file
         self._weekday_paths_file = weekday_paths_file
         self._weekend_paths_file = weekend_paths_file

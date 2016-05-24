@@ -5,42 +5,25 @@
 
 
 import csv
+import gzip
 import os
-import MySQLdb
+#import MySQLdb
 import urllib2
+import shutil
 import sys
 
 # TODO(corina): Change this.s
 CSV_FILES_URL = 'https://dl.dropboxusercontent.com/u/954872/UbicompSample.zip?dl=1'
 CSV_FILES_DOWNLOAD = 'UbicompSample.zip'
-CSV_FILES_SOURCE = os.getcwd() + '/UbicompSample/' # Script must run from main dir.
 # TODO(corina): Change this.
 CSV_FILTER = 'phone|celllocation|cid' 
 MYSQL_DATABASE = 'priv_proxy'
-MYSQL_TABLE = 'collected_info'
-
-
-# Sanitize the CSV collection.
-def sanitize_CSV_files():
-    # PRE: The CSV files are downloaded from CSV_FILES_URL.
-    
-    for source in os.listdir(CSV_FILES_SOURCE):
-    if source.endswith(".csv"):
-            print source
-             with open(CSV_FILES_SOURCE + source, 'rb') as f:
-             reader = csv.reader(f, delimiter=';', quotechar="'", quoting=csv.QUOTE_ALL)
-                 with open(CSV_FILES_SOURCE + source[:-4] + "_result.csv","wb") as result:
-                     wtr = csv.writer(result, delimiter=';', quotechar="'", quoting=csv.QUOTE_ALL)
-                     for r in reader:
-                         if (r[3] == CSV_FILTER):
-                             wtr.writerow((r[1],r[2],r[4]))
-
+MYSQL_TABLE = 'test'
+                
 
 def main(argv=None):
-    # Saintize the CSV files.
-    print 'Sanitize the CSV files...'
-    sanitize_CSV_files()
-
+    """
+    db = None
     try:
         # Connect to the MySQL server.
         print 'Connect to the MySQL server...'
@@ -64,18 +47,45 @@ def main(argv=None):
         cur.execute(create_db_query)
         cur.execute(use_db_query)
         cur.execute(create_table_query)
+    """
+    # Insert CSV files into the database.
+    print 'Populating the table...'
+    stop = False
+    count = 0
+    for root, subdirs, files in os.walk('/Volumes/Part1/Data'):
+        print root
+        if 'indexdb' in root:
+            continue
+        for filename in files:
+            file_path = os.path.join(root, filename)
+            if file_path.endswith('.gz'):
+                count += 1
+                file_content = gzip.open(file_path, 'rb')
+                reader = csv.reader(file_content, delimiter=';', quotechar="'", quoting=csv.QUOTE_ALL)
+                write_file_name = './csv_data_' + str(count) + '.csv'
+                csv_file = open(write_file_name, 'wb')
+                writer = csv.writer(csv_file,
+                            delimiter=';',
+                            quotechar='"',
+                            quoting=csv.QUOTE_MINIMAL)
+                for r in reader:
+                    if (r[3] == CSV_FILTER):
+                        writer.writerow((r[1],r[2],r[4]))
+                file_content.close()
+                csv_file.close()
 
-        # Insert CSV files into the database.
-        print 'Populating the table...'
-        for source in os.listdir(CSV_FILES_SOURCE):
-            if source.endswith("_result.csv"):
-        source = CSV_FILES_SOURCE + source
-                add_csv_query = "LOAD DATA LOCAL INFILE \'" + source + "\' into table " + MYSQL_TABLE + " fields terminated by ';' \
-                                 lines terminated by '\n' \
-                                 (RecordId, Timestamp, Location);"
-                cur.execute(add_csv_query)
-    db.commit()
-
+                source = './csv_file.csv'
+                #add_csv_query = "LOAD DATA LOCAL INFILE \'" + source + "\' into table " + MYSQL_TABLE + " fields terminated by ';' \
+                #                            lines terminated by '\n' \
+                #                            (RecordId, Timestamp, Location);"
+                #cur.execute(add_csv_query)
+                #db.commit()
+                if count == 10:
+                    stop = True
+                    break
+        if stop:
+            break
+    """
     except MySQLdb.Error, e:
         print "Error %d: %s" % (e.args[0],e.args[1])
         sys.exit(1)
@@ -84,7 +94,7 @@ def main(argv=None):
         if db:
             print 'Table has been populated.'
             db.close()
-
+    """
 
 if __name__ == '__main__':
     status = main()

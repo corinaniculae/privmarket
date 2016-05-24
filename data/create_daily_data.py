@@ -36,7 +36,7 @@ def main():
 
     tfl_manager = TFLManager()
     logging.basicConfig(stream=sys.stdout, level=logging.WARNING)
-    logger = logging.getLogger('daily_paths')
+    logger = datalib.get_new_logger('daily_paths', 'create_daily_data.log')
 
     # Generate the file of used stop points.
     if not os.path.isfile(datalib.CSV_FOLDER + datalib.STOP_POINTS_FILE):

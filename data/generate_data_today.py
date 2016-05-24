@@ -9,7 +9,8 @@ import os
 import sys
 
 import datalib
-from create_synthetic_paths import TFLManager
+from  tfl_manager import TFLManager
+from mysql_manager import MySQLManager
 
 
 def main():

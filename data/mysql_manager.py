@@ -4,13 +4,10 @@
 
 
 import argparse
-import logging
 import MySQLdb
-import os
 import sys
 
 import datalib
-from create_synthetic_paths import TFLManager
 
 
 parser = argparse.ArgumentParser(description='MySQL query handler.')
@@ -22,7 +19,7 @@ parser.add_argument('--db',
 parser.add_argument('--table',
                     dest='table',
                     type=str,
-                    default=datalib.MYSQL_TABLE,
+                    default=datalib.MYSQL_GEN_TABLE,
                     help='The MySQL table to be used.')
 args = parser.parse_args()
 
@@ -36,8 +33,8 @@ class MySQLManager:
         database: String of the name of the database to be used.
         table: String of the table to be used.
     """
-    def __init__(self, database=args.db. table=args.table):
-        self._logger = logging.getLogger('MySQLLogger')
+    def __init__(self, database=args.db, table=args.table):
+        self._logger = datalib.get_new_logger('MySQLManager')
         self._database = database
         self._table = table
 

@@ -2,6 +2,7 @@
 
 import calendar
 import datetime
+import logging
 
 
 # Data Files.
@@ -58,14 +59,14 @@ TUBE_LINES_IDS = ['bakerloo',
 
 # MYSQL variables.
 MYSQL_DB = 'priv_proxy'
-MYSQL_TABLE = 'generated'
+MYSQL_GEN_TABLE = 'generated'
 MYSQL_HOST = 'localhost'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = 'letmein'
 MYSQL_LOCAL_INFILE = 1
 
 
-#MYSQL queries.
+# MYSQL queries.
 MYSQL_CREATE_DB = 'CREATE DATABASE IF NOT EXISTS %s ;'
 MYSQL_USE_DB = 'USE %s;'
 MYSQL_CREATE_TABLE = """CREATE TABLE IF NOT EXISTS %s (
@@ -89,8 +90,12 @@ MYSQL_LOAD_GEN_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
                                 (RecordId, Latitude, Longitude, Timestamp); """
 
 
-#Daily path generation related.
+# Daily path generation related.
 TIME_GET_DAILY_PATHS = '5:00'
+
+
+# Logging related.
+LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 
 
 def is_weekend():
@@ -120,3 +125,30 @@ def get_next_time(curr_time, duration):
         new_min = int(new_min) % 60
         tokens[1] = str(new_hour) + ':' + str(new_min) + ':' + time_tokens[2]
     return tokens[0] + 'T' + tokens[1]
+
+
+def get_new_logger(logger_name, file_name=None):
+    """Returns a new logger, as requested, with all setup done.
+
+        Arguments:
+            logger_name: String of the name of the logger.
+            file_name: If present, file name to record all the logs.
+    """
+
+    logger = logging.getLogger(logger_name)
+    formatter = logging.Formatter(LOG_FORMAT)
+
+    if file_name:
+        file_handler = logging.FileHandler(file_name)
+        file_handler.setLevel(logging.DEBUG)
+        # create formatter and add it to the handlers
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
+    # Create console handler.
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+
+    return logger
