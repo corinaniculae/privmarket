@@ -21,7 +21,7 @@ MYSQL_DATABASE = 'priv_proxy'
 MYSQL_TABLE = 'test'
                 
 
-def main(argv=None):
+def main():
     """
     db = None
     try:
@@ -51,6 +51,7 @@ def main(argv=None):
     # Insert CSV files into the database.
     print 'Populating the table...'
     stop = False
+    ind = 0
     count = 0
     for root, subdirs, files in os.walk('/Volumes/Part1/Data'):
         print root
@@ -62,7 +63,14 @@ def main(argv=None):
                 count += 1
                 file_content = gzip.open(file_path, 'rb')
                 reader = csv.reader(file_content, delimiter=';', quotechar="'", quoting=csv.QUOTE_ALL)
-                write_file_name = './csv_data_' + str(count) + '.csv'
+                if '\\' not in root[-40:]:
+                    new_file_name = root[-40:]
+                    print new_file_name
+                    ind +=1
+                else:
+                    print "This is an error."
+                continue
+                write_file_name = '/Volumes/Part2/Curated/csv_' + root[-20:]+ '.csv'
                 csv_file = open(write_file_name, 'wb')
                 writer = csv.writer(csv_file,
                             delimiter=';',
@@ -85,6 +93,7 @@ def main(argv=None):
                     break
         if stop:
             break
+    print 'total: ' + str(ind)
     """
     except MySQLdb.Error, e:
         print "Error %d: %s" % (e.args[0],e.args[1])

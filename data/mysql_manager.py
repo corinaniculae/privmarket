@@ -80,7 +80,7 @@ class MySQLManager:
             return 1
 
         finally:
-            if db:
+            if db is not None:
                 self._logger.info('Table has been populated.\n')
                 db.close()
         return 0
