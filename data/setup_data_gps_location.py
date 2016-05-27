@@ -7,30 +7,32 @@
 import csv
 import gzip
 import os
-import urllib2
-import shutil
 import sys
 import time
+
+import datalib
                
 
 def main():
+    logger = datalib.get_new_logger('setup_gps_data', 'logs/setup_gps_data.log')
+
     # Curate the CSV files.
     print 'Curating the CSV files...'
     count = 0
     for root, subdirs, files in os.walk('/Volumes/Part1/Data'):
-        print root
         if 'indexdb' in root:
             continue
         for filename in files:
             file_path = os.path.join(root, filename)
             if file_path.endswith('.gz'):
+                logger.info('Searching in file: %s' % file_path)
                 count += 1
                 file_content = gzip.open(file_path, 'rb')
                 reader = csv.reader(file_content,
                                     delimiter=';',
                                     quotechar="'",
                                     quoting=csv.QUOTE_ALL)
-                write_file_name = ('/Volumes/Part2/GPSCurated/all_loc.csv')
+                write_file_name = '/Volumes/Part2/GPSCurated/all_loc.csv'
                 csv_file = open(write_file_name, 'a')
                 writer = csv.writer(csv_file,
                                     delimiter=';',
@@ -39,12 +41,14 @@ def main():
                 for r in reader:
                     filter_tag = str(r[3]) 
                     if filter_tag.startswith('location'):
+                        logger.info('Found one in file: %s' % filename)
                         writer.writerow((r[1],r[2],r[3], r[4]))
                         
                 file_content.close()
                 csv_file.close()
                 time.sleep(60)
     print 'total: ' + str(count)
+    return 0
 
 
 if __name__ == '__main__':
