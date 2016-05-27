@@ -16,6 +16,9 @@ import datalib
 def main():
     logger = datalib.get_new_logger('setup_gps_data', 'logs/setup_gps_data.log')
 
+    # Increase the size of the csv's fields to be read.
+    csv.field_size_limit(sys.maxsize)
+
     # Curate the CSV files.
     print 'Curating the CSV files...'
     count = 0
