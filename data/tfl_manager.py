@@ -329,12 +329,12 @@ class TFLManager:
         if os.path.isfile(file_path):
             self._logger.warning('The weekday paths were already generated.')
             return
-        weekday_paths_file = file(file_path, 'wb')
+        weekday_paths_file = file(file_path, 'a')
         writer = csv.writer(weekday_paths_file,
                             delimiter=';',
                             quotechar='"',
                             quoting=csv.QUOTE_MINIMAL)
-        day_time_users = self.__generate_day_time_users(writer, 0)
+        day_time_users = self.__generate_day_time_users(writer, 5000)
         night_time_users = self.__generate_night_time_users(writer,
                                                             day_time_users)
         self.__generate_random_users(writer, night_time_users)
