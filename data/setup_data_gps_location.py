@@ -42,12 +42,12 @@ def main():
                     filter_tag = str(r[3]) 
                     if filter_tag.startswith('location'):
                         logger.info('Found one in file: %s' % filename)
-                        writer.writerow((r[1],r[2],r[3], r[4]))
+                        writer.writerow(r[1],r[2],r[3], r[4])
                         
                 file_content.close()
                 csv_file.close()
                 time.sleep(60)
-    print 'total: ' + str(count)
+    logger.info('Total files curated: %d' % count)
     return 0
 
 
