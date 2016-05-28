@@ -11,7 +11,10 @@ import sys
 import time
 
 import datalib
-               
+
+OLD_STOP_DIR_POINT = '0f894e0b6eb6b84ce84517399d04e17af8853564'
+CURR_STOP_DIR_POINT = '103cbad0f653585830dce14d66bb197bf945d511'
+
 
 def main():
     logger = datalib.get_new_logger('setup_gps_data', 'logs/setup_gps_data.log')
@@ -27,7 +30,7 @@ def main():
             continue
         logger.info('root is: ' + root[-40:])
 
-        if root[-40:] < '0f894e0b6eb6b84ce84517399d04e17af8853564':
+        if root[-40:] < CURR_STOP_DIR_POINT:
             logger.info('%s was explored before.' % root)
             continue
         for filename in files:

@@ -12,7 +12,7 @@ import sys
 import datalib
 
 
-START_DIR_POINT = '0'
+START_DIR_POINT = '023897e4e9fcf1d4f0cffbc63084cad0e8aeb346'
 
 
 def main():
