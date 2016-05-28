@@ -28,6 +28,27 @@ def get_tube_map():
     return flask.render_template('mymap.html')
 
 
+@app.route('/ubicomp')
+def get_ubicomp_map():
+    return flask.render_template('ubicomp.html')
+
+
+@app.route('/tfl')
+def get_tfl_map():
+    return 'ok, lets do this!'
+
+
+@app.route('/query')
+def get_query_page():
+    return flask.render_template('query.html')
+
+
+@app.route('/<path:path>')
+def static_proxy(path):
+    # send_static_file will guess the correct MIME type
+    return app.send_static_file(path)
+
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
