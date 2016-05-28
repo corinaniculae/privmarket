@@ -8,9 +8,11 @@ import csv
 import gzip
 import os
 import sys
-import time
 
 import datalib
+
+
+START_DIR_POINT = '0'
 
 
 def main():
@@ -23,10 +25,13 @@ def main():
         print root
         if 'indexdb' in root:
             continue
+        if root[-40:] < START_DIR_POINT:
+            logger.info('%s was explored before.' % root)
+            continue
         for filename in files:
             file_path = os.path.join(root, filename)
             if file_path.endswith('.gz'):
-                logger.info('Searching in file: %s' % file_path)
+                logger.info('Searching in file: %s' % root)
                 dest_file = '/Volumes/Part2/Curated/%s.csv' % root[-40:]
                 if os.path.isfile(dest_file):
                     logger.info('File %s was curated before.' % filename)
@@ -42,15 +47,16 @@ def main():
                                     delimiter=';',
                                     quotechar='"',
                                     quoting=csv.QUOTE_MINIMAL)
-                for r in reader:
-                    filter_tag = str(r[3]) 
-                    if (filter_tag.startswith('phone|celllocation') or
-                            filter_tag.startswith('location')):
-                        writer.writerow(r[1],r[2],r[3], r[4])
-                        
+                try:
+                    for r in reader:
+                        filter_tag = str(r[3])
+                        if filter_tag.startswith('phone|celllocation'):
+                            writer.writerow((r[0], r[1], r[2], r[3], r[4]))
+                except Exception, e:
+                    logger.error(str(e))
+                    continue
                 file_content.close()
                 csv_file.close()
-                time.sleep(60)
     logger.info('Total files curated: %d' % count)
     return 0
    

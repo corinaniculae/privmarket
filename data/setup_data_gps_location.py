@@ -25,6 +25,11 @@ def main():
     for root, subdirs, files in os.walk('/Volumes/Part1/Data'):
         if 'indexdb' in root:
             continue
+        logger.info('root is: ' + root[-40:])
+
+        if root[-40:] < '0f894e0b6eb6b84ce84517399d04e17af8853564':
+            logger.info('%s was explored before.' % root)
+            continue
         for filename in files:
             file_path = os.path.join(root, filename)
             if file_path.endswith('.gz'):
@@ -41,12 +46,14 @@ def main():
                                     delimiter=';',
                                     quotechar='"',
                                     quoting=csv.QUOTE_MINIMAL)
-                for r in reader:
-                    filter_tag = str(r[3]) 
-                    if filter_tag.startswith('location'):
-                        logger.info('Found one in file: %s' % filename)
-                        writer.writerow(r[1],r[2],r[3], r[4])
-                        
+                try:
+                    for r in reader:
+                        filter_tag = str(r[3])
+                        if filter_tag.startswith('location'):
+                            logger.info('Found one in file: %s' % filename)
+                            writer.writerow((r[1], r[2], r[3], r[4]))
+                except Exception:
+                    continue
                 file_content.close()
                 csv_file.close()
                 time.sleep(60)
