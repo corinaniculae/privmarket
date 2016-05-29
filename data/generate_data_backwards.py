@@ -45,7 +45,6 @@ def daily_paths(query_date):
         query_date: Datetime object, representing the date to be queried.
     """
     tfl_manager = TFLManager()
-    mysql_manager = MySQLManager()
 
     logger = datalib.get_new_logger('backwards_paths', 'logs/backwards_paths_1.log')
 
@@ -54,17 +53,8 @@ def daily_paths(query_date):
         tfl_manager.print_tube_stops_to_file()
         logger.info('Generated the stop points file.')
 
-    # Generate today's daily path file.
-    today_paths_file_name = tfl_manager.get_paths_file_name(query_date)
-    if not os.path.isfile(today_paths_file_name):
-        tfl_manager.generate_and_print_daily_paths()
-        logger.info('Generated the daily paths: ' + today_paths_file_name)
-
-    # Write the records into the database.
-    today_source = os.path.join(datalib.CSV_FOLDER_GENERATED,
-                                tfl_manager.get_paths_file_name(query_date))
-    mysql_manager.insert_CSV_file(today_source)
-    logging.info('Inserted the corresponding CSV file into the database.')
+    tfl_manager.generate_and_print_daily_paths(query_date)
+    logger.info('Generated the daily paths: ' + query_date.strftime('%Y-%m-%d'))
 
 
 def date_range(str_start_date, str_end_date):
