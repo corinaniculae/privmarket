@@ -28,13 +28,13 @@ parser.add_argument('--users',
 parser.add_argument('--start',
                     dest='start_date',
                     type=str,
-                    default='01.05.2016',
-                    help='Start date as DD.MM.YYYY.')
+                    default='01-05-2016',
+                    help='Start date as DD-MM-YYYY.')
 parser.add_argument('--end',
                     dest='end_date',
                     type=str,
-                    default='25.05.2016',
-                    help='End date as DD.MM.YYYY.')
+                    default='14-05-2016',
+                    help='End date as DD=MM-YYYY.')
 args = parser.parse_args()
 
 
@@ -47,8 +47,7 @@ def daily_paths(query_date):
     tfl_manager = TFLManager()
     mysql_manager = MySQLManager()
 
-    logging.basicConfig(stream=sys.stdout, level=logging.WARNING)
-    logger = logging.getLogger('backwards_paths')
+    logger = datalib.get_new_logger('backwards_paths', 'logs/backwards_paths_1.log')
 
     # Generate the file of used stop points.
     if not os.path.isfile(datalib.CSV_FOLDER + datalib.STOP_POINTS_FILE):
@@ -81,12 +80,12 @@ def date_range(str_start_date, str_end_date):
     """
     start_tokens = str_start_date.split('-')
     end_tokens = str_end_date.split('-')
-    start_date = datetime.date(start_tokens[2],
-                               start_tokens[1],
-                               start_tokens[0])
-    end_date = datetime.date(end_tokens[2],
-                             end_tokens[1],
-                             end_tokens[0])
+    start_date = datetime.date(int(start_tokens[2]),
+                               int(start_tokens[1]),
+                               int(start_tokens[0]))
+    end_date = datetime.date(int(end_tokens[2]),
+                             int(end_tokens[1]),
+                             int(end_tokens[0]))
     for n in range(int ((end_date - start_date).days)):
         yield start_date + datetime.timedelta(n)
 
