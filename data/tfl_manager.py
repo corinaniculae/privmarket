@@ -329,12 +329,12 @@ class TFLManager:
         if os.path.isfile(file_path):
             self._logger.warning('The weekday paths were already generated.')
             return
-        weekday_paths_file = file(file_path, 'a')
+        weekday_paths_file = file(file_path, 'wb')
         writer = csv.writer(weekday_paths_file,
                             delimiter=';',
                             quotechar='"',
                             quoting=csv.QUOTE_MINIMAL)
-        day_time_users = self.__generate_day_time_users(writer, 5000)
+        day_time_users = self.__generate_day_time_users(writer, 0)
         night_time_users = self.__generate_night_time_users(writer,
                                                             day_time_users)
         self.__generate_random_users(writer, night_time_users)
@@ -437,7 +437,11 @@ class TFLManager:
             self.__generate_and_print_path_file(paths_date)
 
         # Check if today's travels were not generated.
-        daily_file_name = 'daily_%s.csv' % str(time.strftime("%Y_%m_%d"))
+        if paths_date is not None:
+            suffix_file = str(paths_date.strftime("%Y_%m_%d"))
+        else:
+            suffix_file = str(time.strftime("%Y_%m_%d"))
+        daily_file_name = 'daily_%s.csv' % suffix_file
         daily_file_path = os.path.join(datalib.CSV_FOLDER_GENERATED,
                                        daily_file_name)
         if os.path.isfile(daily_file_path):

@@ -7,7 +7,7 @@ import random
 
 
 # Data Files.
-WEEKDAY_PATHS_CSV = 'weekday_paths_1.csv'
+WEEKDAY_PATHS_CSV = 'weekday_1.csv'
 WEEKEND_PATHS_CSV = 'weekend_paths_%s.csv'
 CSV_FOLDER = 'data/csv_files/'
 CSV_FOLDER_GENERATED = 'data/csv_files/generated/'
