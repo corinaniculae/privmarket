@@ -65,6 +65,7 @@ MYSQL_GEN_TABLE = 'generated'
 MYSQL_HOST = 'localhost'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = 'letmein'
+MYSQL_PORT = 3307
 MYSQL_LOCAL_INFILE = 1
 
 
@@ -76,12 +77,11 @@ MYSQL_CREATE_TABLE = """CREATE TABLE IF NOT EXISTS %s (
                                 Timestamp VARCHAR(60) NOT NULL,
                                 Location VARCHAR(60) NOT NULL
                                 );"""
+
 MYSQL_CREATE_GEN_TABLE = """CREATE TABLE IF NOT EXISTS %s (
-                                RecordId VARCHAR(60) NOT NULL,
+                                RecordId int(64) NOT NULL,
                                 Latitude VARCHAR(60) NOT NULL,
                                 Longitude VARCHAR(60) NOT NULL,
-                                OutboundTime INT(16) NOT NULL,
-                                InboundTime INT(16) NOT NULL,
                                 Timestamp VARCHAR(60) NOT NULL
                                 );"""
 MYSQL_LOAD_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
@@ -92,6 +92,7 @@ MYSQL_LOAD_GEN_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
                                 fields terminated by ';'
                                 lines terminated by '\n'
                                 (RecordId, Latitude, Longitude, Timestamp); """
+MYSQL_INSERT_VALUES = """INSERT INTO %s VALUES (%d, %s, %s, %s)"""
 
 
 # Daily path generation related.
