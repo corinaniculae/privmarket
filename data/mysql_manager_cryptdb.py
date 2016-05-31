@@ -116,7 +116,7 @@ class MySQLManagerCryptDB:
             # Insert CSV file
             for row in reader:
                 insert_csv_query = (datalib.MYSQL_INSERT_VALUES % (self._table,
-                                                                   int(row[0]),
+                                                                   row[0],
                                                                    row[1],
                                                                    row[2],
                                                                    row[3]))
