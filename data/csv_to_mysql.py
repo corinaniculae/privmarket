@@ -37,7 +37,7 @@ def main():
                                                      row[1],
                                                      row[2],
                                                      row[3])
-            writer.writerow(new_row)
+            writer.writerow((new_row))
             logger.info('Wrote row: %s' % new_row)
 
         source_file.close()
