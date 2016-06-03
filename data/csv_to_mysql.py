@@ -21,12 +21,8 @@ def main():
         result_path = os.path.join(datalib.CSV_FOLDER_GENERATED,
                                    'mysql_' + str(counter) + '.sql')
         source_file = file(source_path, 'rb')
-        result_file = file(result_path, 'wb')
+        result_file = open(result_path, 'wb')
         reader = csv.reader(source_file,
-                            delimiter=';',
-                            quotechar='"',
-                            quoting=csv.QUOTE_MINIMAL)
-        writer = csv.writer(result_file,
                             delimiter=';',
                             quotechar='"',
                             quoting=csv.QUOTE_MINIMAL)
@@ -37,7 +33,7 @@ def main():
                                                      row[1],
                                                      row[2],
                                                      row[3])
-            writer.writerow((new_row))
+            result_file.write(new_row + '\n')
             logger.info('Wrote row: %s' % new_row)
 
         source_file.close()

@@ -92,7 +92,7 @@ MYSQL_LOAD_GEN_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
                                 fields terminated by ';'
                                 lines terminated by '\n'
                                 (RecordId, Latitude, Longitude, Timestamp); """
-MYSQL_INSERT_VALUES = """INSERT INTO %s VALUES (%s, %s, %s, %s)"""
+MYSQL_INSERT_VALUES = """INSERT INTO %s VALUES (%s, %s, %s, %s);"""
 
 
 # Daily path generation related.
