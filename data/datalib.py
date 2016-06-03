@@ -79,7 +79,7 @@ MYSQL_CREATE_TABLE = """CREATE TABLE IF NOT EXISTS %s (
                                 );"""
 
 MYSQL_CREATE_GEN_TABLE = """CREATE TABLE IF NOT EXISTS %s (
-                                RecordId int(64) NOT NULL,
+                                RecordId VARCHAR(60) NOT NULL,
                                 Latitude VARCHAR(60) NOT NULL,
                                 Longitude VARCHAR(60) NOT NULL,
                                 Timestamp VARCHAR(60) NOT NULL
@@ -92,7 +92,7 @@ MYSQL_LOAD_GEN_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
                                 fields terminated by ';'
                                 lines terminated by '\n'
                                 (RecordId, Latitude, Longitude, Timestamp); """
-MYSQL_INSERT_VALUES = """INSERT INTO %s VALUES (%d, %s, %s, %s)"""
+MYSQL_INSERT_VALUES = """INSERT INTO %s VALUES (%s, %s, %s, %s)"""
 
 
 # Daily path generation related.
