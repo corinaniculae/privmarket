@@ -102,6 +102,7 @@ JOURNEY_TIMES = range(6, 23)
 MORNING_TIMES = range(6, 12)
 EVENING_TIMES = range(4, 22)
 WEEKEND_TIMES = range(7, 23)
+TOTAL_WEEKDAY_FILES = 1000
 
 
 # Logging related.

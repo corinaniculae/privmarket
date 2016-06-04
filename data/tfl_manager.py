@@ -18,7 +18,7 @@ parser = argparse.ArgumentParser(description='Sets up n user paths via TFL.')
 parser.add_argument('--users',
                     dest='n',
                     type=int,
-                    default=10000,
+                    default=1000,
                     help='Number of users to simulate.')
 parser.add_argument('--morning',
                     dest='morning',
@@ -324,7 +324,7 @@ class TFLManager:
         return random_users
 
     """ Generates and prints in file a weekday path for each user. """
-    def __generate_and_print_weekday_patterns(self):
+    def generate_and_print_weekday_patterns(self):
         file_path = os.path.join(datalib.CSV_FOLDER, self._weekday_paths_file)
         if os.path.isfile(file_path):
             self._logger.warning('The weekday paths were already generated.')
@@ -366,7 +366,7 @@ class TFLManager:
     """
     def __generate_and_print_weekend_patterns(self, paths_date=None):
         # Make sure the weekday paths have been generated.
-        self.__generate_and_print_weekday_patterns()
+        self.generate_and_print_weekday_patterns()
         # Get current date to name the file accordingly.
         # At this point, it is guaranteed that's a weekend.
         file_name = self.get_paths_file_name(paths_date)
@@ -418,7 +418,7 @@ class TFLManager:
         if datalib.is_weekend(paths_date):
             self.__generate_and_print_weekend_patterns(paths_date)
         else:
-            self.__generate_and_print_weekday_patterns()
+            self.generate_and_print_weekday_patterns()
 
     """ Generates and prints in file the daily commute of the users.
 
