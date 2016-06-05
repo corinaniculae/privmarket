@@ -9,9 +9,10 @@ import json
 import logging
 import os
 import random
-import requests
 import sys
 import time
+
+import requests
 
 import datalib
 
@@ -41,19 +42,6 @@ STOP_NAME = 1
 STOP_LAT = 2
 STOP_LON = 3
 
-# Column names in the paths CSV files.
-USER_ID = 0
-FROM_ID = 1
-FROM_NAME = 2
-FROM_LAT = 3
-FROM_LON = 4
-TO_ID = 5
-TO_NAME = 6
-TO_LAT = 7
-TO_LON = 8
-OUTBOUND_TIME = 9
-INBOUND_TIME = 10
-
 
 class TFLManager:
     """Handler for any TFL API requests."""
@@ -74,7 +62,7 @@ class TFLManager:
                  weekday_paths_file=datalib.WEEKDAY_PATHS_CSV,
                  weekend_paths_file=datalib.WEEKEND_PATHS_CSV,
                  no_users=args.n,
-		 initial_shift=0):
+                 initial_shift=0):
         log_file_name = datalib.LOG_FILE_TFL % initial_shift
         logging.basicConfig(stream=sys.stdout, level=logging.WARNING)
         self._logger = datalib.get_new_logger(datalib.LOG_NAME_TFL,
@@ -82,8 +70,7 @@ class TFLManager:
         self._stop_points_file = stop_points_file
         self._weekday_paths_file = weekday_paths_file
         self._weekend_paths_file = weekend_paths_file
-	self._initial_shift = initial_shift
-
+        self._initial_shift = initial_shift
         self._no_users = no_users
         self._counter = 0
         self.__get_all_tube_stops()
@@ -117,7 +104,7 @@ class TFLManager:
     def __get_all_tube_stops(self):
         self._stops_set = set([])
         for line_id in datalib.TUBE_LINES_IDS:
-            request = (datalib.REQUEST_LINE_STOP_POINTS % line_id)
+            request = (datalib.REQUEST_STOP_POINTS_BY_LINE % line_id)
             result = self._fetch_tfl_result(request)
             try:
                 result = result.json()
@@ -210,9 +197,9 @@ class TFLManager:
             result = self._fetch_tfl_result(request)
             try:
                 result = result.json()
-                if ((datalib.TFL_FROM_DISAM in result) or
-                        (datalib.TFL_TO_DISAM in result) or
-                        (datalib.TFL_VIA_DISAM in result)):
+                if ((datalib.TFL_FROM_DISAMBIGUATION in result) or
+                        (datalib.TFL_TO_DISAMBIGUATION in result) or
+                        (datalib.TFL_VIA_DISAMBIGUATION in result)):
                     self._logger.error(result)
                     raise ValueError()
             except ValueError:
@@ -398,10 +385,11 @@ class TFLManager:
                             quotechar='"',
                             quoting=csv.QUOTE_MINIMAL)
         for row in reader:
-            (start_point, weekend_point) = self.__get_valid_path(row[FROM_ID])
+            (start_point,
+             weekend_point) = self.__get_valid_path(row[datalib.FROM_ID])
             (outbound_time,
              inbound_time) = datalib.generate_random_travel_interval(True)
-            writer.writerow([row[USER_ID],
+            writer.writerow([row[datalib.USER_ID],
                              start_point[STOP_ID],
                              start_point[STOP_NAME],
                              start_point[STOP_LAT],
@@ -449,7 +437,7 @@ class TFLManager:
             suffix_file = str(time.strftime("%Y_%m_%d"))
         daily_file_name = 'daily_%d_%s.csv' % (self._initial_shift / 1000,
                                                suffix_file)
-        daily_file_path = os.path.join(datalib.CSV_FOLDER_GENERATED,
+        daily_file_path = os.path.join(datalib.CSV_GENERATED_FOLDER,
                                        daily_file_name)
         if os.path.isfile(daily_file_path):
             return
@@ -467,9 +455,12 @@ class TFLManager:
                             quoting=csv.QUOTE_MINIMAL)
         # Generate and write the paths.
         for record in reader:
-            from_stop_pos = ('%s,%s' % (record[FROM_LAT], record[FROM_LON]))
-            to_stop_pos = ('%s,%s' % (record[FROM_LAT], record[TO_LON]))
-            out_time = datalib.get_random_formatted_time(record[OUTBOUND_TIME])
+            from_stop_pos = ('%s,%s' % (record[datalib.FROM_LAT],
+                                        record[datalib.FROM_LON]))
+            to_stop_pos = ('%s,%s' % (record[datalib.FROM_LAT],
+                                      record[datalib.TO_LON]))
+            outbound_time_str = record[datalib.OUTBOUND_TIME]
+            out_time = datalib.get_random_formatted_time(outbound_time_str)
             travel_date = datalib.get_formatted_date(paths_date)
             request = (datalib.REQUEST_JOURNEY % (from_stop_pos,
                                                   to_stop_pos,
@@ -482,7 +473,8 @@ class TFLManager:
                     raise ValueError('No "journey" param in the json response.')
             except ValueError:
                 message = 'Reguest: ' + request + '\n Response: ' + str(result)
-                self._logger.error('No journey for user ' + record[USER_ID] +
+                self._logger.error('No journey for user ' +
+                                   record[datalib.USER_ID] +
                                    message)
                 continue
             # There are no ambiguities or errors in the JSON response.
@@ -502,11 +494,11 @@ class TFLManager:
                     for i in range(0, total, freq):
                         lat_lon = line_string[i]
                         ct = datalib.get_next_time(ct, 1)
-                        writer.writerow([record[USER_ID],
+                        writer.writerow([record[datalib.USER_ID],
                                          lat_lon[0],
                                          lat_lon[1],
                                          ct.strftime('%Y-%m-%dT%H:%M')])
-            self._logger.info('Wrote daily for user %s.' % record[USER_ID])
+            self._logger.info('Daily for user %s.' % record[datalib.USER_ID])
         daily_file.close()
         path_file.close()
         return daily_file_path
