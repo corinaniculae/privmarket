@@ -14,7 +14,6 @@ import os
 import sys
 
 import datalib
-from mysql_manager import MySQLManager
 from tfl_manager import TFLManager
 
 
@@ -44,17 +43,23 @@ def daily_paths(query_date):
     Arguments:
         query_date: Datetime object, representing the date to be queried.
     """
-    tfl_manager = TFLManager()
+    for weekday_file_counter in range(1, 10):
+	msg = 'Generating daily for %s, date %s' % (weekday_file_counter,
+                                                    query_date.strftime('%Y-%m-%d'))
+        logging.info(msg)
+        weekday_file = 'paths/weekday_' + str(weekday_file_counter) + '.csv'
+        weekend_file = 'paths/weekend_' + str(weekday_file_counter) + '_%s.csv'
+        ins = weekday_file_counter * 1000
+        tfl_manager = TFLManager(weekday_paths_file=weekday_file,
+                                 weekend_paths_file=weekend_file,
+                                 initial_shift=ins)
 
-    logger = datalib.get_new_logger('backwards_paths', 'logs/backwards_paths_1.log')
+        # Generate the file of used stop points.
+        if not os.path.isfile(datalib.CSV_FOLDER + datalib.STOP_POINTS_FILE):
+            tfl_manager.print_tube_stops_to_file()
+            logger.info('Generated the stop points file.')
 
-    # Generate the file of used stop points.
-    if not os.path.isfile(datalib.CSV_FOLDER + datalib.STOP_POINTS_FILE):
-        tfl_manager.print_tube_stops_to_file()
-        logger.info('Generated the stop points file.')
-
-    tfl_manager.generate_and_print_daily_paths(query_date)
-    logger.info('Generated the daily paths: ' + query_date.strftime('%Y-%m-%d'))
+        tfl_manager.generate_and_print_daily_paths(query_date)
 
 
 def date_range(str_start_date, str_end_date):
@@ -81,6 +86,7 @@ def date_range(str_start_date, str_end_date):
 
 
 def main():
+    logging.basicConfig(stream=sys.stdout, level=logging.WARNING)
     for single_date in date_range(args.start_date, args.end_date):
         daily_paths(single_date)
     return 0

@@ -15,8 +15,10 @@ STOP_POINTS_FILE = 'stop_points.csv'
 
 
 # TFL API Related Misc.
-APP_ID = 'ce6bfcc9'
-APP_KEY = '9b365537a90d6e5427240840cb1bfee8'
+#APP_ID = 'ce6bfcc9'
+#APP_KEY = '9b365537a90d6e5427240840cb1bfee8'
+APP_ID = 'ec039efe'
+APP_KEY = 'fb265b0c73f86b5835afcde5d3585c18'
 API_LIMIT = 420
 SLEEP_API = 60
 
@@ -109,7 +111,7 @@ TOTAL_WEEKDAY_FILES = 1000
 LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 LOG_FILE_GEN_TODAY = 'logs/today_daily_paths.log'
 LOF_FILE_MYSQL = 'logs/MySQLManager.log'
-LOG_FILE_TFL = 'logs/TFLManager.log'
+LOG_FILE_TFL = 'logs/TFLManager_%d.log'
 LOG_GEN_TODAY = 'today_daily_paths'
 LOG_NAME_MYSQL = 'MySQLManager'
 LOG_NAME_TFL = 'TFLManager'

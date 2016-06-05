@@ -6,9 +6,11 @@ in order to create a synthetic weekday and weekend path for n users. """
 import argparse
 import csv
 import json
+import logging
 import os
 import random
 import requests
+import sys
 import time
 
 import datalib
@@ -71,12 +73,16 @@ class TFLManager:
                  stop_points_file=datalib.STOP_POINTS_FILE,
                  weekday_paths_file=datalib.WEEKDAY_PATHS_CSV,
                  weekend_paths_file=datalib.WEEKEND_PATHS_CSV,
-                 no_users=args.n):
+                 no_users=args.n,
+		 initial_shift=0):
+        log_file_name = datalib.LOG_FILE_TFL % initial_shift
+        logging.basicConfig(stream=sys.stdout, level=logging.WARNING)
         self._logger = datalib.get_new_logger(datalib.LOG_NAME_TFL,
-                                              datalib.LOG_FILE_TFL)
+                                              log_file_name)
         self._stop_points_file = stop_points_file
         self._weekday_paths_file = weekday_paths_file
         self._weekend_paths_file = weekend_paths_file
+	self._initial_shift = initial_shift
 
         self._no_users = no_users
         self._counter = 0
@@ -236,7 +242,7 @@ class TFLManager:
             raise TFLError(message)
         morning_users = int(args.morning * args.n)
         for tmp_user_id in range(0, morning_users):
-            user_id = tmp_user_id + id_shift
+            user_id = tmp_user_id + id_shift + self._initial_shift
             self._logger.info('Generating pattern for user: %s' % user_id)
             outbound_time = random.sample(datalib.MORNING_TIMES, 1)[0]
             inbound_time = random.sample(datalib.EVENING_TIMES, 1)[0]
@@ -270,7 +276,7 @@ class TFLManager:
             raise TFLError(message)
         night_users = int(args.night * args.n)
         for tmp_user_id in range(0, night_users):
-            user_id = tmp_user_id + id_shift
+            user_id = tmp_user_id + id_shift + self._initial_shift
             self._logger.info('Generating pattern for user: %s' % user_id)
             (start_point, weekday_point) = self.__get_valid_path()
             outbound_time = random.sample(datalib.EVENING_TIMES, 1)[0]
@@ -304,7 +310,7 @@ class TFLManager:
             raise TFLError(message)
         random_users = int((1 - args.morning - args.night) * args.n)
         for tmp_user_id in range(0, random_users):
-            user_id = tmp_user_id + id_shift
+            user_id = tmp_user_id + id_shift + self._initial_shift
             self._logger.info('Generating pattern for user: %s' % user_id)
             (start_point, weekday_point) = self.__get_valid_path()
             (outbound_time,
@@ -337,7 +343,7 @@ class TFLManager:
         day_time_users = self.__generate_day_time_users(writer, 0)
         night_time_users = self.__generate_night_time_users(writer,
                                                             day_time_users)
-        self.__generate_random_users(writer, night_time_users)
+        self.__generate_random_users(writer, day_time_users + night_time_users)
         self._logger.info('All weekday paths have been generated.')
 
     """ Get the full name of the path file to be used at the specified date.
@@ -441,7 +447,8 @@ class TFLManager:
             suffix_file = str(paths_date.strftime("%Y_%m_%d"))
         else:
             suffix_file = str(time.strftime("%Y_%m_%d"))
-        daily_file_name = 'daily_%s.csv' % suffix_file
+        daily_file_name = 'daily_%d_%s.csv' % (self._initial_shift / 1000,
+                                               suffix_file)
         daily_file_path = os.path.join(datalib.CSV_FOLDER_GENERATED,
                                        daily_file_name)
         if os.path.isfile(daily_file_path):
@@ -499,6 +506,9 @@ class TFLManager:
                                          lat_lon[0],
                                          lat_lon[1],
                                          ct.strftime('%Y-%m-%dT%H:%M')])
+            self._logger.info('Wrote daily for user %s.' % record[USER_ID])
+        daily_file.close()
+        path_file.close()
         return daily_file_path
 
 
