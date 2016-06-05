@@ -25,18 +25,22 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="cointainer">
-                        <div class="btn-group-vertical" data-toggle="buttons">
-                          <label class="btn btn-info active query-button">
-                            <input type="radio" name="options" id="option1" onchange="initMap()" autocomplete="off" checked> Stop points list
-                          </label>
-                          <label class="btn btn-info query-button">
-                            <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Syntactic Query
-                          </label>
-                          <label class="btn btn-info query-button">
-                            <input type="radio" name="options" id="option3" autocomplete="off"> Semantic Query
-                          </label>
+                    <div class="row">
+                        <div class="cointainer">
+                            <div class="btn-group-vertical" data-toggle="buttons">
+                              <label class="btn btn-info active query-button">
+                                <input type="radio" name="options" id="option1" onchange="initMap()" autocomplete="off" checked> Stop points list
+                              </label>
+                              <label class="btn btn-info query-button">
+                                <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Syntactic Query
+                              </label>
+                              <label class="btn btn-info query-button">
+                                <input type="radio" name="options" id="option3" autocomplete="off"> Semantic Query
+                              </label>
+                            </div>
                         </div>
+                    </div>
+                    <div class="row" id="query-form">
                     </div>
                 </div>
             </div>
@@ -100,6 +104,14 @@
                 var synButton = document.
                 getElementById('option2');
             }
+
+            function addForm() {
+                var formContent = '<button type="button" class="btn btn-primary">Send Query</button>';
+                var queryFormDiv = document.getElementById('query-form');
+                queryFormDiv.innerHTML=formContent;
+
+            }
+            
             function getSyntacticMap() {
                     var mapDiv = document.getElementById('map');
                     var map = new google.maps.Map(mapDiv, {
@@ -119,6 +131,7 @@
                     editable: true
                     });
                     rectangle.setMap(map);
+                    addForm();
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer>
