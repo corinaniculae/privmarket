@@ -3,7 +3,10 @@
 import flask
 import gmplot
 import shutil
+import sys
 
+sys.path.append('data/')
+from tfl_manager import TFLManager
 
 app = flask.Flask(__name__)
 
@@ -47,6 +50,14 @@ def get_query_page():
 def static_proxy(path):
     # send_static_file will guess the correct MIME type
     return app.send_static_file(path)
+
+
+@app.route('/gettest')
+def get_test():
+    user = {'nickname': 'Miguel'}  # fake user
+    tfl_manager = TFLManager()
+    return flask.render_template('test.html',
+                                 stop_points=tfl_manager._stops_set)
 
 
 if __name__ == "__main__":
