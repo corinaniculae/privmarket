@@ -3,6 +3,9 @@
     <head>
         <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="../static/css/query.css" rel="stylesheet">
+        <script src="../static/js/jquery.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+
     </head>
     <body>
         <div class="container">
@@ -22,17 +25,31 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-
+                    <div class="cointainer">
+                        <div class="btn-group-vertical" data-toggle="buttons">
+                          <label class="btn btn-info active query-button">
+                            <input type="radio" name="options" id="option1" onchange="initMap()" autocomplete="off" checked> Stop points list
+                          </label>
+                          <label class="btn btn-info query-button">
+                            <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Syntactic Query
+                          </label>
+                          <label class="btn btn-info query-button">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Semantic Query
+                          </label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-10">
                     Current stop points:
-                    <ul class="stops">
-                        {% for stop in stop_points %}
-                        <li> {{ stop }}</li>
-                        {% endfor %}
-                    </ul>
+                    <div class="mygrid-wrapper-div">
+                        <ul class="stops">
+                            {% for stop in stop_points %}
+                            <li> {{ stop[0] }}; {{ stop[1] }}; {{ stop[2] }}; {{ stop[3] }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,26 +60,66 @@
                     center: {lat: 51.508226, lng: -0.128404},
                     zoom: 10
                 });
+                var markers = [];
+                var size = -1;
+                var pinColor = "BDBDBF";
+                var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+                        new google.maps.Size(21, 34),
+                        new google.maps.Point(0, 0),
+                        new google.maps.Point(10, 34));
+                var pinColor2 = "FE7569";
+                var pinImage2 = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor2,
+                        new google.maps.Size(21, 34),
+                        new google.maps.Point(0, 0),
+                        new google.maps.Point(10, 34));
                 {% for stop in stop_points %}
-                     var marker = new google.maps.Marker({
-                         position: {lat: {{ stop[2] }}, lng: {{ stop[3]}} },
-                         map: map
+                    var mkr = new google.maps.Marker({
+                        position: {lat: {{ stop[2] }}, lng: {{ stop[3]}}},
+                        map: map,
+                        icon: pinImage,
+                        opacity: 0.3
+                    });
+                    markers.push(mkr);
+                    size++;
+                    markers[size].addListener('mouseover', function () {
+                        this.setIcon(pinImage2);
+                        this.setOpacity(1);
+                    });
+                    markers[size].addListener('mouseout', function () {
+                        this.setIcon(pinImage);
+                        this.setOpacity(0.3);
+                    });
+                    markers[size].addListener('click', function () {
+                        var infowindow = new google.maps.InfoWindow({
+                            content: "{{ stop[1] }}"
                         });
+                        infowindow.open(map, this);
+                    });
                 {% endfor %}
-                var bounds = {
-                    north:  51.548154,
-                    south:  51.648154,
-                    east:   - 0.074695,
-                    west:   - 0.195695
-                };
 
-            // Define a rectangle and set its editable property to true.
-            /*var rectangle = new google.maps.Rectangle({
-                bounds: bounds,
-                editable: true
-            });
-            rectangle.setMap(map);*/
-          }
+                var synButton = document.
+                getElementById('option2');
+            }
+            function getSyntacticMap() {
+                    var mapDiv = document.getElementById('map');
+                    var map = new google.maps.Map(mapDiv, {
+                        center: {lat: 51.508226, lng: -0.128404},
+                        zoom: 10
+                    });
+
+                    var bounds = {
+                        north: 51.548154,
+                        south: 51.648154,
+
+                        east: -0.074695,
+                        west: -0.195695
+                    };
+                    var rectangle = new google.maps.Rectangle({
+                    bounds: bounds,
+                    editable: true
+                    });
+                    rectangle.setMap(map);
+            }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer>
         </script>
