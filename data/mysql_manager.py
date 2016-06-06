@@ -39,12 +39,12 @@ class MySQLManager:
                                  user=datalib.MYSQL_USER,       # username
                                  passwd=datalib.MYSQL_PASSWORD, # password
                                  local_infile=datalib.MYSQL_LOCAL_INFILE)
-            cursor = self._db.cursor()  # Cursor object for following queries.
+            cursor = db.cursor()  # Cursor object for following queries.
             self._logger.info('Connected to MySQL.')
 
             # Create the needed database and/or table.
-            create_db_query = (datalib.MYSQL_CREATE_DB % self._db)
-            use_db_query = (datalib.MYSQL_USE_DB % self._db)
+            create_db_query = (datalib.MYSQL_CREATE_DB % self._database)
+            use_db_query = (datalib.MYSQL_USE_DB % self._database)
             if self._daily:
                 create_table_query = (
                     datalib.MYSQL_CREATE_GEN_TABLE % self._table)
