@@ -17,16 +17,21 @@ files = ['daily_0_2016_05_01.csv', 'daily_0_2016_05_02.csv',
 
 
 def main():
-    cryptdb = cryptdb_manager.CryptDBManager()
-    logger = datalib.get_new_logger('quick_fix', 'quick_fix.log')
-    for fl in files:
-        logger.info('Preparing to insert file: %s' % fl)
-        source_path = os.path.join(datalib.CSV_GENERATED_FOLDER, fl)
-        cryptdb.insert_csv_file(source_path)
-        logger.info('Inserted file: %s' % source_path)
-        break
-    cryptdb.close_db_manager()
-    return 0
+    try:
+        cryptdb = cryptdb_manager.CryptDBManager()
+        logger = datalib.get_new_logger('quick_fix', 'quick_fix.log')
+        for fl in files:
+            if fl != 'daily_0_2016_05_02.csv':
+                continue
+            logger.info('Preparing to insert file: %s' % fl)
+            source_path = os.path.join(datalib.CSV_GENERATED_FOLDER, fl)
+            cryptdb.insert_csv_file(source_path)
+            logger.info('Inserted file: %s' % source_path)
+            break
+        cryptdb.close_db_manager()
+        return 0
+    except Exception, e:
+        logger.error('%s: %s' % (e.args[0], e.args[1]))
 
 
 if __name__ == '__main__':

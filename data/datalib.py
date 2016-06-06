@@ -127,8 +127,8 @@ MYSQL_CREATE_PATHS_TABLE = """CREATE TABLE IF NOT EXISTS %s (
                                     FromLon varchar(60) not null, \
                                     ToStopId varchar(60) not null, \
                                     ToStopName varchar(120) not null, \
-                                    ToStopLat varchar(60) not null, \
-                                    ToStopLon varchar(60) not null, \
+                                    ToLat varchar(60) not null, \
+                                    ToLon varchar(60) not null, \
                                     FromHour int(16) not null, \
                                     ToHour int(16) not null
                                     );"""
