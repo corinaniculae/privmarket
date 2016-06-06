@@ -1,0 +1,1000 @@
+60000;910GLEYTNMR;Leyton Midland Road Rail Station;51.569731;-0.008042;940GZZDLTWG;Tower Gateway DLR Station;51.510621;-0.074813;8;7
+60001;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;910GDENMRKH;Denmark Hill Rail Station;51.468206;-0.089356;6;12
+60002;940GZZLUSKS;South Kensington Underground Station;51.494098;-0.174135;940GZZLUWAF;Watford Underground Station;51.657446;-0.41738;7;8
+60003;910GHOXTON;Hoxton Rail Station;51.531517;-0.075676;940GZZLUSWK;Southwark Underground Station;51.50398;-0.104935;7;10
+60004;940GZZDLMUD;Mudchute DLR Station;51.490707;-0.014731;940GZZLUEPG;Epping Underground Station;51.693689;0.11378;7;13
+60005;940GZZLUHSN;Harlesden Underground Station;51.536316;-0.257882;910GBHILLPK;Bush Hill Park Rail Station;51.641872;-0.069452;7;8
+60006;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;940GZZLULYS;Leytonstone Underground Station;51.56833;0.008202;6;13
+60007;940GZZLUBBN;Barbican Underground Station;51.52028;-0.097988;940GZZLUPNR;Pinner Underground Station;51.5929;-0.381164;11;11
+60008;910GWMBY;Wembley Central Rail Station;51.552331;-0.296433;940GZZLULRD;Latimer Road Underground Station;51.513394;-0.217797;6;11
+60009;940GZZLUBLG;Bethnal Green Underground Station;51.527227;-0.0555;940GZZLUMMT;Monument Underground Station;51.510705;-0.085964;7;9
+60010;940GZZLULVT;Liverpool Street Underground Station;51.517377;-0.083176;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;10;18
+60011;940GZZLULNB;London Bridge Underground Station;51.505725;-0.088867;940GZZLUSUT;Sudbury Town Underground Station;51.550821;-0.315746;9;21
+60012;910GBRUCGRV;Bruce Grove Rail Station;51.593966;-0.069861;910GBTHNLGR;Bethnal Green Rail Station;51.523922;-0.059562;10;7
+60013;940GZZLUNAN;North Acton Underground Station;51.523529;-0.259754;940GZZLUVXL;Vauxhall Underground Station;51.485747;-0.1242;11;4
+60014;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;910GHMPSTDH;Hampstead Heath Rail Station;51.555216;-0.165702;7;15
+60015;940GZZLUSKW;Stockwell Underground Station;51.472188;-0.122639;940GZZLUFLP;Fairlop Underground Station;51.595625;0.091015;7;5
+60016;910GCMDNRD;Camden Road Rail Station;51.541796;-0.138697;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;8;19
+60017;940GZZLUHPC;Hyde Park Corner Underground Station;51.503039;-0.152438;910GDENMRKH;Denmark Hill Rail Station;51.468206;-0.089356;10;19
+60018;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;940GZZDLGAL;Gallions Reach DLR Station;51.508945;0.071565;7;4
+60019;910GKLBRNHR;Kilburn High Road Rail Station;51.537283;-0.192235;910GSTOTNHM;South Tottenham Rail Station;51.580379;-0.072096;10;8
+60020;940GZZLURBG;Redbridge Underground Station;51.576249;0.045369;910GHACKNYW;Hackney Wick Rail Station;51.543416;-0.024912;8;20
+60021;940GZZLUSJW;St. John's Wood Underground Station;51.534527;-0.173945;940GZZLUEAN;East Acton Underground Station;51.516616;-0.247248;8;12
+60022;940GZZLUWYC;Wembley Central Underground Station;51.55231;-0.296852;940GZZLUCXY;Croxley Underground Station;51.647044;-0.441708;7;17
+60023;910GSTNBGPK;Stonebridge Park Rail Station;51.544117;-0.275828;910GSTOTNHM;South Tottenham Rail Station;51.580379;-0.072096;9;13
+60024;940GZZLUGTH;Gants Hill Underground Station;51.57655;0.066195;940GZZLUPRD;Preston Road Underground Station;51.571979;-0.295107;10;13
+60025;940GZZDLBNK;Bank DLR Station;51.513237;-0.088509;940GZZLULRD;Latimer Road Underground Station;51.513394;-0.217797;11;17
+60026;940GZZLUERC;Edgware Road (Circle Line) Underground Station;51.519863;-0.167829;940GZZLULGT;Lancaster Gate Underground Station;51.511727;-0.175491;10;14
+60027;940GZZDLRAL;Royal Albert DLR Station;51.508361;0.045944;940GZZDLPDK;Pontoon Dock DLR Station;51.502216;0.032124;10;9
+60028;910GHARLSDN;Harlesden Rail Station;51.536295;-0.257667;940GZZLUWKN;West Kensington Underground Station;51.490463;-0.206635;11;14
+60029;940GZZLUNWY;North Wembley Underground Station;51.562558;-0.304;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;7;5
+60030;910GWNDSWRD;Wandsworth Road Rail Station;51.47022;-0.138516;940GZZLUWPL;Whitechapel Underground Station;51.519522;-0.059965;8;7
+60031;940GZZDLCGT;Canning Town DLR Station;51.514471;0.00772;940GZZLUMBA;Marble Arch Underground Station;51.513429;-0.15895;8;12
+60032;910GSURREYQ;Surrey Quays Rail Station;51.4932;-0.047512;940GZZLUACT;Acton Town Underground Station;51.503062;-0.280462;8;4
+60033;940GZZLULRD;Latimer Road Underground Station;51.513394;-0.217797;940GZZLULYS;Leytonstone Underground Station;51.56833;0.008202;7;4
+60034;910GHARLSDN;Harlesden Rail Station;51.536295;-0.257667;940GZZLUTCR;Tottenham Court Road Underground Station;51.516431;-0.130406;11;5
+60035;910GSHRDHST;Shoreditch High Street Rail Station;51.52338;-0.07524;910GHRGYGL;Harringay Green Lanes Rail Station;51.577189;-0.098138;6;10
+60036;940GZZLUSJW;St. John's Wood Underground Station;51.534527;-0.173945;940GZZLUWWL;Walthamstow Central Underground Station;51.582971;-0.019877;7;21
+60037;940GZZDLISL;Island Gardens DLR Station;51.487814;-0.010132;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;9;15
+60038;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;940GZZLUWYP;Wembley Park Underground Station;51.563204;-0.279261;11;19
+60039;940GZZLUKNB;Knightsbridge Underground Station;51.501673;-0.160504;910GPCKHMQD;Queens Road Peckham Rail Station;51.47357;-0.057307;10;7
+60040;910GDALS;Dalston Junction Rail Station;51.546121;-0.075131;940GZZLUPVL;Perivale Underground Station;51.536723;-0.323447;10;5
+60041;940GZZDLDEV;Devons Road DLR Station;51.522672;-0.017608;940GZZLUSKT;South Kenton Underground Station;51.570238;-0.308433;8;6
+60042;910GSTOTNHM;South Tottenham Rail Station;51.580379;-0.072096;910GFORESTH;Forest Hill Rail Station;51.439282;-0.053151;7;8
+60043;940GZZLUBDS;Bounds Green Underground Station;51.607042;-0.12423;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;6;11
+60044;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;940GZZLUWYC;Wembley Central Underground Station;51.55231;-0.296852;9;9
+60045;940GZZDLALL;All Saints DLR Station;51.511004;-0.013128;940GZZDLISL;Island Gardens DLR Station;51.487814;-0.010132;9;5
+60046;940GZZLUHBN;Holborn Underground Station;51.517585;-0.12047;940GZZLUQPS;Queen's Park Underground Station;51.534163;-0.204571;6;20
+60047;940GZZLUSGT;Southgate Underground Station;51.632323;-0.127811;940GZZLUGHK;Goldhawk Road Underground Station;51.502009;-0.226714;10;16
+60048;910GPCKHMRY;Peckham Rye Rail Station;51.470037;-0.069409;940GZZLURKW;Rickmansworth Underground Station;51.640207;-0.473693;11;20
+60049;940GZZLUNBP;Newbury Park Underground Station;51.575732;0.090015;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;11;17
+60050;910GDALS;Dalston Junction Rail Station;51.546121;-0.075131;940GZZLUCAR;Caledonian Road Underground Station;51.548524;-0.118489;6;15
+60051;940GZZDLWIQ;West India Quay DLR Station;51.507034;-0.020304;940GZZLULYS;Leytonstone Underground Station;51.56833;0.008202;9;13
+60052;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;910GSHRDHST;Shoreditch High Street Rail Station;51.52338;-0.07524;8;16
+60053;940GZZLULSQ;Leicester Square Underground Station;51.51139;-0.128421;910GCMDNRD;Camden Road Rail Station;51.541796;-0.138697;8;14
+60054;940GZZLUMED;Mile End Underground Station;51.525127;-0.033633;910GGOSPLOK;Gospel Oak Rail Station;51.555341;-0.150766;6;13
+60055;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;910GCLPHHS;Clapham High Street Rail Station;51.465394;-0.132784;8;10
+60056;940GZZLUMMT;Monument Underground Station;51.510705;-0.085964;940GZZDLPDK;Pontoon Dock DLR Station;51.502216;0.032124;9;17
+60057;940GZZLUEPG;Epping Underground Station;51.693689;0.11378;940GZZLUHGD;Hillingdon Underground Station;51.553712;-0.449818;11;7
+60058;910GROMFORD;Romford Rail Station;51.574835;0.183251;910GSHMPSTD;South Hampstead Rail Station;51.541438;-0.178875;9;7
+60059;910GWHHRTLA;White Hart Lane Rail Station;51.605044;-0.070907;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;10;14
+60060;940GZZLUTPN;Turnpike Lane Underground Station;51.590279;-0.102947;940GZZDLPRE;Prince Regent DLR Station;51.509267;0.034167;10;16
+60061;940GZZLUTMP;Temple Underground Station;51.51101;-0.114256;910GLEYTNMR;Leyton Midland Road Rail Station;51.569731;-0.008042;9;12
+60062;910GHOMRTON;Homerton Rail Station;51.547017;-0.042353;910GBARKING;Barking Rail Station;51.5395;0.080913;10;21
+60063;940GZZDLBPK;Beckton Park DLR Station;51.508797;0.054942;940GZZLUSKT;South Kenton Underground Station;51.570238;-0.308433;7;4
+60064;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;940GZZLUPLW;Plaistow Underground Station;51.531345;0.01746;6;20
+60065;940GZZLUHOH;Harrow-on-the-Hill Underground Station;51.579202;-0.337226;940GZZDLBNK;Bank DLR Station;51.513237;-0.088509;11;15
+60066;910GBTHNLGR;Bethnal Green Rail Station;51.523922;-0.059562;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;9;9
+60067;910GGOSPLOK;Gospel Oak Rail Station;51.555341;-0.150766;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;7;5
+60068;940GZZDLPDK;Pontoon Dock DLR Station;51.502216;0.032124;940GZZLUSPU;St. Paul's Underground Station;51.51494;-0.097562;8;8
+60069;910GRTHERHI;Rotherhithe Rail Station;51.500821;-0.052042;940GZZLUCXY;Croxley Underground Station;51.647044;-0.441708;10;18
+60070;940GZZDLWLA;Woolwich Arsenal DLR Station;51.490012;0.069136;940GZZLUKBY;Kingsbury Underground Station;51.584852;-0.27879;11;5
+60071;910GHAGGERS;Haggerston Rail Station;51.538711;-0.075661;940GZZDLKGV;King George V DLR Station;51.502007;0.062633;6;10
+60072;910GHONROPK;Honor Oak Park Rail Station;51.449992;-0.045499;940GZZLUSTM;Stanmore Underground Station;51.619838;-0.303267;8;14
+60073;940GZZLUWSM;Westminster Underground Station;51.501324;-0.124857;910GROMFORD;Romford Rail Station;51.574835;0.183251;9;16
+60074;910GWBRMPTN;West Brompton Rail Station;51.487065;-0.19559;940GZZLUWRP;West Ruislip Underground Station;51.569686;-0.437875;10;14
+60075;940GZZDLLEW;Lewisham DLR Station;51.464668;-0.012867;910GWNDSWRD;Wandsworth Road Rail Station;51.47022;-0.138516;9;11
+60076;940GZZLUEPY;East Putney Underground Station;51.459208;-0.210998;940GZZLULGT;Lancaster Gate Underground Station;51.511727;-0.175491;10;9
+60077;940GZZLUCGN;Covent Garden Underground Station;51.513098;-0.124431;940GZZLUWOG;Wood Green Underground Station;51.597486;-0.109881;7;5
+60078;940GZZLUBWT;Bayswater Underground Station;51.512289;-0.187935;940GZZLUMYB;Marylebone Underground Station;51.522327;-0.163204;7;7
+60079;940GZZLURSM;Ruislip Manor Underground Station;51.5732;-0.412963;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;7;9
+60080;940GZZLUNWH;Northwood Hills Underground Station;51.60057;-0.409453;910GENFLDTN;Enfield Town Rail Station;51.652034;-0.079321;7;21
+60081;940GZZLUECM;Ealing Common Underground Station;51.510145;-0.288265;910GNORWDJ;Norwood Junction Rail Station;51.39702;-0.075216;11;14
+60082;910GCRPNDPK;Carpenders Park Rail Station;51.628351;-0.385942;940GZZLUWSP;Westbourne Park Underground Station;51.521115;-0.201063;7;5
+60083;910GACTNCTL;Acton Central Rail Station;51.508721;-0.26297;940GZZLUPRD;Preston Road Underground Station;51.571979;-0.295107;9;6
+60084;940GZZLUUPY;Upney Underground Station;51.538376;0.101541;940GZZDLISL;Island Gardens DLR Station;51.487814;-0.010132;8;12
+60085;940GZZLUBDS;Bounds Green Underground Station;51.607042;-0.12423;910GSTKNWNG;Stoke Newington Rail Station;51.565239;-0.072881;8;20
+60086;940GZZLUDGE;Dagenham East Underground Station;51.544101;0.166029;940GZZLUHGR;Hanger Lane Underground Station;51.530182;-0.292704;6;18
+60087;910GCHESHNT;Cheshunt Rail Station;51.702877;-0.023952;940GZZLUNWH;Northwood Hills Underground Station;51.60057;-0.409453;11;17
+60088;940GZZLUSPU;St. Paul's Underground Station;51.51494;-0.097562;940GZZLULBN;Lambeth North Underground Station;51.498812;-0.11231;7;16
+60089;910GGOSPLOK;Gospel Oak Rail Station;51.555341;-0.150766;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;10;7
+60090;910GPCKHMQD;Queens Road Peckham Rail Station;51.47357;-0.057307;940GZZLUSWK;Southwark Underground Station;51.50398;-0.104935;7;13
+60091;940GZZDLPOP;Poplar DLR Station;51.507749;-0.017377;910GHAGGERS;Haggerston Rail Station;51.538711;-0.075661;10;6
+60092;940GZZDLCUT;Cutty Sark (for Maritime Greenwich) DLR Station;51.481675;-0.010802;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;8;11
+60093;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;940GZZLUUPB;Upminster Bridge Underground Station;51.558565;0.235824;6;11
+60094;940GZZLUCGN;Covent Garden Underground Station;51.513098;-0.124431;910GLEYTNMR;Leyton Midland Road Rail Station;51.569731;-0.008042;8;21
+60095;940GZZLUTWH;Tower Hill Underground Station;51.509975;-0.07654;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;11;17
+60096;910GHTCHEND;Hatch End Rail Station;51.609416;-0.368604;940GZZLUCHL;Chancery Lane Underground Station;51.518251;-0.111578;8;16
+60097;940GZZDLABR;Abbey Road DLR Station;51.531931;0.003745;910GWBRMPTN;West Brompton Rail Station;51.487065;-0.19559;10;12
+60098;940GZZLUTPN;Turnpike Lane Underground Station;51.590279;-0.102947;940GZZLUWYP;Wembley Park Underground Station;51.563204;-0.279261;9;5
+60099;940GZZLUGTR;Gloucester Road Underground Station;51.494321;-0.182655;940GZZDLRVC;Royal Victoria DLR Station;51.50934;0.018505;8;16
+60100;940GZZLUSVS;Seven Sisters Underground Station;51.583336;-0.072577;910GSHMPSTD;South Hampstead Rail Station;51.541438;-0.178875;7;9
+60101;910GSHMPSTD;South Hampstead Rail Station;51.541438;-0.178875;940GZZLUHR4;Heathrow Terminal 4 Underground Station;51.458527;-0.445762;9;9
+60102;910GWCROYDN;West Croydon Rail Station;51.378428;-0.102581;910GWATFDJ;Watford Junction Rail Station;51.663908;-0.395928;9;14
+60103;940GZZDLABR;Abbey Road DLR Station;51.531931;0.003745;940GZZLUCWP;Chiswick Park Underground Station;51.494632;-0.267972;7;10
+60104;940GZZLUFBY;Fulham Broadway Underground Station;51.480084;-0.195419;940GZZDLDEP;Deptford Bridge DLR Station;51.474218;-0.022431;11;16
+60105;940GZZLUPLW;Plaistow Underground Station;51.531345;0.01746;940GZZLUKNB;Knightsbridge Underground Station;51.501673;-0.160504;9;5
+60106;940GZZLUMYB;Marylebone Underground Station;51.522327;-0.163204;910GCRPNDPK;Carpenders Park Rail Station;51.628351;-0.385942;6;18
+60107;940GZZLUNDN;Neasden Underground Station;51.553992;-0.249836;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;9;11
+60108;940GZZLULGT;Lancaster Gate Underground Station;51.511727;-0.175491;940GZZLUBBB;Bromley-by-Bow Underground Station;51.524844;-0.011531;11;16
+60109;910GWNSTDPK;Wanstead Park Rail Station;51.551698;0.026222;940GZZLUBKH;Buckhurst Hill Underground Station;51.626612;0.046767;7;8
+60110;940GZZLUWRP;West Ruislip Underground Station;51.569686;-0.437875;940GZZLUBBN;Barbican Underground Station;51.52028;-0.097988;10;18
+60111;940GZZDLLDP;Langdon Park DLR Station;51.515176;-0.014143;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;7;9
+60112;910GHAGGERS;Haggerston Rail Station;51.538711;-0.075661;940GZZLUCGN;Covent Garden Underground Station;51.513098;-0.124431;10;11
+60113;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;910GLIVST;London Liverpool Street Rail Station;51.517996;-0.08142;7;21
+60114;940GZZLUCWL;Chigwell Underground Station;51.617923;0.075051;940GZZLUBBB;Bromley-by-Bow Underground Station;51.524844;-0.011531;8;16
+60115;940GZZLUSJP;St. James's Park Underground Station;51.499548;-0.133604;910GKLBRNHR;Kilburn High Road Rail Station;51.537283;-0.192235;6;15
+60116;940GZZLULBN;Lambeth North Underground Station;51.498812;-0.11231;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;10;16
+60117;910GSHRDHST;Shoreditch High Street Rail Station;51.52338;-0.07524;940GZZLUSGP;Stonebridge Park Underground Station;51.543965;-0.275891;7;18
+60118;910GSTOTNHM;South Tottenham Rail Station;51.580379;-0.072096;910GQPRK;Queens Park (London) Rail Station;51.533972;-0.204983;9;8
+60119;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;940GZZLUASL;Arsenal Underground Station;51.558661;-0.107452;9;18
+60120;940GZZLUHWT;Hounslow West Underground Station;51.473473;-0.386533;940GZZLUWWL;Walthamstow Central Underground Station;51.582971;-0.019877;8;20
+60121;910GPENEW;Penge West Rail Station;51.417557;-0.060834;910GHARLSDN;Harlesden Rail Station;51.536295;-0.257667;8;5
+60122;940GZZLUPLW;Plaistow Underground Station;51.531345;0.01746;940GZZLUHGD;Hillingdon Underground Station;51.553712;-0.449818;10;19
+60123;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;910GBARKING;Barking Rail Station;51.5395;0.080913;8;10
+60124;910GGNRSBRY;Gunnersbury Rail Station;51.491682;-0.275286;940GZZLUNGW;North Greenwich Underground Station;51.500474;0.004295;11;8
+60125;940GZZLUTPN;Turnpike Lane Underground Station;51.590279;-0.102947;940GZZLUBNK;Bank Underground Station;51.513424;-0.088948;8;16
+60126;940GZZLUESQ;Euston Square Underground Station;51.525609;-0.135825;940GZZLUSJP;St. James's Park Underground Station;51.499548;-0.133604;11;13
+60127;940GZZLUWLO;Waterloo Underground Station;51.503303;-0.114776;940GZZLUNGW;North Greenwich Underground Station;51.500474;0.004295;6;10
+60128;910GHRGYGL;Harringay Green Lanes Rail Station;51.577189;-0.098138;910GUPMNSTR;Upminster Rail Station;51.559023;0.250895;6;19
+60129;940GZZLUHBN;Holborn Underground Station;51.517585;-0.12047;940GZZLUMSH;Mansion House Underground Station;51.512122;-0.094004;7;15
+60130;940GZZLUCYF;Canary Wharf Underground Station;51.503492;-0.018239;940GZZLUNWH;Northwood Hills Underground Station;51.60057;-0.409453;7;18
+60131;940GZZLUNGW;North Greenwich Underground Station;51.500474;0.004295;910GNWEMBLY;North Wembley Rail Station;51.562602;-0.303984;8;10
+60132;940GZZDLELV;Elverson Road DLR Station;51.469077;-0.016721;940GZZLUHGR;Hanger Lane Underground Station;51.530182;-0.292704;9;12
+60133;940GZZLUNWH;Northwood Hills Underground Station;51.60057;-0.409453;910GENFLDTN;Enfield Town Rail Station;51.652034;-0.079321;8;16
+60134;940GZZLUPCO;Pimlico Underground Station;51.489101;-0.133757;940GZZLUHBN;Holborn Underground Station;51.517585;-0.12047;8;9
+60135;940GZZLUADE;Aldgate East Underground Station;51.515042;-0.072378;940GZZLURGP;Regent's Park Underground Station;51.523349;-0.146441;8;21
+60136;910GCNDAW;Canada Water Rail Station;51.497994;-0.049713;910GLONFLDS;London Fields Rail Station;51.541158;-0.057747;10;5
+60137;940GZZLUICK;Ickenham Underground Station;51.561989;-0.441991;940GZZLUCGN;Covent Garden Underground Station;51.513098;-0.124431;10;21
+60138;910GHAKNYNM;Hackney Downs Rail Station;51.548763;-0.060813;940GZZLUPNR;Pinner Underground Station;51.5929;-0.381164;9;6
+60139;940GZZDLSHS;Stratford High Street DLR Station;51.538201;-0.00107;940GZZLUWJN;Willesden Junction Underground Station;51.532264;-0.244282;6;16
+60140;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;11;10
+60141;940GZZLUSFB;Stamford Brook Underground Station;51.494921;-0.245703;940GZZLUKSL;Kensal Green Underground Station;51.530544;-0.225014;6;4
+60142;940GZZLUHPC;Hyde Park Corner Underground Station;51.503039;-0.152438;940GZZLUMBA;Marble Arch Underground Station;51.513429;-0.15895;7;13
+60143;940GZZLUSHH;South Harrow Underground Station;51.564894;-0.352494;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;6;21
+60144;910GFORESTH;Forest Hill Rail Station;51.439282;-0.053151;940GZZLUSJP;St. James's Park Underground Station;51.499548;-0.133604;9;8
+60145;910GWATFDHS;Watford High Street Rail Station;51.652655;-0.391714;940GZZLUDGE;Dagenham East Underground Station;51.544101;0.166029;6;21
+60146;940GZZLUHNX;Hatton Cross Underground Station;51.466751;-0.423181;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;7;7
+60147;940GZZLUSKS;South Kensington Underground Station;51.494098;-0.174135;940GZZLUOSY;Osterley Underground Station;51.481278;-0.352226;11;10
+60148;910GCHESHNT;Cheshunt Rail Station;51.702877;-0.023952;940GZZLUWRP;West Ruislip Underground Station;51.569686;-0.437875;10;21
+60149;940GZZLUHGR;Hanger Lane Underground Station;51.530182;-0.292704;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;11;8
+60150;940GZZLUCST;Cannon Street Underground Station;51.511515;-0.090426;940GZZLUBWT;Bayswater Underground Station;51.512289;-0.187935;7;16
+60151;940GZZDLWSV;West Silvertown DLR Station;51.502841;0.022469;940GZZLUHOH;Harrow-on-the-Hill Underground Station;51.579202;-0.337226;9;20
+60152;940GZZLUEMB;Embankment Underground Station;51.507062;-0.122662;910GSBURY;Southbury Rail Station;51.648713;-0.05243;10;13
+60153;910GCSEAH;Imperial Wharf Rail Station;51.474953;-0.18282;940GZZLUEAN;East Acton Underground Station;51.516616;-0.247248;9;5
+60154;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;940GZZLUSEA;South Ealing Underground Station;51.501008;-0.307425;8;10
+60155;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;940GZZLUNHG;Notting Hill Gate Underground Station;51.509132;-0.196102;9;7
+60156;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;910GWAPPING;Wapping Rail Station;51.504392;-0.055925;10;16
+60157;940GZZLUSJP;St. James's Park Underground Station;51.499548;-0.133604;940GZZLUGFD;Greenford Underground Station;51.54243;-0.346052;9;10
+60158;940GZZLUCST;Cannon Street Underground Station;51.511515;-0.090426;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;9;18
+60159;940GZZLUMED;Mile End Underground Station;51.525127;-0.033633;940GZZLUEAE;Eastcote Underground Station;51.576504;-0.397376;9;12
+60160;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;910GHACKNYC;Hackney Central Rail Station;51.54711;-0.056051;8;8
+60161;910GPENEW;Penge West Rail Station;51.417557;-0.060834;940GZZLULRD;Latimer Road Underground Station;51.513394;-0.217797;6;4
+60162;940GZZDLGAL;Gallions Reach DLR Station;51.508945;0.071565;910GWLTWCEN;Walthamstow Central Rail Station;51.582925;-0.019807;7;9
+60163;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;940GZZLUSVS;Seven Sisters Underground Station;51.583336;-0.072577;10;19
+60164;940GZZDLDEV;Devons Road DLR Station;51.522672;-0.017608;910GHACKNYW;Hackney Wick Rail Station;51.543416;-0.024912;9;11
+60165;940GZZLUSVS;Seven Sisters Underground Station;51.583336;-0.072577;940GZZLUERB;Edgware Road (Bakerloo) Underground Station;51.520304;-0.170147;7;4
+60166;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;940GZZLUBOS;Boston Manor Underground Station;51.495639;-0.324941;11;12
+60167;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;9;15
+60168;910GCRPNDPK;Carpenders Park Rail Station;51.628351;-0.385942;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;8;9
+60169;940GZZLUNFD;Northfields Underground Station;51.499324;-0.31472;940GZZLUHSD;Hammersmith (Dist&Picc Line) Underground Station;51.492304;-0.223619;10;5
+60170;940GZZLUUXB;Uxbridge Underground Station;51.546563;-0.47794;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;11;8
+60171;940GZZLUSGT;Southgate Underground Station;51.632323;-0.127811;940GZZLUGHK;Goldhawk Road Underground Station;51.502009;-0.226714;11;14
+60172;940GZZLUSSQ;Sloane Square Underground Station;51.492274;-0.156374;940GZZLUWSP;Westbourne Park Underground Station;51.521115;-0.201063;8;15
+60173;940GZZLUKSX;King's Cross St. Pancras Underground Station;51.530668;-0.12319;940GZZLUWHW;West Harrow Underground Station;51.579717;-0.353401;7;15
+60174;940GZZLUHSD;Hammersmith (Dist&Picc Line) Underground Station;51.492304;-0.223619;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;11;21
+60175;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;940GZZLUPCC;Piccadilly Circus Underground Station;51.510055;-0.133794;8;8
+60176;940GZZLUGGH;Grange Hill Underground Station;51.613385;0.092077;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;9;17
+60177;940GZZLUBMY;Bermondsey Underground Station;51.497957;-0.063762;940GZZDLLDP;Langdon Park DLR Station;51.515176;-0.014143;10;7
+60178;910GHAKNYNM;Hackney Downs Rail Station;51.548763;-0.060813;910GCSEAH;Imperial Wharf Rail Station;51.474953;-0.18282;9;18
+60179;940GZZLUECM;Ealing Common Underground Station;51.510145;-0.288265;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;8;11
+60180;940GZZLUVXL;Vauxhall Underground Station;51.485747;-0.1242;940GZZDLALL;All Saints DLR Station;51.511004;-0.013128;8;17
+60181;940GZZLUWAF;Watford Underground Station;51.657446;-0.41738;940GZZLUALP;Alperton Underground Station;51.540633;-0.29961;11;10
+60182;940GZZLUVXL;Vauxhall Underground Station;51.485747;-0.1242;910GLONFLDS;London Fields Rail Station;51.541158;-0.057747;8;16
+60183;910GHOMRTON;Homerton Rail Station;51.547017;-0.042353;910GSTOTNHM;South Tottenham Rail Station;51.580379;-0.072096;10;16
+60184;940GZZLUSWC;Swiss Cottage Underground Station;51.543687;-0.174891;940GZZLUCHX;Charing Cross Underground Station;51.507415;-0.127273;10;19
+60185;940GZZLURSQ;Russell Square Underground Station;51.523077;-0.124281;940GZZLULVT;Liverpool Street Underground Station;51.517377;-0.083176;11;15
+60186;940GZZLUPNR;Pinner Underground Station;51.5929;-0.381164;910GEMRSPKH;Emerson Park Rail Station;51.568648;0.220128;9;14
+60187;940GZZDLCAN;Canary Wharf DLR Station;51.504842;-0.02099;940GZZLUSGP;Stonebridge Park Underground Station;51.543965;-0.275891;8;21
+60188;940GZZLUEPK;Elm Park Underground Station;51.54978;0.198654;940GZZLUWKN;West Kensington Underground Station;51.490463;-0.206635;9;14
+60189;940GZZLUEPG;Epping Underground Station;51.693689;0.11378;940GZZLUASG;Arnos Grove Underground Station;51.616454;-0.133058;6;4
+60190;910GWNDSWRD;Wandsworth Road Rail Station;51.47022;-0.138516;910GWHHRTLA;White Hart Lane Rail Station;51.605044;-0.070907;7;4
+60191;940GZZLUALP;Alperton Underground Station;51.540633;-0.29961;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;8;20
+60192;940GZZLULGT;Lancaster Gate Underground Station;51.511727;-0.175491;940GZZLUKNB;Knightsbridge Underground Station;51.501673;-0.160504;8;13
+60193;910GUPMNSTR;Upminster Rail Station;51.559023;0.250895;940GZZDLWLA;Woolwich Arsenal DLR Station;51.490012;0.069136;9;8
+60194;940GZZLUPCO;Pimlico Underground Station;51.489101;-0.133757;940GZZLUHRC;Heathrow Terminals 1-2-3 Underground Station ;51.471239;-0.452256;8;20
+60195;940GZZDLBNK;Bank DLR Station;51.513237;-0.088509;940GZZLURSQ;Russell Square Underground Station;51.523077;-0.124281;10;12
+60196;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;910GLEYTNMR;Leyton Midland Road Rail Station;51.569731;-0.008042;11;8
+60197;940GZZLURKW;Rickmansworth Underground Station;51.640207;-0.473693;910GCROUCHH;Crouch Hill Rail Station;51.571308;-0.117144;6;14
+60198;910GLEYTNMR;Leyton Midland Road Rail Station;51.569731;-0.008042;910GWNDSWRD;Wandsworth Road Rail Station;51.47022;-0.138516;10;7
+60199;940GZZLUSJW;St. John's Wood Underground Station;51.534527;-0.173945;940GZZLUAMS;Amersham Underground Station;51.674127;-0.607708;8;19
+60200;940GZZLURYO;Royal Oak Underground Station;51.519118;-0.188745;940GZZLUNDN;Neasden Underground Station;51.553992;-0.249836;8;20
+60201;940GZZLUBLG;Bethnal Green Underground Station;51.527227;-0.0555;940GZZLUKOY;Kensington (Olympia) Underground Station;51.497628;-0.210013;7;8
+60202;940GZZLUCHL;Chancery Lane Underground Station;51.518251;-0.111578;910GHOMRTON;Homerton Rail Station;51.547017;-0.042353;6;5
+60203;940GZZLUGPS;Great Portland Street Underground Station;51.523845;-0.144258;940GZZLUNEN;North Ealing Underground Station;51.51751;-0.288868;6;4
+60204;910GHACKNYC;Hackney Central Rail Station;51.54711;-0.056051;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;9;10
+60205;940GZZLUSGP;Stonebridge Park Underground Station;51.543965;-0.275891;940GZZLUUPB;Upminster Bridge Underground Station;51.558565;0.235824;10;13
+60206;940GZZLUSHH;South Harrow Underground Station;51.564894;-0.352494;940GZZDLISL;Island Gardens DLR Station;51.487814;-0.010132;10;11
+60207;910GRTHERHI;Rotherhithe Rail Station;51.500821;-0.052042;940GZZLURVP;Ravenscourt Park Underground Station;51.494126;-0.23588;6;7
+60208;940GZZLUGBY;Gunnersbury Underground Station;51.491808;-0.275267;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;6;11
+60209;940GZZLUCYF;Canary Wharf Underground Station;51.503492;-0.018239;940GZZLUNAN;North Acton Underground Station;51.523529;-0.259754;11;15
+60210;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;940GZZLULBN;Lambeth North Underground Station;51.498812;-0.11231;8;17
+60211;910GCLAPTON;Clapton Rail Station;51.56165;-0.057018;940GZZDLELV;Elverson Road DLR Station;51.469077;-0.016721;6;6
+60212;940GZZLUSFS;Southfields Underground Station;51.445076;-0.2066;910GHGHMSPK;Highams Park Rail Station;51.608357;-0.000214;10;5
+60213;940GZZDLLIM;Limehouse DLR Station;51.512397;-0.039802;910GSIVRST;Silver Street Rail Station;51.614696;-0.067233;7;13
+60214;940GZZLUGBY;Gunnersbury Underground Station;51.491808;-0.275267;940GZZLUMRH;Manor House Underground Station;51.570744;-0.096113;6;5
+60215;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;940GZZDLALL;All Saints DLR Station;51.511004;-0.013128;6;8
+60216;910GCRPNDPK;Carpenders Park Rail Station;51.628351;-0.385942;940GZZLUHBN;Holborn Underground Station;51.517585;-0.12047;7;4
+60217;940GZZLUPSG;Parsons Green Underground Station;51.475281;-0.201168;940GZZLUSKS;South Kensington Underground Station;51.494098;-0.174135;6;14
+60218;910GWHHRTLA;White Hart Lane Rail Station;51.605044;-0.070907;940GZZLUWAF;Watford Underground Station;51.657446;-0.41738;7;7
+60219;940GZZDLALL;All Saints DLR Station;51.511004;-0.013128;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;8;19
+60220;940GZZDLISL;Island Gardens DLR Station;51.487814;-0.010132;940GZZLUERB;Edgware Road (Bakerloo) Underground Station;51.520304;-0.170147;6;20
+60221;940GZZLUPKR;Park Royal Underground Station;51.527129;-0.284341;940GZZLUEHM;East Ham Underground Station;51.538953;0.051195;11;18
+60222;940GZZLUHRC;Heathrow Terminals 1-2-3 Underground Station ;51.471239;-0.452256;910GWCHAPEL;Whitechapel Rail Station;51.519474;-0.059751;11;20
+60223;940GZZLUNBP;Newbury Park Underground Station;51.575732;0.090015;940GZZDLCLA;Crossharbour DLR Station;51.495732;-0.014599;9;13
+60224;940GZZLUBWT;Bayswater Underground Station;51.512289;-0.187935;940GZZDLALL;All Saints DLR Station;51.511004;-0.013128;6;13
+60225;940GZZLUPVL;Perivale Underground Station;51.536723;-0.323447;940GZZLUMYB;Marylebone Underground Station;51.522327;-0.163204;6;5
+60226;940GZZDLDEP;Deptford Bridge DLR Station;51.474218;-0.022431;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;7;19
+60227;910GRTHERHI;Rotherhithe Rail Station;51.500821;-0.052042;940GZZLUGTR;Gloucester Road Underground Station;51.494321;-0.182655;9;14
+60228;940GZZLUBST;Baker Street Underground Station;51.522888;-0.157127;940GZZLUHSK;High Street Kensington Underground Station;51.50106;-0.19279;9;21
+60229;940GZZDLRAL;Royal Albert DLR Station;51.508361;0.045944;910GWDST;Wood Street Rail Station;51.586587;-0.002397;6;8
+60230;910GHACKNYC;Hackney Central Rail Station;51.54711;-0.056051;910GACTNCTL;Acton Central Rail Station;51.508721;-0.26297;7;17
+60231;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;940GZZLUSEA;South Ealing Underground Station;51.501008;-0.307425;9;12
+60232;910GWNSTDPK;Wanstead Park Rail Station;51.551698;0.026222;940GZZLUCWP;Chiswick Park Underground Station;51.494632;-0.267972;9;8
+60233;940GZZDLSTL;Star Lane DLR Station;51.520791;0.004164;940GZZLURSM;Ruislip Manor Underground Station;51.5732;-0.412963;10;18
+60234;940GZZLUWKN;West Kensington Underground Station;51.490463;-0.206635;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;6;10
+60235;940GZZDLALL;All Saints DLR Station;51.511004;-0.013128;910GSHRDHST;Shoreditch High Street Rail Station;51.52338;-0.07524;10;11
+60236;940GZZLUKSL;Kensal Green Underground Station;51.530544;-0.225014;910GSBURY;Southbury Rail Station;51.648713;-0.05243;9;21
+60237;910GSBURY;Southbury Rail Station;51.648713;-0.05243;940GZZLUCSM;Chesham Underground Station;51.70521;-0.611241;8;17
+60238;940GZZDLCUT;Cutty Sark (for Maritime Greenwich) DLR Station;51.481675;-0.010802;940GZZLUSSQ;Sloane Square Underground Station;51.492274;-0.156374;8;4
+60239;940GZZLUSWC;Swiss Cottage Underground Station;51.543687;-0.174891;910GWHHRTLA;White Hart Lane Rail Station;51.605044;-0.070907;8;18
+60240;940GZZDLEIN;East India DLR Station;51.509364;-0.002319;940GZZLUNEN;North Ealing Underground Station;51.51751;-0.288868;8;7
+60241;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;940GZZLUSBM;Shepherd's Bush Market Underground Station;51.505583;-0.226373;8;6
+60242;910GSHRDHST;Shoreditch High Street Rail Station;51.52338;-0.07524;940GZZLUHR4;Heathrow Terminal 4 Underground Station;51.458527;-0.445762;6;8
+60243;940GZZLUCST;Cannon Street Underground Station;51.511515;-0.090426;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;9;9
+60244;910GGNRSBRY;Gunnersbury Rail Station;51.491682;-0.275286;910GSTKNWNG;Stoke Newington Rail Station;51.565239;-0.072881;8;4
+60245;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;940GZZLUWBN;West Brompton Underground Station;51.487272;-0.195597;7;21
+60246;940GZZLURYO;Royal Oak Underground Station;51.519118;-0.188745;910GBROCKLY;Brockley Rail Station;51.464652;-0.03753;6;13
+60247;940GZZLUHR4;Heathrow Terminal 4 Underground Station;51.458527;-0.445762;910GLIVST;London Liverpool Street Rail Station;51.517996;-0.08142;6;16
+60248;940GZZLUBSC;Barons Court Underground Station;51.490315;-0.213425;940GZZDLPRE;Prince Regent DLR Station;51.509267;0.034167;6;18
+60249;910GPCKHMQD;Queens Road Peckham Rail Station;51.47357;-0.057307;940GZZLURBG;Redbridge Underground Station;51.576249;0.045369;7;20
+60250;940GZZLUBMY;Bermondsey Underground Station;51.497957;-0.063762;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;10;13
+60251;940GZZLUHRC;Heathrow Terminals 1-2-3 Underground Station ;51.471239;-0.452256;910GACTNCTL;Acton Central Rail Station;51.508721;-0.26297;9;5
+60252;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;940GZZLUWSM;Westminster Underground Station;51.501324;-0.124857;9;14
+60253;940GZZLUPLW;Plaistow Underground Station;51.531345;0.01746;940GZZLUEAE;Eastcote Underground Station;51.576504;-0.397376;7;18
+60254;910GWBRMPTN;West Brompton Rail Station;51.487065;-0.19559;940GZZLUGTH;Gants Hill Underground Station;51.57655;0.066195;9;7
+60255;940GZZLUSWK;Southwark Underground Station;51.50398;-0.104935;910GSTKNWNG;Stoke Newington Rail Station;51.565239;-0.072881;6;18
+60256;940GZZLUWYC;Wembley Central Underground Station;51.55231;-0.296852;940GZZLUWIP;Wimbledon Park Underground Station;51.434575;-0.199717;9;15
+60257;940GZZLUKPK;Kilburn Park Underground Station;51.534985;-0.194229;940GZZLUNWY;North Wembley Underground Station;51.562558;-0.304;6;17
+60258;940GZZLURYO;Royal Oak Underground Station;51.519118;-0.188745;940GZZLUEPY;East Putney Underground Station;51.459208;-0.210998;11;9
+60259;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;940GZZLUPNR;Pinner Underground Station;51.5929;-0.381164;6;14
+60260;910GSKENTON;South Kenton Rail Station;51.570221;-0.308463;940GZZLUHGR;Hanger Lane Underground Station;51.530182;-0.292704;6;8
+60261;910GTHBLDSG;Theobalds Grove Rail Station;51.692457;-0.034824;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;8;19
+60262;940GZZLUWRP;West Ruislip Underground Station;51.569686;-0.437875;940GZZLUBND;Bond Street Underground Station;51.514309;-0.149719;10;12
+60263;940GZZLUWPL;Whitechapel Underground Station;51.519522;-0.059965;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;11;20
+60264;940GZZDLPOP;Poplar DLR Station;51.507749;-0.017377;940GZZLUNHA;North Harrow Underground Station;51.58487;-0.36241;9;18
+60265;940GZZLUGBY;Gunnersbury Underground Station;51.491808;-0.275267;940GZZDLCGT;Canning Town DLR Station;51.514471;0.00772;9;7
+60266;940GZZDLWLA;Woolwich Arsenal DLR Station;51.490012;0.069136;940GZZLUTPN;Turnpike Lane Underground Station;51.590279;-0.102947;7;7
+60267;910GWATFDJ;Watford Junction Rail Station;51.663908;-0.395928;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;6;17
+60268;940GZZLUBXN;Brixton Underground Station;51.462621;-0.114884;940GZZLUWJN;Willesden Junction Underground Station;51.532264;-0.244282;9;14
+60269;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;940GZZLUOXC;Oxford Circus Underground Station;51.515228;-0.141899;9;18
+60270;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;940GZZDLSHS;Stratford High Street DLR Station;51.538201;-0.00107;7;12
+60271;940GZZLUEBY;Ealing Broadway Underground Station;51.515022;-0.301457;940GZZLUMYB;Marylebone Underground Station;51.522327;-0.163204;11;12
+60272;940GZZLUECT;Earl's Court Underground Station;51.492067;-0.193376;940GZZLULNB;London Bridge Underground Station;51.505725;-0.088867;6;20
+60273;940GZZLUOSY;Osterley Underground Station;51.481278;-0.352226;910GKNTSHTW;Kentish Town West Rail Station;51.546553;-0.146651;11;15
+60274;940GZZLUHOH;Harrow-on-the-Hill Underground Station;51.579202;-0.337226;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;8;15
+60275;910GHONROPK;Honor Oak Park Rail Station;51.449992;-0.045499;940GZZLUSNB;Snaresbrook Underground Station;51.580684;0.021449;8;17
+60276;940GZZLUSWC;Swiss Cottage Underground Station;51.543687;-0.174891;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;8;20
+60277;910GEDMNGRN;Edmonton Green Rail Station;51.624936;-0.061106;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;8;13
+60278;940GZZDLSTL;Star Lane DLR Station;51.520791;0.004164;940GZZLUPSG;Parsons Green Underground Station;51.475281;-0.201168;8;17
+60279;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;910GKENSLG;Kensal Green Rail Station;51.530546;-0.225086;8;20
+60280;940GZZLUCWL;Chigwell Underground Station;51.617923;0.075051;940GZZDLEIN;East India DLR Station;51.509364;-0.002319;6;19
+60281;910GWATFDHS;Watford High Street Rail Station;51.652655;-0.391714;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;9;12
+60282;940GZZLUHGR;Hanger Lane Underground Station;51.530182;-0.292704;940GZZLUWWL;Walthamstow Central Underground Station;51.582971;-0.019877;9;15
+60283;940GZZLUCAR;Caledonian Road Underground Station;51.548524;-0.118489;940GZZLUWCY;White City Underground Station;51.511964;-0.224295;7;13
+60284;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;940GZZLUHBN;Holborn Underground Station;51.517585;-0.12047;9;20
+60285;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;11;20
+60286;940GZZDLWIQ;West India Quay DLR Station;51.507034;-0.020304;910GHAGGERS;Haggerston Rail Station;51.538711;-0.075661;7;14
+60287;940GZZLUSUT;Sudbury Town Underground Station;51.550821;-0.315746;910GACTNCTL;Acton Central Rail Station;51.508721;-0.26297;6;10
+60288;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;10;19
+60289;940GZZDLCLA;Crossharbour DLR Station;51.495732;-0.014599;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;9;16
+60290;940GZZDLSTL;Star Lane DLR Station;51.520791;0.004164;940GZZLUCPK;Canons Park Underground Station;51.6077;-0.294693;6;6
+60291;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;940GZZLUSKS;South Kensington Underground Station;51.494098;-0.174135;7;12
+60292;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;940GZZDLWLA;Woolwich Arsenal DLR Station;51.490012;0.069136;9;9
+60293;910GWBRMPTN;West Brompton Rail Station;51.487065;-0.19559;940GZZDLEIN;East India DLR Station;51.509364;-0.002319;7;7
+60294;940GZZDLGAL;Gallions Reach DLR Station;51.508945;0.071565;940GZZLUCPK;Canons Park Underground Station;51.6077;-0.294693;10;18
+60295;940GZZLUSJW;St. John's Wood Underground Station;51.534527;-0.173945;940GZZLUBST;Baker Street Underground Station;51.522888;-0.157127;10;6
+60296;940GZZDLKGV;King George V DLR Station;51.502007;0.062633;910GKENSLG;Kensal Green Rail Station;51.530546;-0.225086;8;10
+60297;910GHOMRTON;Homerton Rail Station;51.547017;-0.042353;940GZZLUBKF;Blackfriars Underground Station;51.511586;-0.103654;7;4
+60298;940GZZLUSTD;Stratford Underground Station;51.541811;-0.00345;940GZZDLWIQ;West India Quay DLR Station;51.507034;-0.020304;9;20
+60299;940GZZLUSKW;Stockwell Underground Station;51.472188;-0.122639;940GZZLUPNR;Pinner Underground Station;51.5929;-0.381164;9;9
+60300;910GBROCKLY;Brockley Rail Station;51.464652;-0.03753;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;10;15
+60301;940GZZLUTWH;Tower Hill Underground Station;51.509975;-0.07654;940GZZLUEPG;Epping Underground Station;51.693689;0.11378;10;4
+60302;940GZZLURYO;Royal Oak Underground Station;51.519118;-0.188745;910GRTHERHI;Rotherhithe Rail Station;51.500821;-0.052042;10;18
+60303;940GZZLUWRP;West Ruislip Underground Station;51.569686;-0.437875;940GZZLUASG;Arnos Grove Underground Station;51.616454;-0.133058;6;21
+60304;940GZZDLPOP;Poplar DLR Station;51.507749;-0.017377;940GZZDLSIT;Stratford International DLR Station;51.545271;-0.00963;10;21
+60305;910GHOXTON;Hoxton Rail Station;51.531517;-0.075676;910GSHPDSB;Shepherds Bush Rail Station;51.505289;-0.217652;10;16
+60306;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;6;15
+60307;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;7;7
+60308;910GSEVNSIS;Seven Sisters Rail Station;51.582274;-0.075264;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;9;15
+60309;940GZZLUBLG;Bethnal Green Underground Station;51.527227;-0.0555;940GZZLUBOS;Boston Manor Underground Station;51.495639;-0.324941;7;20
+60310;910GROMFORD;Romford Rail Station;51.574835;0.183251;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;7;13
+60311;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;940GZZDLABR;Abbey Road DLR Station;51.531931;0.003745;6;17
+60312;940GZZLUHGR;Hanger Lane Underground Station;51.530182;-0.292704;910GRICHMND;Richmond (London) Rail Station;51.463064;-0.301559;10;11
+60313;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;940GZZLUWAF;Watford Underground Station;51.657446;-0.41738;8;12
+60314;910GWATFDHS;Watford High Street Rail Station;51.652655;-0.391714;910GSTKNWNG;Stoke Newington Rail Station;51.565239;-0.072881;11;19
+60315;940GZZLUCXY;Croxley Underground Station;51.647044;-0.441708;940GZZLUSHH;South Harrow Underground Station;51.564894;-0.352494;7;13
+60316;940GZZLUSHH;South Harrow Underground Station;51.564894;-0.352494;940GZZLUFPK;Finsbury Park Underground Station;51.564164;-0.106819;7;7
+60317;940GZZLUHPK;Holland Park Underground Station;51.507148;-0.205677;940GZZLUTNG;Turnham Green Underground Station;51.495152;-0.254554;9;10
+60318;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;940GZZLUBKE;Barkingside Underground Station;51.585695;0.088596;6;21
+60319;940GZZLUBST;Baker Street Underground Station;51.522888;-0.157127;940GZZLUNHT;Northolt Underground Station;51.548242;-0.368702;11;21
+60320;940GZZLUCAR;Caledonian Road Underground Station;51.548524;-0.118489;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;6;20
+60321;940GZZDLCYP;Cyprus DLR Station;51.508477;0.063934;940GZZDLISL;Island Gardens DLR Station;51.487814;-0.010132;6;16
+60322;940GZZLUACT;Acton Town Underground Station;51.503062;-0.280462;910GHONROPK;Honor Oak Park Rail Station;51.449992;-0.045499;6;14
+60323;910GWMBY;Wembley Central Rail Station;51.552331;-0.296433;910GBTHNLGR;Bethnal Green Rail Station;51.523922;-0.059562;6;17
+60324;940GZZLUCYD;Chorleywood Underground Station;51.654359;-0.518453;940GZZDLSIT;Stratford International DLR Station;51.545271;-0.00963;10;20
+60325;940GZZLUHGD;Hillingdon Underground Station;51.553712;-0.449818;940GZZLUWBN;West Brompton Underground Station;51.487272;-0.195597;10;9
+60326;940GZZLUWIP;Wimbledon Park Underground Station;51.434575;-0.199717;940GZZLUERB;Edgware Road (Bakerloo) Underground Station;51.520304;-0.170147;9;20
+60327;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;910GEMRSPKH;Emerson Park Rail Station;51.568648;0.220128;10;21
+60328;940GZZLUERC;Edgware Road (Circle Line) Underground Station;51.519863;-0.167829;940GZZLUBKF;Blackfriars Underground Station;51.511586;-0.103654;8;20
+60329;940GZZLUADE;Aldgate East Underground Station;51.515042;-0.072378;940GZZLUSTM;Stanmore Underground Station;51.619838;-0.303267;8;9
+60330;940GZZLUSFB;Stamford Brook Underground Station;51.494921;-0.245703;940GZZLUBLR;Blackhorse Road Underground Station;51.586925;-0.041143;8;19
+60331;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;940GZZLUCST;Cannon Street Underground Station;51.511515;-0.090426;9;11
+60332;910GENFLDTN;Enfield Town Rail Station;51.652034;-0.079321;940GZZLUMSH;Mansion House Underground Station;51.512122;-0.094004;7;6
+60333;940GZZLUSUH;Sudbury Hill Underground Station;51.556952;-0.336437;910GANERLEY;Anerley Rail Station;51.412155;-0.06588;7;15
+60334;910GLONFLDS;London Fields Rail Station;51.541158;-0.057747;940GZZLUSGT;Southgate Underground Station;51.632323;-0.127811;10;5
+60335;940GZZLUSNB;Snaresbrook Underground Station;51.580684;0.021449;910GWNDSWRD;Wandsworth Road Rail Station;51.47022;-0.138516;6;8
+60336;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;940GZZLUBWR;Bow Road Underground Station;51.526944;-0.025121;10;8
+60337;910GSKENTON;South Kenton Rail Station;51.570221;-0.308463;940GZZLUHCH;Hornchurch Underground Station;51.554098;0.219131;7;13
+60338;910GBRBYPK;Brondesbury Park Rail Station;51.540705;-0.210125;940GZZLUSSQ;Sloane Square Underground Station;51.492274;-0.156374;8;15
+60339;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;940GZZLUCHL;Chancery Lane Underground Station;51.518251;-0.111578;11;11
+60340;940GZZLUWKN;West Kensington Underground Station;51.490463;-0.206635;910GCRYSTLP;Crystal Palace Rail Station;51.418111;-0.072605;9;18
+60341;940GZZDLBLA;Blackwall DLR Station;51.507995;-0.006961;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;7;21
+60342;940GZZLUWPL;Whitechapel Underground Station;51.519522;-0.059965;940GZZDLBOW;Bow Church DLR Station;51.527818;-0.020931;7;16
+60343;940GZZLULSQ;Leicester Square Underground Station;51.51139;-0.128421;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;7;20
+60344;910GLEYTNMR;Leyton Midland Road Rail Station;51.569731;-0.008042;910GEDMNGRN;Edmonton Green Rail Station;51.624936;-0.061106;8;10
+60345;940GZZLUADE;Aldgate East Underground Station;51.515042;-0.072378;910GSACTON;South Acton Rail Station;51.4997;-0.270157;8;18
+60346;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;940GZZDLISL;Island Gardens DLR Station;51.487814;-0.010132;6;21
+60347;940GZZLUKBY;Kingsbury Underground Station;51.584852;-0.27879;910GBTHNLGR;Bethnal Green Rail Station;51.523922;-0.059562;7;8
+60348;940GZZLUSUT;Sudbury Town Underground Station;51.550821;-0.315746;940GZZLUWOG;Wood Green Underground Station;51.597486;-0.109881;6;14
+60349;940GZZLUSBM;Shepherd's Bush Market Underground Station;51.505583;-0.226373;910GNWEMBLY;North Wembley Rail Station;51.562602;-0.303984;6;18
+60350;940GZZLUKOY;Kensington (Olympia) Underground Station;51.497628;-0.210013;910GHOMRTON;Homerton Rail Station;51.547017;-0.042353;10;11
+60351;940GZZDLCAN;Canary Wharf DLR Station;51.504842;-0.02099;910GCROUCHH;Crouch Hill Rail Station;51.571308;-0.117144;9;11
+60352;940GZZLUWOG;Wood Green Underground Station;51.597486;-0.109881;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;7;19
+60353;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;910GBHILLPK;Bush Hill Park Rail Station;51.641872;-0.069452;9;16
+60354;940GZZLUSVS;Seven Sisters Underground Station;51.583336;-0.072577;940GZZLUNWH;Northwood Hills Underground Station;51.60057;-0.409453;11;20
+60355;940GZZLUBOS;Boston Manor Underground Station;51.495639;-0.324941;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;11;16
+60356;940GZZLUWLO;Waterloo Underground Station;51.503303;-0.114776;940GZZDLMUD;Mudchute DLR Station;51.490707;-0.014731;6;5
+60357;940GZZLUERC;Edgware Road (Circle Line) Underground Station;51.519863;-0.167829;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;9;12
+60358;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;940GZZLUWHP;West Hampstead Underground Station;51.546644;-0.191056;10;14
+60359;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;940GZZDLGAL;Gallions Reach DLR Station;51.508945;0.071565;11;8
+60360;910GPCKHMRY;Peckham Rye Rail Station;51.470037;-0.069409;940GZZLUWYC;Wembley Central Underground Station;51.55231;-0.296852;6;14
+60361;940GZZLUNWH;Northwood Hills Underground Station;51.60057;-0.409453;940GZZLUNHG;Notting Hill Gate Underground Station;51.509132;-0.196102;8;7
+60362;940GZZLUSSQ;Sloane Square Underground Station;51.492274;-0.156374;940GZZLUBMY;Bermondsey Underground Station;51.497957;-0.063762;6;17
+60363;940GZZDLWLA;Woolwich Arsenal DLR Station;51.490012;0.069136;940GZZDLWIQ;West India Quay DLR Station;51.507034;-0.020304;7;18
+60364;940GZZLUHGR;Hanger Lane Underground Station;51.530182;-0.292704;910GHONROPK;Honor Oak Park Rail Station;51.449992;-0.045499;10;12
+60365;940GZZLUACT;Acton Town Underground Station;51.503062;-0.280462;940GZZLUASG;Arnos Grove Underground Station;51.616454;-0.133058;10;20
+60366;940GZZLUFBY;Fulham Broadway Underground Station;51.480084;-0.195419;940GZZLUHWY;Holloway Road Underground Station;51.552702;-0.113239;10;18
+60367;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;940GZZLULVT;Liverpool Street Underground Station;51.517377;-0.083176;10;8
+60368;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;940GZZLURKW;Rickmansworth Underground Station;51.640207;-0.473693;11;9
+60369;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;910GDENMRKH;Denmark Hill Rail Station;51.468206;-0.089356;7;18
+60370;940GZZLUHWT;Hounslow West Underground Station;51.473473;-0.386533;940GZZLULNB;London Bridge Underground Station;51.505725;-0.088867;11;8
+60371;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;940GZZDLTWG;Tower Gateway DLR Station;51.510621;-0.074813;6;5
+60372;940GZZLUNHG;Notting Hill Gate Underground Station;51.509132;-0.196102;940GZZDLWSV;West Silvertown DLR Station;51.502841;0.022469;7;15
+60373;940GZZDLELV;Elverson Road DLR Station;51.469077;-0.016721;910GTHBLDSG;Theobalds Grove Rail Station;51.692457;-0.034824;7;21
+60374;940GZZLUOXC;Oxford Circus Underground Station;51.515228;-0.141899;940GZZLUMED;Mile End Underground Station;51.525127;-0.033633;11;19
+60375;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;940GZZLUHBN;Holborn Underground Station;51.517585;-0.12047;6;8
+60376;940GZZDLDEV;Devons Road DLR Station;51.522672;-0.017608;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;9;6
+60377;940GZZLULSQ;Leicester Square Underground Station;51.51139;-0.128421;940GZZDLALL;All Saints DLR Station;51.511004;-0.013128;11;19
+60378;940GZZLUCGN;Covent Garden Underground Station;51.513098;-0.124431;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;7;6
+60379;940GZZLUBST;Baker Street Underground Station;51.522888;-0.157127;940GZZLUKOY;Kensington (Olympia) Underground Station;51.497628;-0.210013;9;10
+60380;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;940GZZLUALP;Alperton Underground Station;51.540633;-0.29961;9;9
+60381;940GZZLUWSP;Westbourne Park Underground Station;51.521115;-0.201063;940GZZLUBBB;Bromley-by-Bow Underground Station;51.524844;-0.011531;10;19
+60382;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;940GZZLUCYF;Canary Wharf Underground Station;51.503492;-0.018239;9;20
+60383;940GZZLUNGW;North Greenwich Underground Station;51.500474;0.004295;940GZZLUNHA;North Harrow Underground Station;51.58487;-0.36241;7;5
+60384;940GZZDLCAN;Canary Wharf DLR Station;51.504842;-0.02099;940GZZDLSIT;Stratford International DLR Station;51.545271;-0.00963;6;6
+60385;940GZZLUBKF;Blackfriars Underground Station;51.511586;-0.103654;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;10;14
+60386;910GCNNB;Canonbury Rail Station;51.548738;-0.092185;940GZZLUSJP;St. James's Park Underground Station;51.499548;-0.133604;9;7
+60387;940GZZLUNHA;North Harrow Underground Station;51.58487;-0.36241;940GZZLUEBY;Ealing Broadway Underground Station;51.515022;-0.301457;9;15
+60388;940GZZLUWIP;Wimbledon Park Underground Station;51.434575;-0.199717;910GWDGRNPK;Woodgrange Park Rail Station;51.549269;0.044433;7;12
+60389;940GZZLUWOG;Wood Green Underground Station;51.597486;-0.109881;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;6;6
+60390;940GZZLUGGH;Grange Hill Underground Station;51.613385;0.092077;940GZZLUBEC;Becontree Underground Station;51.540336;0.127028;10;10
+60391;940GZZLUEHM;East Ham Underground Station;51.538953;0.051195;940GZZLUWBN;West Brompton Underground Station;51.487272;-0.195597;9;20
+60392;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;910GFORESTH;Forest Hill Rail Station;51.439282;-0.053151;9;15
+60393;940GZZLUSPU;St. Paul's Underground Station;51.51494;-0.097562;910GDALSKLD;Dalston Kingsland Rail Station;51.548154;-0.075695;10;19
+60394;910GSACTON;South Acton Rail Station;51.4997;-0.270157;940GZZLUPCO;Pimlico Underground Station;51.489101;-0.133757;7;5
+60395;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;940GZZLUECM;Ealing Common Underground Station;51.510145;-0.288265;9;15
+60396;940GZZLUKOY;Kensington (Olympia) Underground Station;51.497628;-0.210013;940GZZLUCWL;Chigwell Underground Station;51.617923;0.075051;8;16
+60397;940GZZLUCYD;Chorleywood Underground Station;51.654359;-0.518453;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;7;19
+60398;910GROMFORD;Romford Rail Station;51.574835;0.183251;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;9;17
+60399;910GKLBRNHR;Kilburn High Road Rail Station;51.537283;-0.192235;910GDENMRKH;Denmark Hill Rail Station;51.468206;-0.089356;6;21
+60400;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;940GZZDLCUT;Cutty Sark (for Maritime Greenwich) DLR Station;51.481675;-0.010802;9;9
+60401;940GZZLUICK;Ickenham Underground Station;51.561989;-0.441991;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;10;16
+60402;940GZZLUGPS;Great Portland Street Underground Station;51.523845;-0.144258;910GKENR;Kensal Rise Rail Station;51.534559;-0.219955;10;20
+60403;910GHMPSTDH;Hampstead Heath Rail Station;51.555216;-0.165702;910GHAKNYNM;Hackney Downs Rail Station;51.548763;-0.060813;8;4
+60404;940GZZDLKGV;King George V DLR Station;51.502007;0.062633;910GWBRMPTN;West Brompton Rail Station;51.487065;-0.19559;6;11
+60405;940GZZLUBXN;Brixton Underground Station;51.462621;-0.114884;940GZZLUPYB;Putney Bridge Underground Station;51.468265;-0.208729;7;21
+60406;940GZZLUSWK;Southwark Underground Station;51.50398;-0.104935;940GZZLUCGT;Canning Town Underground Station;51.513588;0.00833;7;7
+60407;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;910GLEYTNMR;Leyton Midland Road Rail Station;51.569731;-0.008042;8;14
+60408;910GWDST;Wood Street Rail Station;51.586587;-0.002397;940GZZLUGPS;Great Portland Street Underground Station;51.523845;-0.144258;10;8
+60409;940GZZLUCSM;Chesham Underground Station;51.70521;-0.611241;940GZZLUMSH;Mansion House Underground Station;51.512122;-0.094004;10;21
+60410;940GZZLUBND;Bond Street Underground Station;51.514309;-0.149719;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;7;10
+60411;940GZZLUPCO;Pimlico Underground Station;51.489101;-0.133757;940GZZLUWHP;West Hampstead Underground Station;51.546644;-0.191056;10;12
+60412;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;940GZZLULAD;Ladbroke Grove Underground Station;51.517454;-0.210389;10;16
+60413;910GCRYSTLP;Crystal Palace Rail Station;51.418111;-0.072605;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;11;7
+60414;940GZZLUTMP;Temple Underground Station;51.51101;-0.114256;940GZZLUTCR;Tottenham Court Road Underground Station;51.516431;-0.130406;11;5
+60415;940GZZLUHWE;Hounslow East Underground Station;51.473217;-0.356476;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;9;11
+60416;940GZZLUCAR;Caledonian Road Underground Station;51.548524;-0.118489;940GZZLUHSK;High Street Kensington Underground Station;51.50106;-0.19279;11;19
+60417;910GSIVRST;Silver Street Rail Station;51.614696;-0.067233;940GZZLUMVL;Maida Vale Underground Station;51.529782;-0.185756;11;6
+60418;910GWHHRTLA;White Hart Lane Rail Station;51.605044;-0.070907;940GZZLUEPY;East Putney Underground Station;51.459208;-0.210998;10;6
+60419;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;940GZZLUHCH;Hornchurch Underground Station;51.554098;0.219131;6;5
+60420;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;9;6
+60421;910GCMDNRD;Camden Road Rail Station;51.541796;-0.138697;910GDALS;Dalston Junction Rail Station;51.546121;-0.075131;9;16
+60422;940GZZLUFPK;Finsbury Park Underground Station;51.564164;-0.106819;940GZZLUMGT;Moorgate Underground Station;51.51818;-0.088317;11;9
+60423;910GKLBRNHR;Kilburn High Road Rail Station;51.537283;-0.192235;940GZZLUBLR;Blackhorse Road Underground Station;51.586925;-0.041143;6;18
+60424;910GKEWGRDN;Kew Gardens Rail Station;51.477077;-0.285054;940GZZLUDGE;Dagenham East Underground Station;51.544101;0.166029;9;13
+60425;940GZZLUSBM;Shepherd's Bush Market Underground Station;51.505583;-0.226373;940GZZLUMVL;Maida Vale Underground Station;51.529782;-0.185756;10;18
+60426;910GWAPPING;Wapping Rail Station;51.504392;-0.055925;910GWATFDHS;Watford High Street Rail Station;51.652655;-0.391714;6;6
+60427;940GZZLUSWK;Southwark Underground Station;51.50398;-0.104935;910GKEWGRDN;Kew Gardens Rail Station;51.477077;-0.285054;8;10
+60428;910GWLSDJHL;Willesden Junction Rail Station;51.532502;-0.244547;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;8;16
+60429;940GZZLURGP;Regent's Park Underground Station;51.523349;-0.146441;940GZZLUSBM;Shepherd's Bush Market Underground Station;51.505583;-0.226373;6;11
+60430;940GZZDLCGT;Canning Town DLR Station;51.514471;0.00772;940GZZDLGAL;Gallions Reach DLR Station;51.508945;0.071565;6;11
+60431;910GHRGYGL;Harringay Green Lanes Rail Station;51.577189;-0.098138;940GZZLULRD;Latimer Road Underground Station;51.513394;-0.217797;8;7
+60432;910GSKENTON;South Kenton Rail Station;51.570221;-0.308463;940GZZLUSSQ;Sloane Square Underground Station;51.492274;-0.156374;10;7
+60433;940GZZLUSNB;Snaresbrook Underground Station;51.580684;0.021449;940GZZDLCLA;Crossharbour DLR Station;51.495732;-0.014599;9;17
+60434;940GZZLUHBN;Holborn Underground Station;51.517585;-0.12047;940GZZLUOSY;Osterley Underground Station;51.481278;-0.352226;10;10
+60435;940GZZLULGN;Loughton Underground Station;51.641451;0.055486;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;10;7
+60436;940GZZLUVIC;Victoria Underground Station;51.496363;-0.143098;940GZZLUOXC;Oxford Circus Underground Station;51.515228;-0.141899;6;20
+60437;940GZZLUWTA;West Acton Underground Station;51.518006;-0.28098;940GZZLUMED;Mile End Underground Station;51.525127;-0.033633;6;6
+60438;910GWCHAPEL;Whitechapel Rail Station;51.519474;-0.059751;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;10;17
+60439;940GZZLUPVL;Perivale Underground Station;51.536723;-0.323447;910GKENSLG;Kensal Green Rail Station;51.530546;-0.225086;10;12
+60440;940GZZLUBWR;Bow Road Underground Station;51.526944;-0.025121;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;7;8
+60441;910GPENEW;Penge West Rail Station;51.417557;-0.060834;940GZZLUOSY;Osterley Underground Station;51.481278;-0.352226;10;18
+60442;940GZZLUMPK;Moor Park Underground Station;51.629844;-0.432443;940GZZLUSEA;South Ealing Underground Station;51.501008;-0.307425;8;12
+60443;940GZZLUSKT;South Kenton Underground Station;51.570238;-0.308433;940GZZLURVP;Ravenscourt Park Underground Station;51.494126;-0.23588;11;10
+60444;940GZZLUWHP;West Hampstead Underground Station;51.546644;-0.191056;910GROMFORD;Romford Rail Station;51.574835;0.183251;6;14
+60445;940GZZLUKPK;Kilburn Park Underground Station;51.534985;-0.194229;940GZZLUWHP;West Hampstead Underground Station;51.546644;-0.191056;11;13
+60446;940GZZLUHOH;Harrow-on-the-Hill Underground Station;51.579202;-0.337226;940GZZLUSBM;Shepherd's Bush Market Underground Station;51.505583;-0.226373;9;18
+60447;940GZZLUCAR;Caledonian Road Underground Station;51.548524;-0.118489;910GCAMHTH;Cambridge Heath (London) Rail Station;51.531978;-0.057273;9;17
+60448;940GZZLUEHM;East Ham Underground Station;51.538953;0.051195;940GZZLUAMS;Amersham Underground Station;51.674127;-0.607708;11;14
+60449;910GSHRDHST;Shoreditch High Street Rail Station;51.52338;-0.07524;910GWNSTDPK;Wanstead Park Rail Station;51.551698;0.026222;7;14
+60450;910GACTNCTL;Acton Central Rail Station;51.508721;-0.26297;940GZZLUQWY;Queensway Underground Station;51.510316;-0.187149;6;6
+60451;940GZZLUSKS;South Kensington Underground Station;51.494098;-0.174135;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;9;10
+60452;940GZZLURGP;Regent's Park Underground Station;51.523349;-0.146441;910GSHMPSTD;South Hampstead Rail Station;51.541438;-0.178875;9;14
+60453;940GZZLURGP;Regent's Park Underground Station;51.523349;-0.146441;940GZZLUWTA;West Acton Underground Station;51.518006;-0.28098;6;15
+60454;940GZZLUWJN;Willesden Junction Underground Station;51.532264;-0.244282;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;11;12
+60455;940GZZDLBOW;Bow Church DLR Station;51.527818;-0.020931;910GWATFDJ;Watford Junction Rail Station;51.663908;-0.395928;7;14
+60456;910GCLPHHS;Clapham High Street Rail Station;51.465394;-0.132784;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;9;6
+60457;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;910GHOXTON;Hoxton Rail Station;51.531517;-0.075676;11;5
+60458;910GCLPHHS;Clapham High Street Rail Station;51.465394;-0.132784;940GZZLUPKR;Park Royal Underground Station;51.527129;-0.284341;8;12
+60459;910GSIVRST;Silver Street Rail Station;51.614696;-0.067233;940GZZDLDEP;Deptford Bridge DLR Station;51.474218;-0.022431;6;15
+60460;910GSHRDHST;Shoreditch High Street Rail Station;51.52338;-0.07524;940GZZLUNDN;Neasden Underground Station;51.553992;-0.249836;9;17
+60461;940GZZLUOSY;Osterley Underground Station;51.481278;-0.352226;940GZZDLHEQ;Heron Quays DLR Station;51.503383;-0.021413;10;7
+60462;940GZZLUKNB;Knightsbridge Underground Station;51.501673;-0.160504;940GZZLUBOS;Boston Manor Underground Station;51.495639;-0.324941;8;6
+60463;940GZZLUASG;Arnos Grove Underground Station;51.616454;-0.133058;940GZZLUBWT;Bayswater Underground Station;51.512289;-0.187935;11;11
+60464;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;940GZZLUMMT;Monument Underground Station;51.510705;-0.085964;10;6
+60465;940GZZDLBPK;Beckton Park DLR Station;51.508797;0.054942;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;10;19
+60466;940GZZLUPYB;Putney Bridge Underground Station;51.468265;-0.208729;940GZZLUWLO;Waterloo Underground Station;51.503303;-0.114776;6;11
+60467;940GZZLUCYD;Chorleywood Underground Station;51.654359;-0.518453;940GZZLUDGY;Dagenham Heathway Underground Station;51.541644;0.147539;6;17
+60468;940GZZLUUPY;Upney Underground Station;51.538376;0.101541;940GZZLUSKS;South Kensington Underground Station;51.494098;-0.174135;10;5
+60469;910GHACKNYC;Hackney Central Rail Station;51.54711;-0.056051;940GZZLUSJP;St. James's Park Underground Station;51.499548;-0.133604;9;16
+60470;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;940GZZLUMBA;Marble Arch Underground Station;51.513429;-0.15895;10;20
+60471;940GZZLULVT;Liverpool Street Underground Station;51.517377;-0.083176;940GZZLUSHH;South Harrow Underground Station;51.564894;-0.352494;8;5
+60472;910GKNTSHTW;Kentish Town West Rail Station;51.546553;-0.146651;940GZZLUALP;Alperton Underground Station;51.540633;-0.29961;7;8
+60473;940GZZLUMGT;Moorgate Underground Station;51.51818;-0.088317;940GZZLUPKR;Park Royal Underground Station;51.527129;-0.284341;6;4
+60474;940GZZLUSEA;South Ealing Underground Station;51.501008;-0.307425;910GCNDAW;Canada Water Rail Station;51.497994;-0.049713;6;6
+60475;940GZZDLDEV;Devons Road DLR Station;51.522672;-0.017608;940GZZDLPRE;Prince Regent DLR Station;51.509267;0.034167;9;17
+60476;910GSHMPSTD;South Hampstead Rail Station;51.541438;-0.178875;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;6;7
+60477;940GZZLUHRC;Heathrow Terminals 1-2-3 Underground Station ;51.471239;-0.452256;940GZZLUPRD;Preston Road Underground Station;51.571979;-0.295107;11;21
+60478;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;940GZZLURYO;Royal Oak Underground Station;51.519118;-0.188745;6;13
+60479;940GZZLUBWT;Bayswater Underground Station;51.512289;-0.187935;910GEDMNGRN;Edmonton Green Rail Station;51.624936;-0.061106;8;8
+60480;910GNWEMBLY;North Wembley Rail Station;51.562602;-0.303984;940GZZLUWJN;Willesden Junction Underground Station;51.532264;-0.244282;9;12
+60481;940GZZLUEAN;East Acton Underground Station;51.516616;-0.247248;940GZZLUHSK;High Street Kensington Underground Station;51.50106;-0.19279;9;20
+60482;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;940GZZLURYO;Royal Oak Underground Station;51.519118;-0.188745;9;17
+60483;910GDENMRKH;Denmark Hill Rail Station;51.468206;-0.089356;940GZZLUPVL;Perivale Underground Station;51.536723;-0.323447;11;21
+60484;910GSKENTON;South Kenton Rail Station;51.570221;-0.308463;940GZZLUVIC;Victoria Underground Station;51.496363;-0.143098;10;15
+60485;910GBARKING;Barking Rail Station;51.5395;0.080913;940GZZLUCYD;Chorleywood Underground Station;51.654359;-0.518453;7;10
+60486;910GPENEW;Penge West Rail Station;51.417557;-0.060834;910GWATFDJ;Watford Junction Rail Station;51.663908;-0.395928;9;6
+60487;940GZZLUHCH;Hornchurch Underground Station;51.554098;0.219131;940GZZLUPCO;Pimlico Underground Station;51.489101;-0.133757;11;4
+60488;910GWMBY;Wembley Central Rail Station;51.552331;-0.296433;940GZZLUWHW;West Harrow Underground Station;51.579717;-0.353401;9;13
+60489;940GZZLUBWR;Bow Road Underground Station;51.526944;-0.025121;940GZZLURYO;Royal Oak Underground Station;51.519118;-0.188745;7;20
+60490;910GLONFLDS;London Fields Rail Station;51.541158;-0.057747;940GZZLUEHM;East Ham Underground Station;51.538953;0.051195;8;21
+60491;940GZZLUFLP;Fairlop Underground Station;51.595625;0.091015;940GZZLUHR4;Heathrow Terminal 4 Underground Station;51.458527;-0.445762;6;6
+60492;940GZZLUEMB;Embankment Underground Station;51.507062;-0.122662;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;8;4
+60493;940GZZLULVT;Liverpool Street Underground Station;51.517377;-0.083176;910GCMDNRD;Camden Road Rail Station;51.541796;-0.138697;11;17
+60494;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;940GZZLUSKW;Stockwell Underground Station;51.472188;-0.122639;9;13
+60495;940GZZLUEMB;Embankment Underground Station;51.507062;-0.122662;910GHAGGERS;Haggerston Rail Station;51.538711;-0.075661;6;5
+60496;940GZZLUSUH;Sudbury Hill Underground Station;51.556952;-0.336437;940GZZLUNHG;Notting Hill Gate Underground Station;51.509132;-0.196102;8;16
+60497;940GZZDLRVC;Royal Victoria DLR Station;51.50934;0.018505;940GZZLUHOH;Harrow-on-the-Hill Underground Station;51.579202;-0.337226;6;10
+60498;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;940GZZLUWOG;Wood Green Underground Station;51.597486;-0.109881;11;12
+60499;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;910GQPRK;Queens Park (London) Rail Station;51.533972;-0.204983;8;17
+60500;940GZZLUMBA;Marble Arch Underground Station;51.513429;-0.15895;940GZZLULGN;Loughton Underground Station;51.641451;0.055486;14;9
+60501;940GZZLUHCH;Hornchurch Underground Station;51.554098;0.219131;940GZZLUNBP;Newbury Park Underground Station;51.575732;0.090015;7;11
+60502;940GZZLUBOS;Boston Manor Underground Station;51.495639;-0.324941;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;16;9
+60503;940GZZLUERC;Edgware Road (Circle Line) Underground Station;51.519863;-0.167829;940GZZLUFPK;Finsbury Park Underground Station;51.564164;-0.106819;19;10
+60504;940GZZLUWPL;Whitechapel Underground Station;51.519522;-0.059965;910GHAKNYNM;Hackney Downs Rail Station;51.548763;-0.060813;18;9
+60505;910GSEVNSIS;Seven Sisters Rail Station;51.582274;-0.075264;910GWHHRTLA;White Hart Lane Rail Station;51.605044;-0.070907;9;10
+60506;940GZZLUCWP;Chiswick Park Underground Station;51.494632;-0.267972;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;13;9
+60507;940GZZDLABR;Abbey Road DLR Station;51.531931;0.003745;940GZZLURGP;Regent's Park Underground Station;51.523349;-0.146441;15;10
+60508;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;910GROMFORD;Romford Rail Station;51.574835;0.183251;14;9
+60509;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;940GZZLUBMY;Bermondsey Underground Station;51.497957;-0.063762;9;8
+60510;910GBRBYPK;Brondesbury Park Rail Station;51.540705;-0.210125;940GZZLUOSY;Osterley Underground Station;51.481278;-0.352226;11;9
+60511;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;6;6
+60512;910GSTKNWNG;Stoke Newington Rail Station;51.565239;-0.072881;910GWATFDJ;Watford Junction Rail Station;51.663908;-0.395928;5;8
+60513;940GZZLUGPS;Great Portland Street Underground Station;51.523845;-0.144258;940GZZLUWIP;Wimbledon Park Underground Station;51.434575;-0.199717;9;8
+60514;940GZZLUSRP;South Ruislip Underground Station;51.556859;-0.398904;910GBLCHSRD;Blackhorse Road Rail Station;51.586612;-0.041228;8;8
+60515;910GTHBLDSG;Theobalds Grove Rail Station;51.692457;-0.034824;940GZZLUKPK;Kilburn Park Underground Station;51.534985;-0.194229;8;10
+60516;940GZZLUNDN;Neasden Underground Station;51.553992;-0.249836;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;20;9
+60517;910GWNSTDPK;Wanstead Park Rail Station;51.551698;0.026222;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;15;10
+60518;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;940GZZLUEPK;Elm Park Underground Station;51.54978;0.198654;14;10
+60519;940GZZLUERC;Edgware Road (Circle Line) Underground Station;51.519863;-0.167829;910GCRPNDPK;Carpenders Park Rail Station;51.628351;-0.385942;20;6
+60520;940GZZDLPUD;Pudding Mill Lane DLR Station;51.534307;-0.012747;940GZZLUSKW;Stockwell Underground Station;51.472188;-0.122639;20;9
+60521;940GZZLUGHK;Goldhawk Road Underground Station;51.502009;-0.226714;910GCMDNRD;Camden Road Rail Station;51.541796;-0.138697;14;11
+60522;940GZZLUICK;Ickenham Underground Station;51.561989;-0.441991;940GZZLUDGE;Dagenham East Underground Station;51.544101;0.166029;6;10
+60523;940GZZDLEIN;East India DLR Station;51.509364;-0.002319;940GZZLUBEC;Becontree Underground Station;51.540336;0.127028;15;6
+60524;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;940GZZLUBNK;Bank Underground Station;51.513424;-0.088948;9;9
+60525;940GZZLULYS;Leytonstone Underground Station;51.56833;0.008202;910GGNRSBRY;Gunnersbury Rail Station;51.491682;-0.275286;16;6
+60526;910GNORWDJ;Norwood Junction Rail Station;51.39702;-0.075216;910GHOXTON;Hoxton Rail Station;51.531517;-0.075676;15;11
+60527;940GZZLUHRC;Heathrow Terminals 1-2-3 Underground Station ;51.471239;-0.452256;910GEMRSPKH;Emerson Park Rail Station;51.568648;0.220128;7;6
+60528;940GZZLUERC;Edgware Road (Circle Line) Underground Station;51.519863;-0.167829;940GZZDLCYP;Cyprus DLR Station;51.508477;0.063934;21;8
+60529;940GZZLUWHW;West Harrow Underground Station;51.579717;-0.353401;940GZZLUICK;Ickenham Underground Station;51.561989;-0.441991;15;8
+60530;940GZZLUSGT;Southgate Underground Station;51.632323;-0.127811;910GWCHAPEL;Whitechapel Rail Station;51.519474;-0.059751;13;7
+60531;940GZZLUHR4;Heathrow Terminal 4 Underground Station;51.458527;-0.445762;910GUPMNSTR;Upminster Rail Station;51.559023;0.250895;18;10
+60532;940GZZDLABR;Abbey Road DLR Station;51.531931;0.003745;940GZZLUNWY;North Wembley Underground Station;51.562558;-0.304;7;7
+60533;940GZZLUWYP;Wembley Park Underground Station;51.563204;-0.279261;940GZZLUWSP;Westbourne Park Underground Station;51.521115;-0.201063;21;8
+60534;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;940GZZLUEHM;East Ham Underground Station;51.538953;0.051195;18;6
+60535;940GZZLUAMS;Amersham Underground Station;51.674127;-0.607708;940GZZLUWHW;West Harrow Underground Station;51.579717;-0.353401;16;11
+60536;940GZZDLCUT;Cutty Sark (for Maritime Greenwich) DLR Station;51.481675;-0.010802;910GBRBYPK;Brondesbury Park Rail Station;51.540705;-0.210125;6;7
+60537;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;910GANERLEY;Anerley Rail Station;51.412155;-0.06588;10;10
+60538;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;940GZZLUSWC;Swiss Cottage Underground Station;51.543687;-0.174891;13;7
+60539;910GSTOTNHM;South Tottenham Rail Station;51.580379;-0.072096;940GZZLURSQ;Russell Square Underground Station;51.523077;-0.124281;8;8
+60540;940GZZLUADE;Aldgate East Underground Station;51.515042;-0.072378;940GZZLUKOY;Kensington (Olympia) Underground Station;51.497628;-0.210013;5;9
+60541;940GZZLUOSY;Osterley Underground Station;51.481278;-0.352226;940GZZLULGT;Lancaster Gate Underground Station;51.511727;-0.175491;15;9
+60542;910GSBURY;Southbury Rail Station;51.648713;-0.05243;940GZZLUHR4;Heathrow Terminal 4 Underground Station;51.458527;-0.445762;16;6
+60543;940GZZLUEAN;East Acton Underground Station;51.516616;-0.247248;940GZZLUPNR;Pinner Underground Station;51.5929;-0.381164;20;8
+60544;910GBARKING;Barking Rail Station;51.5395;0.080913;940GZZLUMSH;Mansion House Underground Station;51.512122;-0.094004;19;6
+60545;940GZZLUOXC;Oxford Circus Underground Station;51.515228;-0.141899;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;10;9
+60546;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;940GZZLUHWT;Hounslow West Underground Station;51.473473;-0.386533;20;11
+60547;940GZZLUWWL;Walthamstow Central Underground Station;51.582971;-0.019877;940GZZDLSTL;Star Lane DLR Station;51.520791;0.004164;8;6
+60548;910GHONROPK;Honor Oak Park Rail Station;51.449992;-0.045499;940GZZLUPNR;Pinner Underground Station;51.5929;-0.381164;6;7
+60549;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;940GZZLUNHG;Notting Hill Gate Underground Station;51.509132;-0.196102;7;11
+60550;940GZZLUCHX;Charing Cross Underground Station;51.507415;-0.127273;940GZZLUWAF;Watford Underground Station;51.657446;-0.41738;18;10
+60551;940GZZDLCYP;Cyprus DLR Station;51.508477;0.063934;940GZZLUWYC;Wembley Central Underground Station;51.55231;-0.296852;4;10
+60552;910GLONFLDS;London Fields Rail Station;51.541158;-0.057747;940GZZDLPRE;Prince Regent DLR Station;51.509267;0.034167;12;9
+60553;910GHONROPK;Honor Oak Park Rail Station;51.449992;-0.045499;910GLIVST;London Liverpool Street Rail Station;51.517996;-0.08142;7;10
+60554;940GZZDLHEQ;Heron Quays DLR Station;51.503383;-0.021413;910GWHHRTLA;White Hart Lane Rail Station;51.605044;-0.070907;11;11
+60555;910GBHILLPK;Bush Hill Park Rail Station;51.641872;-0.069452;910GHRGYGL;Harringay Green Lanes Rail Station;51.577189;-0.098138;14;6
+60556;940GZZLUSJP;St. James's Park Underground Station;51.499548;-0.133604;940GZZLUWAF;Watford Underground Station;51.657446;-0.41738;6;10
+60557;940GZZLUWHW;West Harrow Underground Station;51.579717;-0.353401;910GWDGRNPK;Woodgrange Park Rail Station;51.549269;0.044433;11;10
+60558;940GZZLUHPC;Hyde Park Corner Underground Station;51.503039;-0.152438;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;19;6
+60559;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;940GZZLUTMH;Tottenham Hale Underground Station;51.588115;-0.060234;6;8
+60560;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;4;9
+60561;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;910GCNNB;Canonbury Rail Station;51.548738;-0.092185;15;7
+60562;940GZZLUWSM;Westminster Underground Station;51.501324;-0.124857;940GZZLUWJN;Willesden Junction Underground Station;51.532264;-0.244282;19;11
+60563;910GFORESTH;Forest Hill Rail Station;51.439282;-0.053151;910GLIVST;London Liverpool Street Rail Station;51.517996;-0.08142;14;10
+60564;910GLONFLDS;London Fields Rail Station;51.541158;-0.057747;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;21;11
+60565;940GZZLUWYP;Wembley Park Underground Station;51.563204;-0.279261;910GENFLDTN;Enfield Town Rail Station;51.652034;-0.079321;15;9
+60566;940GZZLUWOG;Wood Green Underground Station;51.597486;-0.109881;940GZZLUMYB;Marylebone Underground Station;51.522327;-0.163204;16;6
+60567;940GZZLURVP;Ravenscourt Park Underground Station;51.494126;-0.23588;940GZZLURGP;Regent's Park Underground Station;51.523349;-0.146441;17;6
+60568;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;940GZZLUSEA;South Ealing Underground Station;51.501008;-0.307425;20;7
+60569;910GHGHMSPK;Highams Park Rail Station;51.608357;-0.000214;940GZZLUGFD;Greenford Underground Station;51.54243;-0.346052;17;6
+60570;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;940GZZLUBOS;Boston Manor Underground Station;51.495639;-0.324941;9;7
+60571;940GZZLUFLP;Fairlop Underground Station;51.595625;0.091015;940GZZDLGAL;Gallions Reach DLR Station;51.508945;0.071565;21;8
+60572;940GZZLUNHT;Northolt Underground Station;51.548242;-0.368702;910GDALS;Dalston Junction Rail Station;51.546121;-0.075131;15;9
+60573;940GZZLUNHG;Notting Hill Gate Underground Station;51.509132;-0.196102;940GZZLUSNB;Snaresbrook Underground Station;51.580684;0.021449;12;10
+60574;940GZZLUBWR;Bow Road Underground Station;51.526944;-0.025121;940GZZLUSFS;Southfields Underground Station;51.445076;-0.2066;8;10
+60575;940GZZLUERB;Edgware Road (Bakerloo) Underground Station;51.520304;-0.170147;940GZZLUMPK;Moor Park Underground Station;51.629844;-0.432443;11;9
+60576;940GZZLUAMS;Amersham Underground Station;51.674127;-0.607708;940GZZLUWLA;Wood Lane Underground Station;51.509674;-0.224528;17;7
+60577;910GANERLEY;Anerley Rail Station;51.412155;-0.06588;940GZZLUASG;Arnos Grove Underground Station;51.616454;-0.133058;15;11
+60578;940GZZDLBLA;Blackwall DLR Station;51.507995;-0.006961;910GSIVRST;Silver Street Rail Station;51.614696;-0.067233;14;8
+60579;940GZZLUNWY;North Wembley Underground Station;51.562558;-0.304;940GZZLUBND;Bond Street Underground Station;51.514309;-0.149719;14;9
+60580;940GZZLUBKE;Barkingside Underground Station;51.585695;0.088596;910GHARLSDN;Harlesden Rail Station;51.536295;-0.257667;16;10
+60581;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;940GZZLUWCY;White City Underground Station;51.511964;-0.224295;16;7
+60582;940GZZLUBLG;Bethnal Green Underground Station;51.527227;-0.0555;940GZZDLCAN;Canary Wharf DLR Station;51.504842;-0.02099;12;6
+60583;910GNWEMBLY;North Wembley Rail Station;51.562602;-0.303984;940GZZLUWYP;Wembley Park Underground Station;51.563204;-0.279261;13;9
+60584;910GSTOTNHM;South Tottenham Rail Station;51.580379;-0.072096;940GZZDLWLA;Woolwich Arsenal DLR Station;51.490012;0.069136;16;8
+60585;940GZZLUPVL;Perivale Underground Station;51.536723;-0.323447;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;15;6
+60586;910GACTNCTL;Acton Central Rail Station;51.508721;-0.26297;940GZZLUCYF;Canary Wharf Underground Station;51.503492;-0.018239;21;8
+60587;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;940GZZDLCLA;Crossharbour DLR Station;51.495732;-0.014599;4;10
+60588;940GZZDLLDP;Langdon Park DLR Station;51.515176;-0.014143;910GWAPPING;Wapping Rail Station;51.504392;-0.055925;6;6
+60589;940GZZLUMRH;Manor House Underground Station;51.570744;-0.096113;940GZZLUMGT;Moorgate Underground Station;51.51818;-0.088317;18;8
+60590;940GZZLUSGT;Southgate Underground Station;51.632323;-0.127811;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;8;8
+60591;940GZZLUMGT;Moorgate Underground Station;51.51818;-0.088317;910GPCKHMRY;Peckham Rye Rail Station;51.470037;-0.069409;10;7
+60592;940GZZLUWKN;West Kensington Underground Station;51.490463;-0.206635;940GZZLUWKN;West Kensington Underground Station;51.490463;-0.206635;18;6
+60593;910GROMFORD;Romford Rail Station;51.574835;0.183251;940GZZLUSHH;South Harrow Underground Station;51.564894;-0.352494;16;11
+60594;940GZZLUGBY;Gunnersbury Underground Station;51.491808;-0.275267;940GZZLUHCH;Hornchurch Underground Station;51.554098;0.219131;15;10
+60595;910GHAKNYNM;Hackney Downs Rail Station;51.548763;-0.060813;940GZZLUKNB;Knightsbridge Underground Station;51.501673;-0.160504;12;6
+60596;940GZZDLBPK;Beckton Park DLR Station;51.508797;0.054942;940GZZDLHEQ;Heron Quays DLR Station;51.503383;-0.021413;17;8
+60597;910GHTCHEND;Hatch End Rail Station;51.609416;-0.368604;940GZZLUSGP;Stonebridge Park Underground Station;51.543965;-0.275891;13;10
+60598;940GZZLUTMP;Temple Underground Station;51.51101;-0.114256;940GZZLUSPU;St. Paul's Underground Station;51.51494;-0.097562;16;9
+60599;940GZZLUGTH;Gants Hill Underground Station;51.57655;0.066195;940GZZLUWIP;Wimbledon Park Underground Station;51.434575;-0.199717;4;10
+60600;940GZZLUEPG;Epping Underground Station;51.693689;0.11378;940GZZDLPRE;Prince Regent DLR Station;51.509267;0.034167;16;6
+60601;940GZZLUMYB;Marylebone Underground Station;51.522327;-0.163204;940GZZLUMPK;Moor Park Underground Station;51.629844;-0.432443;15;11
+60602;940GZZDLABR;Abbey Road DLR Station;51.531931;0.003745;940GZZLUCWP;Chiswick Park Underground Station;51.494632;-0.267972;4;6
+60603;940GZZDLBOW;Bow Church DLR Station;51.527818;-0.020931;940GZZDLDEV;Devons Road DLR Station;51.522672;-0.017608;18;9
+60604;940GZZDLLIM;Limehouse DLR Station;51.512397;-0.039802;910GCMDNRD;Camden Road Rail Station;51.541796;-0.138697;13;10
+60605;940GZZDLISL;Island Gardens DLR Station;51.487814;-0.010132;940GZZLUSKS;South Kensington Underground Station;51.494098;-0.174135;9;7
+60606;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;910GLIVST;London Liverpool Street Rail Station;51.517996;-0.08142;8;8
+60607;940GZZLUUPB;Upminster Bridge Underground Station;51.558565;0.235824;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;13;7
+60608;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;940GZZDLSHS;Stratford High Street DLR Station;51.538201;-0.00107;10;8
+60609;940GZZLUHPK;Holland Park Underground Station;51.507148;-0.205677;940GZZLUNHA;North Harrow Underground Station;51.58487;-0.36241;17;11
+60610;910GBRBYPK;Brondesbury Park Rail Station;51.540705;-0.210125;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;10;10
+60611;940GZZLUHLT;Hainault Underground Station;51.603665;0.093493;940GZZLUBMY;Bermondsey Underground Station;51.497957;-0.063762;5;8
+60612;940GZZLUBST;Baker Street Underground Station;51.522888;-0.157127;940GZZLULBN;Lambeth North Underground Station;51.498812;-0.11231;15;9
+60613;910GACTNCTL;Acton Central Rail Station;51.508721;-0.26297;940GZZLUSGT;Southgate Underground Station;51.632323;-0.127811;13;7
+60614;910GWCROYDN;West Croydon Rail Station;51.378428;-0.102581;940GZZLUBOS;Boston Manor Underground Station;51.495639;-0.324941;4;6
+60615;910GRTHERHI;Rotherhithe Rail Station;51.500821;-0.052042;910GDALS;Dalston Junction Rail Station;51.546121;-0.075131;21;10
+60616;940GZZDLKGV;King George V DLR Station;51.502007;0.062633;910GBROCKLY;Brockley Rail Station;51.464652;-0.03753;14;11
+60617;940GZZLUAMS;Amersham Underground Station;51.674127;-0.607708;910GSKENTON;South Kenton Rail Station;51.570221;-0.308463;4;8
+60618;910GQPRK;Queens Park (London) Rail Station;51.533972;-0.204983;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;13;11
+60619;940GZZDLSIT;Stratford International DLR Station;51.545271;-0.00963;940GZZLUMED;Mile End Underground Station;51.525127;-0.033633;15;7
+60620;910GNWEMBLY;North Wembley Rail Station;51.562602;-0.303984;910GHACKNYW;Hackney Wick Rail Station;51.543416;-0.024912;15;10
+60621;940GZZLUNHA;North Harrow Underground Station;51.58487;-0.36241;940GZZLUNBP;Newbury Park Underground Station;51.575732;0.090015;10;11
+60622;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;910GBROCKLY;Brockley Rail Station;51.464652;-0.03753;17;9
+60623;940GZZDLABR;Abbey Road DLR Station;51.531931;0.003745;940GZZLUMSH;Mansion House Underground Station;51.512122;-0.094004;4;8
+60624;940GZZLUPKR;Park Royal Underground Station;51.527129;-0.284341;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;17;6
+60625;940GZZDLELV;Elverson Road DLR Station;51.469077;-0.016721;910GBHILLPK;Bush Hill Park Rail Station;51.641872;-0.069452;21;11
+60626;940GZZLUSEA;South Ealing Underground Station;51.501008;-0.307425;910GWDGRNPK;Woodgrange Park Rail Station;51.549269;0.044433;7;8
+60627;940GZZLUHR4;Heathrow Terminal 4 Underground Station;51.458527;-0.445762;940GZZLUEAN;East Acton Underground Station;51.516616;-0.247248;5;6
+60628;910GNEWXGTE;New Cross Gate Rail Station;51.475132;-0.040392;940GZZLUTNG;Turnham Green Underground Station;51.495152;-0.254554;18;7
+60629;910GHARLSDN;Harlesden Rail Station;51.536295;-0.257667;910GPENEW;Penge West Rail Station;51.417557;-0.060834;8;8
+60630;940GZZLUTWH;Tower Hill Underground Station;51.509975;-0.07654;910GBTHNLGR;Bethnal Green Rail Station;51.523922;-0.059562;14;9
+60631;910GCRYSTLP;Crystal Palace Rail Station;51.418111;-0.072605;940GZZLUNGW;North Greenwich Underground Station;51.500474;0.004295;17;7
+60632;940GZZLUNDN;Neasden Underground Station;51.553992;-0.249836;940GZZLUWHP;West Hampstead Underground Station;51.546644;-0.191056;12;8
+60633;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;940GZZLUSKW;Stockwell Underground Station;51.472188;-0.122639;6;9
+60634;910GCAMHTH;Cambridge Heath (London) Rail Station;51.531978;-0.057273;940GZZLUFBY;Fulham Broadway Underground Station;51.480084;-0.195419;5;7
+60635;910GWATFDHS;Watford High Street Rail Station;51.652655;-0.391714;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;18;11
+60636;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;940GZZDLMUD;Mudchute DLR Station;51.490707;-0.014731;16;9
+60637;910GDALS;Dalston Junction Rail Station;51.546121;-0.075131;910GCNNB;Canonbury Rail Station;51.548738;-0.092185;16;8
+60638;940GZZLUBKF;Blackfriars Underground Station;51.511586;-0.103654;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;11;8
+60639;910GSTOTNHM;South Tottenham Rail Station;51.580379;-0.072096;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;11;6
+60640;940GZZLUPVL;Perivale Underground Station;51.536723;-0.323447;940GZZLUBMY;Bermondsey Underground Station;51.497957;-0.063762;15;11
+60641;940GZZLUMED;Mile End Underground Station;51.525127;-0.033633;910GSEVNSIS;Seven Sisters Rail Station;51.582274;-0.075264;6;6
+60642;940GZZDLBPK;Beckton Park DLR Station;51.508797;0.054942;940GZZDLBLA;Blackwall DLR Station;51.507995;-0.006961;10;8
+60643;910GHACKNYW;Hackney Wick Rail Station;51.543416;-0.024912;940GZZDLCGT;Canning Town DLR Station;51.514471;0.00772;11;10
+60644;940GZZLUWHP;West Hampstead Underground Station;51.546644;-0.191056;940GZZLUBXN;Brixton Underground Station;51.462621;-0.114884;15;10
+60645;940GZZDLWIQ;West India Quay DLR Station;51.507034;-0.020304;940GZZLUSKT;South Kenton Underground Station;51.570238;-0.308433;14;7
+60646;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;910GSKENTON;South Kenton Rail Station;51.570221;-0.308463;16;10
+60647;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;940GZZLUMPK;Moor Park Underground Station;51.629844;-0.432443;5;10
+60648;940GZZDLBNK;Bank DLR Station;51.513237;-0.088509;940GZZLUESQ;Euston Square Underground Station;51.525609;-0.135825;7;9
+60649;940GZZLUKBY;Kingsbury Underground Station;51.584852;-0.27879;940GZZDLSHS;Stratford High Street DLR Station;51.538201;-0.00107;11;7
+60650;910GTURKYST;Turkey Street Rail Station;51.672637;-0.047209;940GZZDLABR;Abbey Road DLR Station;51.531931;0.003745;19;9
+60651;910GWLTWCEN;Walthamstow Central Rail Station;51.582925;-0.019807;940GZZLUCYD;Chorleywood Underground Station;51.654359;-0.518453;4;10
+60652;910GCRPNDPK;Carpenders Park Rail Station;51.628351;-0.385942;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;7;11
+60653;940GZZLURVP;Ravenscourt Park Underground Station;51.494126;-0.23588;940GZZDLCYP;Cyprus DLR Station;51.508477;0.063934;16;7
+60654;940GZZDLABR;Abbey Road DLR Station;51.531931;0.003745;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;19;7
+60655;940GZZLUWBN;West Brompton Underground Station;51.487272;-0.195597;940GZZLUGPK;Green Park Underground Station;51.506951;-0.142783;14;9
+60656;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;940GZZLUWAF;Watford Underground Station;51.657446;-0.41738;10;8
+60657;940GZZLUPCO;Pimlico Underground Station;51.489101;-0.133757;940GZZLUEAN;East Acton Underground Station;51.516616;-0.247248;13;7
+60658;940GZZLUBNK;Bank Underground Station;51.513424;-0.088948;940GZZLURVP;Ravenscourt Park Underground Station;51.494126;-0.23588;21;8
+60659;940GZZLUVXL;Vauxhall Underground Station;51.485747;-0.1242;940GZZLUEPK;Elm Park Underground Station;51.54978;0.198654;21;6
+60660;940GZZLUVIC;Victoria Underground Station;51.496363;-0.143098;910GPCKHMQD;Queens Road Peckham Rail Station;51.47357;-0.057307;21;7
+60661;910GDENMRKH;Denmark Hill Rail Station;51.468206;-0.089356;940GZZLUWPL;Whitechapel Underground Station;51.519522;-0.059965;13;8
+60662;910GHOXTON;Hoxton Rail Station;51.531517;-0.075676;940GZZLUFLP;Fairlop Underground Station;51.595625;0.091015;6;11
+60663;910GHAGGERS;Haggerston Rail Station;51.538711;-0.075661;940GZZLUEPY;East Putney Underground Station;51.459208;-0.210998;12;7
+60664;910GANERLEY;Anerley Rail Station;51.412155;-0.06588;940GZZLUHGR;Hanger Lane Underground Station;51.530182;-0.292704;11;11
+60665;940GZZLUHWT;Hounslow West Underground Station;51.473473;-0.386533;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;11;9
+60666;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;940GZZDLCUT;Cutty Sark (for Maritime Greenwich) DLR Station;51.481675;-0.010802;15;7
+60667;940GZZLUPCC;Piccadilly Circus Underground Station;51.510055;-0.133794;940GZZLUDGY;Dagenham Heathway Underground Station;51.541644;0.147539;20;9
+60668;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;940GZZLUWSP;Westbourne Park Underground Station;51.521115;-0.201063;17;9
+60669;910GCHESHNT;Cheshunt Rail Station;51.702877;-0.023952;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;6;9
+60670;940GZZLUWRP;West Ruislip Underground Station;51.569686;-0.437875;940GZZLURSM;Ruislip Manor Underground Station;51.5732;-0.412963;4;10
+60671;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;910GCAMHTH;Cambridge Heath (London) Rail Station;51.531978;-0.057273;4;7
+60672;940GZZLUWHP;West Hampstead Underground Station;51.546644;-0.191056;910GCMDNRD;Camden Road Rail Station;51.541796;-0.138697;5;8
+60673;940GZZLUCWL;Chigwell Underground Station;51.617923;0.075051;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;11;11
+60674;940GZZLUCYD;Chorleywood Underground Station;51.654359;-0.518453;910GSIVRST;Silver Street Rail Station;51.614696;-0.067233;19;6
+60675;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;940GZZLUSUT;Sudbury Town Underground Station;51.550821;-0.315746;15;6
+60676;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;16;9
+60677;940GZZLURVP;Ravenscourt Park Underground Station;51.494126;-0.23588;940GZZDLCLA;Crossharbour DLR Station;51.495732;-0.014599;19;11
+60678;940GZZLUBWT;Bayswater Underground Station;51.512289;-0.187935;940GZZLUBKH;Buckhurst Hill Underground Station;51.626612;0.046767;14;6
+60679;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;910GCROUCHH;Crouch Hill Rail Station;51.571308;-0.117144;4;9
+60680;940GZZLURKW;Rickmansworth Underground Station;51.640207;-0.473693;910GDALS;Dalston Junction Rail Station;51.546121;-0.075131;11;11
+60681;940GZZLUBWR;Bow Road Underground Station;51.526944;-0.025121;940GZZLUESQ;Euston Square Underground Station;51.525609;-0.135825;9;9
+60682;940GZZLULRD;Latimer Road Underground Station;51.513394;-0.217797;940GZZDLLIM;Limehouse DLR Station;51.512397;-0.039802;9;8
+60683;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;940GZZLUVXL;Vauxhall Underground Station;51.485747;-0.1242;21;7
+60684;940GZZLUBLR;Blackhorse Road Underground Station;51.586925;-0.041143;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;14;8
+60685;910GHARLSDN;Harlesden Rail Station;51.536295;-0.257667;910GSBURY;Southbury Rail Station;51.648713;-0.05243;9;6
+60686;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;910GWLSDJHL;Willesden Junction Rail Station;51.532502;-0.244547;6;6
+60687;940GZZLUMMT;Monument Underground Station;51.510705;-0.085964;910GSACTON;South Acton Rail Station;51.4997;-0.270157;14;10
+60688;940GZZLUBBB;Bromley-by-Bow Underground Station;51.524844;-0.011531;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;19;11
+60689;910GHACKNYC;Hackney Central Rail Station;51.54711;-0.056051;940GZZLULAD;Ladbroke Grove Underground Station;51.517454;-0.210389;11;8
+60690;940GZZLUQWY;Queensway Underground Station;51.510316;-0.187149;940GZZLUWPL;Whitechapel Underground Station;51.519522;-0.059965;16;11
+60691;910GHARLSDN;Harlesden Rail Station;51.536295;-0.257667;940GZZLUTNG;Turnham Green Underground Station;51.495152;-0.254554;4;8
+60692;940GZZLUBKH;Buckhurst Hill Underground Station;51.626612;0.046767;940GZZLUALP;Alperton Underground Station;51.540633;-0.29961;4;7
+60693;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;15;6
+60694;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;910GWCROYDN;West Croydon Rail Station;51.378428;-0.102581;16;11
+60695;940GZZLUSVS;Seven Sisters Underground Station;51.583336;-0.072577;910GWDGRNPK;Woodgrange Park Rail Station;51.549269;0.044433;8;10
+60696;940GZZLUICK;Ickenham Underground Station;51.561989;-0.441991;940GZZLUBKF;Blackfriars Underground Station;51.511586;-0.103654;19;11
+60697;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;940GZZLUSWK;Southwark Underground Station;51.50398;-0.104935;11;6
+60698;940GZZDLEIN;East India DLR Station;51.509364;-0.002319;910GACTNCTL;Acton Central Rail Station;51.508721;-0.26297;7;11
+60699;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;910GKLBRNHR;Kilburn High Road Rail Station;51.537283;-0.192235;14;9
+60700;940GZZLUCYD;Chorleywood Underground Station;51.654359;-0.518453;940GZZLUOXC;Oxford Circus Underground Station;51.515228;-0.141899;7;12
+60701;910GSTNBGPK;Stonebridge Park Rail Station;51.544117;-0.275828;910GRTHERHI;Rotherhithe Rail Station;51.500821;-0.052042;6;9
+60702;940GZZLUWYC;Wembley Central Underground Station;51.55231;-0.296852;910GHOMRTON;Homerton Rail Station;51.547017;-0.042353;10;22
+60703;940GZZLUPYB;Putney Bridge Underground Station;51.468265;-0.208729;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;6;22
+60704;940GZZLUKNB;Knightsbridge Underground Station;51.501673;-0.160504;940GZZLUKBY;Kingsbury Underground Station;51.584852;-0.27879;12;16
+60705;910GKENOLYM;Kensington (Olympia) Rail Station;51.497903;-0.210362;940GZZLUWRR;Warren Street Underground Station;51.524956;-0.138317;9;19
+60706;940GZZLUTPN;Turnpike Lane Underground Station;51.590279;-0.102947;940GZZLUPVL;Perivale Underground Station;51.536723;-0.323447;14;22
+60707;940GZZLUPKR;Park Royal Underground Station;51.527129;-0.284341;940GZZLUGBY;Gunnersbury Underground Station;51.491808;-0.275267;14;19
+60708;910GCROUCHH;Crouch Hill Rail Station;51.571308;-0.117144;940GZZLULRD;Latimer Road Underground Station;51.513394;-0.217797;13;21
+60709;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;910GKEWGRDN;Kew Gardens Rail Station;51.477077;-0.285054;7;20
+60710;940GZZLUKSX;King's Cross St. Pancras Underground Station;51.530668;-0.12319;910GENFLDTN;Enfield Town Rail Station;51.652034;-0.079321;11;14
+60711;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;16;20
+60712;910GHRGYGL;Harringay Green Lanes Rail Station;51.577189;-0.098138;940GZZLUWHW;West Harrow Underground Station;51.579717;-0.353401;17;22
+60713;940GZZLUGPK;Green Park Underground Station;51.506951;-0.142783;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;11;14
+60714;910GRTHERHI;Rotherhithe Rail Station;51.500821;-0.052042;940GZZLUSSQ;Sloane Square Underground Station;51.492274;-0.156374;12;22
+60715;940GZZLURVP;Ravenscourt Park Underground Station;51.494126;-0.23588;940GZZLUPCO;Pimlico Underground Station;51.489101;-0.133757;7;19
+60716;910GBLCHSRD;Blackhorse Road Rail Station;51.586612;-0.041228;940GZZLUSWC;Swiss Cottage Underground Station;51.543687;-0.174891;8;15
+60717;940GZZLUUXB;Uxbridge Underground Station;51.546563;-0.47794;940GZZLUSGP;Stonebridge Park Underground Station;51.543965;-0.275891;13;19
+60718;940GZZLUDGY;Dagenham Heathway Underground Station;51.541644;0.147539;910GHMPSTDH;Hampstead Heath Rail Station;51.555216;-0.165702;17;20
+60719;940GZZDLRAL;Royal Albert DLR Station;51.508361;0.045944;940GZZDLTWG;Tower Gateway DLR Station;51.510621;-0.074813;11;18
+60720;940GZZDLPOP;Poplar DLR Station;51.507749;-0.017377;910GSTJMSST;St James Street (London) Rail Station;51.580987;-0.032911;13;21
+60721;940GZZLUEPK;Elm Park Underground Station;51.54978;0.198654;940GZZDLPDK;Pontoon Dock DLR Station;51.502216;0.032124;10;21
+60722;940GZZLUSGT;Southgate Underground Station;51.632323;-0.127811;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;9;17
+60723;940GZZDLCYP;Cyprus DLR Station;51.508477;0.063934;940GZZDLBLA;Blackwall DLR Station;51.507995;-0.006961;12;17
+60724;940GZZLUEHM;East Ham Underground Station;51.538953;0.051195;940GZZLUSNB;Snaresbrook Underground Station;51.580684;0.021449;11;21
+60725;910GWLSDJHL;Willesden Junction Rail Station;51.532502;-0.244547;940GZZLUCGN;Covent Garden Underground Station;51.513098;-0.124431;6;18
+60726;940GZZLUNHG;Notting Hill Gate Underground Station;51.509132;-0.196102;940GZZLUADE;Aldgate East Underground Station;51.515042;-0.072378;7;14
+60727;940GZZLUEPY;East Putney Underground Station;51.459208;-0.210998;940GZZLUSFB;Stamford Brook Underground Station;51.494921;-0.245703;18;22
+60728;940GZZLUESQ;Euston Square Underground Station;51.525609;-0.135825;940GZZLUCHL;Chancery Lane Underground Station;51.518251;-0.111578;16;20
+60729;910GWCROYDN;West Croydon Rail Station;51.378428;-0.102581;940GZZLUDGY;Dagenham Heathway Underground Station;51.541644;0.147539;13;20
+60730;910GSTKNWNG;Stoke Newington Rail Station;51.565239;-0.072881;910GHACKNYC;Hackney Central Rail Station;51.54711;-0.056051;18;22
+60731;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;940GZZLUNFD;Northfields Underground Station;51.499324;-0.31472;7;16
+60732;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;940GZZLUGGH;Grange Hill Underground Station;51.613385;0.092077;7;11
+60733;910GWNDSWRD;Wandsworth Road Rail Station;51.47022;-0.138516;940GZZDLLDP;Langdon Park DLR Station;51.515176;-0.014143;10;13
+60734;910GWMBY;Wembley Central Rail Station;51.552331;-0.296433;910GLONFLDS;London Fields Rail Station;51.541158;-0.057747;8;19
+60735;940GZZLUHOH;Harrow-on-the-Hill Underground Station;51.579202;-0.337226;940GZZLUSFS;Southfields Underground Station;51.445076;-0.2066;15;21
+60736;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;940GZZLUSKW;Stockwell Underground Station;51.472188;-0.122639;17;21
+60737;940GZZDLBNK;Bank DLR Station;51.513237;-0.088509;940GZZLUHOH;Harrow-on-the-Hill Underground Station;51.579202;-0.337226;7;17
+60738;940GZZLUPRD;Preston Road Underground Station;51.571979;-0.295107;940GZZLUDGE;Dagenham East Underground Station;51.544101;0.166029;8;11
+60739;940GZZLURYO;Royal Oak Underground Station;51.519118;-0.188745;940GZZLUWLA;Wood Lane Underground Station;51.509674;-0.224528;14;21
+60740;940GZZLUWCY;White City Underground Station;51.511964;-0.224295;940GZZDLBOW;Bow Church DLR Station;51.527818;-0.020931;10;16
+60741;940GZZLULVT;Liverpool Street Underground Station;51.517377;-0.083176;940GZZLUMPK;Moor Park Underground Station;51.629844;-0.432443;18;21
+60742;910GTHBLDSG;Theobalds Grove Rail Station;51.692457;-0.034824;910GFORESTH;Forest Hill Rail Station;51.439282;-0.053151;7;10
+60743;940GZZLUBKH;Buckhurst Hill Underground Station;51.626612;0.046767;910GBROCKLY;Brockley Rail Station;51.464652;-0.03753;12;16
+60744;940GZZDLRAL;Royal Albert DLR Station;51.508361;0.045944;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;7;10
+60745;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;910GCNNB;Canonbury Rail Station;51.548738;-0.092185;16;20
+60746;910GLONFLDS;London Fields Rail Station;51.541158;-0.057747;940GZZLUBOS;Boston Manor Underground Station;51.495639;-0.324941;16;19
+60747;940GZZDLDEP;Deptford Bridge DLR Station;51.474218;-0.022431;940GZZLURGP;Regent's Park Underground Station;51.523349;-0.146441;12;21
+60748;940GZZLUBWT;Bayswater Underground Station;51.512289;-0.187935;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;6;22
+60749;910GHMPSTDH;Hampstead Heath Rail Station;51.555216;-0.165702;910GBARKING;Barking Rail Station;51.5395;0.080913;6;16
+60750;940GZZLUWHW;West Harrow Underground Station;51.579717;-0.353401;940GZZLUNBP;Newbury Park Underground Station;51.575732;0.090015;6;14
+60751;910GSKENTON;South Kenton Rail Station;51.570221;-0.308463;940GZZLUHCH;Hornchurch Underground Station;51.554098;0.219131;15;21
+60752;910GWBRMPTN;West Brompton Rail Station;51.487065;-0.19559;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;8;22
+60753;910GPCKHMQD;Queens Road Peckham Rail Station;51.47357;-0.057307;910GSBURY;Southbury Rail Station;51.648713;-0.05243;9;20
+60754;940GZZLUGHK;Goldhawk Road Underground Station;51.502009;-0.226714;910GWDGRNPK;Woodgrange Park Rail Station;51.549269;0.044433;9;21
+60755;940GZZLUWBN;West Brompton Underground Station;51.487272;-0.195597;940GZZLUUPY;Upney Underground Station;51.538376;0.101541;15;22
+60756;940GZZLUSNB;Snaresbrook Underground Station;51.580684;0.021449;940GZZLUPNR;Pinner Underground Station;51.5929;-0.381164;10;20
+60757;910GPENEW;Penge West Rail Station;51.417557;-0.060834;910GKEWGRDN;Kew Gardens Rail Station;51.477077;-0.285054;7;10
+60758;940GZZLUBBN;Barbican Underground Station;51.52028;-0.097988;940GZZLUCSM;Chesham Underground Station;51.70521;-0.611241;11;15
+60759;940GZZLULNB;London Bridge Underground Station;51.505725;-0.088867;940GZZLUQPS;Queen's Park Underground Station;51.534163;-0.204571;13;17
+60760;910GBRUCGRV;Bruce Grove Rail Station;51.593966;-0.069861;940GZZLUBXN;Brixton Underground Station;51.462621;-0.114884;10;22
+60761;940GZZLUWBN;West Brompton Underground Station;51.487272;-0.195597;910GBUSHEY;Bushey Rail Station;51.645582;-0.384752;10;18
+60762;940GZZLUCPK;Canons Park Underground Station;51.6077;-0.294693;940GZZLUBEC;Becontree Underground Station;51.540336;0.127028;17;20
+60763;940GZZLUWWL;Walthamstow Central Underground Station;51.582971;-0.019877;940GZZLUERB;Edgware Road (Bakerloo) Underground Station;51.520304;-0.170147;17;20
+60764;940GZZLUWAF;Watford Underground Station;51.657446;-0.41738;940GZZLUHCH;Hornchurch Underground Station;51.554098;0.219131;7;22
+60765;940GZZDLSIT;Stratford International DLR Station;51.545271;-0.00963;940GZZLUDGE;Dagenham East Underground Station;51.544101;0.166029;9;22
+60766;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;940GZZLUOSY;Osterley Underground Station;51.481278;-0.352226;6;20
+60767;940GZZLUMSH;Mansion House Underground Station;51.512122;-0.094004;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;6;10
+60768;940GZZLUGHK;Goldhawk Road Underground Station;51.502009;-0.226714;940GZZDLCUT;Cutty Sark (for Maritime Greenwich) DLR Station;51.481675;-0.010802;9;13
+60769;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;910GSTOTNHM;South Tottenham Rail Station;51.580379;-0.072096;12;16
+60770;940GZZLUESQ;Euston Square Underground Station;51.525609;-0.135825;910GBHILLPK;Bush Hill Park Rail Station;51.641872;-0.069452;8;21
+60771;910GSHMPSTD;South Hampstead Rail Station;51.541438;-0.178875;940GZZDLRVC;Royal Victoria DLR Station;51.50934;0.018505;7;19
+60772;940GZZLUPSG;Parsons Green Underground Station;51.475281;-0.201168;940GZZLUSUH;Sudbury Hill Underground Station;51.556952;-0.336437;10;20
+60773;910GHAKNYNM;Hackney Downs Rail Station;51.548763;-0.060813;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;7;13
+60774;940GZZLUWJN;Willesden Junction Underground Station;51.532264;-0.244282;940GZZLUGTR;Gloucester Road Underground Station;51.494321;-0.182655;10;19
+60775;940GZZLUHSD;Hammersmith (Dist&Picc Line) Underground Station;51.492304;-0.223619;940GZZLUSRP;South Ruislip Underground Station;51.556859;-0.398904;7;12
+60776;940GZZLUEBY;Ealing Broadway Underground Station;51.515022;-0.301457;910GCLPHHS;Clapham High Street Rail Station;51.465394;-0.132784;15;18
+60777;910GSTJMSST;St James Street (London) Rail Station;51.580987;-0.032911;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;15;18
+60778;910GCNDAW;Canada Water Rail Station;51.497994;-0.049713;910GWCHAPEL;Whitechapel Rail Station;51.519474;-0.059751;6;9
+60779;940GZZLUNHA;North Harrow Underground Station;51.58487;-0.36241;910GWATFDHS;Watford High Street Rail Station;51.652655;-0.391714;7;11
+60780;940GZZLUSUH;Sudbury Hill Underground Station;51.556952;-0.336437;910GCNNB;Canonbury Rail Station;51.548738;-0.092185;14;18
+60781;940GZZLUCHX;Charing Cross Underground Station;51.507415;-0.127273;940GZZLUCPK;Canons Park Underground Station;51.6077;-0.294693;11;21
+60782;910GBUSHEY;Bushey Rail Station;51.645582;-0.384752;940GZZLUSTD;Stratford Underground Station;51.541811;-0.00345;7;15
+60783;940GZZLUWJN;Willesden Junction Underground Station;51.532264;-0.244282;940GZZLUECT;Earl's Court Underground Station;51.492067;-0.193376;10;20
+60784;940GZZLUSRP;South Ruislip Underground Station;51.556859;-0.398904;940GZZLUUXB;Uxbridge Underground Station;51.546563;-0.47794;6;20
+60785;940GZZLULGN;Loughton Underground Station;51.641451;0.055486;940GZZLUEPY;East Putney Underground Station;51.459208;-0.210998;14;18
+60786;940GZZLUCSM;Chesham Underground Station;51.70521;-0.611241;910GWNSTDPK;Wanstead Park Rail Station;51.551698;0.026222;15;19
+60787;940GZZDLALL;All Saints DLR Station;51.511004;-0.013128;940GZZLUESQ;Euston Square Underground Station;51.525609;-0.135825;7;20
+60788;910GWCROYDN;West Croydon Rail Station;51.378428;-0.102581;940GZZLUPCO;Pimlico Underground Station;51.489101;-0.133757;9;17
+60789;940GZZLUNHT;Northolt Underground Station;51.548242;-0.368702;940GZZLUGFD;Greenford Underground Station;51.54243;-0.346052;14;20
+60790;940GZZDLCYP;Cyprus DLR Station;51.508477;0.063934;910GTURKYST;Turkey Street Rail Station;51.672637;-0.047209;16;19
+60791;940GZZLULBN;Lambeth North Underground Station;51.498812;-0.11231;910GWCROYDN;West Croydon Rail Station;51.378428;-0.102581;7;10
+60792;940GZZLUBWR;Bow Road Underground Station;51.526944;-0.025121;940GZZLURBG;Redbridge Underground Station;51.576249;0.045369;15;18
+60793;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;12;17
+60794;910GUPMNSTR;Upminster Rail Station;51.559023;0.250895;910GHACKNYC;Hackney Central Rail Station;51.54711;-0.056051;6;12
+60795;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;940GZZLUWSM;Westminster Underground Station;51.501324;-0.124857;8;19
+60796;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;910GHOMRTON;Homerton Rail Station;51.547017;-0.042353;7;10
+60797;940GZZLUSNB;Snaresbrook Underground Station;51.580684;0.021449;940GZZLUHRC;Heathrow Terminals 1-2-3 Underground Station ;51.471239;-0.452256;9;12
+60798;940GZZLUBBN;Barbican Underground Station;51.52028;-0.097988;910GWNSTDPK;Wanstead Park Rail Station;51.551698;0.026222;6;22
+60799;910GSTKNWNG;Stoke Newington Rail Station;51.565239;-0.072881;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;7;11
+60800;940GZZLUHBN;Holborn Underground Station;51.517585;-0.12047;940GZZLUPKR;Park Royal Underground Station;51.527129;-0.284341;8;22
+60801;940GZZLUHSN;Harlesden Underground Station;51.536316;-0.257882;940GZZLUGBY;Gunnersbury Underground Station;51.491808;-0.275267;15;21
+60802;910GSBURY;Southbury Rail Station;51.648713;-0.05243;940GZZLUQWY;Queensway Underground Station;51.510316;-0.187149;13;20
+60803;940GZZDLWIQ;West India Quay DLR Station;51.507034;-0.020304;910GSHMPSTD;South Hampstead Rail Station;51.541438;-0.178875;9;22
+60804;940GZZLULGT;Lancaster Gate Underground Station;51.511727;-0.175491;940GZZLUHRC;Heathrow Terminals 1-2-3 Underground Station ;51.471239;-0.452256;6;13
+60805;910GDENMRKH;Denmark Hill Rail Station;51.468206;-0.089356;910GSBURY;Southbury Rail Station;51.648713;-0.05243;10;15
+60806;940GZZDLTWG;Tower Gateway DLR Station;51.510621;-0.074813;940GZZDLBPK;Beckton Park DLR Station;51.508797;0.054942;8;14
+60807;940GZZLUGTH;Gants Hill Underground Station;51.57655;0.066195;940GZZLUNDN;Neasden Underground Station;51.553992;-0.249836;7;21
+60808;940GZZDLBPK;Beckton Park DLR Station;51.508797;0.054942;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;10;18
+60809;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;11;14
+60810;940GZZDLHEQ;Heron Quays DLR Station;51.503383;-0.021413;910GEMRSPKH;Emerson Park Rail Station;51.568648;0.220128;6;17
+60811;940GZZLUUPY;Upney Underground Station;51.538376;0.101541;940GZZLUDOH;Dollis Hill Underground Station;51.551961;-0.239066;11;19
+60812;940GZZLUTCR;Tottenham Court Road Underground Station;51.516431;-0.130406;910GROMFORD;Romford Rail Station;51.574835;0.183251;11;14
+60813;940GZZLUBND;Bond Street Underground Station;51.514309;-0.149719;940GZZDLLDP;Langdon Park DLR Station;51.515176;-0.014143;6;12
+60814;940GZZLUGPK;Green Park Underground Station;51.506951;-0.142783;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;8;21
+60815;940GZZLUALP;Alperton Underground Station;51.540633;-0.29961;940GZZLUBEC;Becontree Underground Station;51.540336;0.127028;11;22
+60816;910GKNTSHTW;Kentish Town West Rail Station;51.546553;-0.146651;910GBLCHSRD;Blackhorse Road Rail Station;51.586612;-0.041228;7;17
+60817;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;940GZZDLBOW;Bow Church DLR Station;51.527818;-0.020931;11;22
+60818;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;940GZZLUMYB;Marylebone Underground Station;51.522327;-0.163204;17;20
+60819;940GZZLUEBY;Ealing Broadway Underground Station;51.515022;-0.301457;940GZZLUNHT;Northolt Underground Station;51.548242;-0.368702;14;17
+60820;940GZZLUNHT;Northolt Underground Station;51.548242;-0.368702;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;6;12
+60821;940GZZLUSTD;Stratford Underground Station;51.541811;-0.00345;910GSHRDHST;Shoreditch High Street Rail Station;51.52338;-0.07524;9;13
+60822;940GZZLUUPY;Upney Underground Station;51.538376;0.101541;940GZZLUCYD;Chorleywood Underground Station;51.654359;-0.518453;10;13
+60823;940GZZLUTCR;Tottenham Court Road Underground Station;51.516431;-0.130406;940GZZDLSIT;Stratford International DLR Station;51.545271;-0.00963;7;19
+60824;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;940GZZLUBBN;Barbican Underground Station;51.52028;-0.097988;15;18
+60825;910GNEWXGTE;New Cross Gate Rail Station;51.475132;-0.040392;940GZZLUHPC;Hyde Park Corner Underground Station;51.503039;-0.152438;7;14
+60826;910GRTHERHI;Rotherhithe Rail Station;51.500821;-0.052042;940GZZLUGFD;Greenford Underground Station;51.54243;-0.346052;18;22
+60827;910GBLCHSRD;Blackhorse Road Rail Station;51.586612;-0.041228;910GSHPDSB;Shepherds Bush Rail Station;51.505289;-0.217652;7;10
+60828;910GHEDSTNL;Headstone Lane Rail Station;51.602648;-0.357222;940GZZLUGGH;Grange Hill Underground Station;51.613385;0.092077;8;12
+60829;940GZZLUACT;Acton Town Underground Station;51.503062;-0.280462;940GZZLUBSC;Barons Court Underground Station;51.490315;-0.213425;7;17
+60830;940GZZLURYO;Royal Oak Underground Station;51.519118;-0.188745;910GHGHMSPK;Highams Park Rail Station;51.608357;-0.000214;11;19
+60831;940GZZLUPSG;Parsons Green Underground Station;51.475281;-0.201168;910GSTKNWNG;Stoke Newington Rail Station;51.565239;-0.072881;9;20
+60832;940GZZDLSHS;Stratford High Street DLR Station;51.538201;-0.00107;940GZZLUSKS;South Kensington Underground Station;51.494098;-0.174135;16;19
+60833;910GSTJMSST;St James Street (London) Rail Station;51.580987;-0.032911;940GZZLUMMT;Monument Underground Station;51.510705;-0.085964;7;16
+60834;910GWCHAPEL;Whitechapel Rail Station;51.519474;-0.059751;910GKNTSHTW;Kentish Town West Rail Station;51.546553;-0.146651;11;21
+60835;940GZZLUAMS;Amersham Underground Station;51.674127;-0.607708;910GSKENTON;South Kenton Rail Station;51.570221;-0.308463;13;19
+60836;940GZZLUSVS;Seven Sisters Underground Station;51.583336;-0.072577;910GSEVNSIS;Seven Sisters Rail Station;51.582274;-0.075264;9;22
+60837;940GZZLUSKW;Stockwell Underground Station;51.472188;-0.122639;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;8;15
+60838;940GZZLUHSD;Hammersmith (Dist&Picc Line) Underground Station;51.492304;-0.223619;940GZZDLELV;Elverson Road DLR Station;51.469077;-0.016721;12;16
+60839;940GZZLUWAF;Watford Underground Station;51.657446;-0.41738;940GZZLUWCY;White City Underground Station;51.511964;-0.224295;10;16
+60840;940GZZLUWYC;Wembley Central Underground Station;51.55231;-0.296852;940GZZDLSIT;Stratford International DLR Station;51.545271;-0.00963;7;15
+60841;940GZZLUQBY;Queensbury Underground Station;51.594196;-0.286219;940GZZLUSEA;South Ealing Underground Station;51.501008;-0.307425;6;10
+60842;940GZZLUSGP;Stonebridge Park Underground Station;51.543965;-0.275891;940GZZLUMVL;Maida Vale Underground Station;51.529782;-0.185756;18;22
+60843;940GZZLULGT;Lancaster Gate Underground Station;51.511727;-0.175491;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;11;18
+60844;910GBRUCGRV;Bruce Grove Rail Station;51.593966;-0.069861;940GZZLUCHL;Chancery Lane Underground Station;51.518251;-0.111578;10;18
+60845;910GHAKNYNM;Hackney Downs Rail Station;51.548763;-0.060813;940GZZDLTWG;Tower Gateway DLR Station;51.510621;-0.074813;8;17
+60846;940GZZLUPLW;Plaistow Underground Station;51.531345;0.01746;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;10;13
+60847;940GZZLUMBA;Marble Arch Underground Station;51.513429;-0.15895;940GZZLUDGY;Dagenham Heathway Underground Station;51.541644;0.147539;7;10
+60848;940GZZLUMYB;Marylebone Underground Station;51.522327;-0.163204;910GWDST;Wood Street Rail Station;51.586587;-0.002397;6;21
+60849;940GZZLUOSY;Osterley Underground Station;51.481278;-0.352226;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;11;15
+60850;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;940GZZDLLDP;Langdon Park DLR Station;51.515176;-0.014143;9;15
+60851;940GZZLUSWC;Swiss Cottage Underground Station;51.543687;-0.174891;910GDALS;Dalston Junction Rail Station;51.546121;-0.075131;7;15
+60852;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;940GZZLULYS;Leytonstone Underground Station;51.56833;0.008202;14;20
+60853;940GZZLUMRH;Manor House Underground Station;51.570744;-0.096113;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;14;19
+60854;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;940GZZDLELV;Elverson Road DLR Station;51.469077;-0.016721;8;16
+60855;910GGNRSBRY;Gunnersbury Rail Station;51.491682;-0.275286;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;14;18
+60856;940GZZLUNGW;North Greenwich Underground Station;51.500474;0.004295;940GZZLUNWH;Northwood Hills Underground Station;51.60057;-0.409453;7;20
+60857;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;940GZZLUHWE;Hounslow East Underground Station;51.473217;-0.356476;10;13
+60858;940GZZLUWTA;West Acton Underground Station;51.518006;-0.28098;910GKNTSHTW;Kentish Town West Rail Station;51.546553;-0.146651;15;18
+60859;940GZZDLKGV;King George V DLR Station;51.502007;0.062633;940GZZLUSSQ;Sloane Square Underground Station;51.492274;-0.156374;14;20
+60860;940GZZLUKSX;King's Cross St. Pancras Underground Station;51.530668;-0.12319;940GZZLUWSP;Westbourne Park Underground Station;51.521115;-0.201063;10;13
+60861;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;940GZZLUNEN;North Ealing Underground Station;51.51751;-0.288868;8;13
+60862;910GGOSPLOK;Gospel Oak Rail Station;51.555341;-0.150766;940GZZLUPYB;Putney Bridge Underground Station;51.468265;-0.208729;6;17
+60863;910GACTNCTL;Acton Central Rail Station;51.508721;-0.26297;910GSTKNWNG;Stoke Newington Rail Station;51.565239;-0.072881;11;21
+60864;940GZZLUSBC;Shepherd's Bush (Central) Underground Station;51.504381;-0.218812;940GZZLURMD;Richmond Underground Station;51.463241;-0.301337;7;18
+60865;910GUPMNSTR;Upminster Rail Station;51.559023;0.250895;910GHTCHEND;Hatch End Rail Station;51.609416;-0.368604;6;14
+60866;910GLONFLDS;London Fields Rail Station;51.541158;-0.057747;940GZZLUNGW;North Greenwich Underground Station;51.500474;0.004295;8;19
+60867;940GZZLUPSG;Parsons Green Underground Station;51.475281;-0.201168;940GZZLUTNG;Turnham Green Underground Station;51.495152;-0.254554;6;17
+60868;940GZZLUUPK;Upton Park Underground Station;51.535345;0.035272;910GLYTNSHR;Leytonstone High Road Rail Station;51.56356;0.008425;9;19
+60869;910GCAMHTH;Cambridge Heath (London) Rail Station;51.531978;-0.057273;910GHACKNYC;Hackney Central Rail Station;51.54711;-0.056051;6;16
+60870;940GZZDLKGV;King George V DLR Station;51.502007;0.062633;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;6;21
+60871;940GZZLUTNG;Turnham Green Underground Station;51.495152;-0.254554;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;9;15
+60872;910GTHBLDSG;Theobalds Grove Rail Station;51.692457;-0.034824;940GZZLUPCC;Piccadilly Circus Underground Station;51.510055;-0.133794;7;22
+60873;940GZZLUSWC;Swiss Cottage Underground Station;51.543687;-0.174891;940GZZLUSVS;Seven Sisters Underground Station;51.583336;-0.072577;12;20
+60874;940GZZLUMGT;Moorgate Underground Station;51.51818;-0.088317;910GUPMNSTR;Upminster Rail Station;51.559023;0.250895;6;20
+60875;910GFORESTH;Forest Hill Rail Station;51.439282;-0.053151;940GZZLUHWE;Hounslow East Underground Station;51.473217;-0.356476;8;19
+60876;940GZZLUDGE;Dagenham East Underground Station;51.544101;0.166029;940GZZLUHR5;Heathrow Terminal 5 Underground Station;51.470056;-0.490552;12;20
+60877;940GZZLUMGT;Moorgate Underground Station;51.51818;-0.088317;940GZZDLRAL;Royal Albert DLR Station;51.508361;0.045944;6;12
+60878;940GZZDLPRE;Prince Regent DLR Station;51.509267;0.034167;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;10;17
+60879;940GZZLUEAE;Eastcote Underground Station;51.576504;-0.397376;940GZZLUCYD;Chorleywood Underground Station;51.654359;-0.518453;7;14
+60880;940GZZLULRD;Latimer Road Underground Station;51.513394;-0.217797;940GZZLUBEC;Becontree Underground Station;51.540336;0.127028;11;15
+60881;940GZZLUBWT;Bayswater Underground Station;51.512289;-0.187935;940GZZLUPCC;Piccadilly Circus Underground Station;51.510055;-0.133794;7;10
+60882;940GZZLUBKF;Blackfriars Underground Station;51.511586;-0.103654;940GZZLUUPK;Upton Park Underground Station;51.535345;0.035272;7;17
+60883;940GZZLUSKS;South Kensington Underground Station;51.494098;-0.174135;940GZZLUCAR;Caledonian Road Underground Station;51.548524;-0.118489;15;21
+60884;910GLIVST;London Liverpool Street Rail Station;51.517996;-0.08142;940GZZLUSGT;Southgate Underground Station;51.632323;-0.127811;14;18
+60885;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;940GZZLUWBN;West Brompton Underground Station;51.487272;-0.195597;10;13
+60886;940GZZLUHPK;Holland Park Underground Station;51.507148;-0.205677;940GZZDLWLA;Woolwich Arsenal DLR Station;51.490012;0.069136;12;18
+60887;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;13;22
+60888;940GZZLUGPS;Great Portland Street Underground Station;51.523845;-0.144258;910GENFLDTN;Enfield Town Rail Station;51.652034;-0.079321;7;18
+60889;910GHACKNYW;Hackney Wick Rail Station;51.543416;-0.024912;940GZZLUFPK;Finsbury Park Underground Station;51.564164;-0.106819;6;22
+60890;910GDALS;Dalston Junction Rail Station;51.546121;-0.075131;940GZZLUHSN;Harlesden Underground Station;51.536316;-0.257882;17;21
+60891;940GZZLUHRC;Heathrow Terminals 1-2-3 Underground Station ;51.471239;-0.452256;940GZZLULGN;Loughton Underground Station;51.641451;0.055486;14;19
+60892;940GZZLUEAN;East Acton Underground Station;51.516616;-0.247248;940GZZLUUXB;Uxbridge Underground Station;51.546563;-0.47794;7;22
+60893;910GNEWXGTE;New Cross Gate Rail Station;51.475132;-0.040392;940GZZDLWIQ;West India Quay DLR Station;51.507034;-0.020304;13;21
+60894;910GWCHAPEL;Whitechapel Rail Station;51.519474;-0.059751;910GENFLDTN;Enfield Town Rail Station;51.652034;-0.079321;16;20
+60895;940GZZLUMPK;Moor Park Underground Station;51.629844;-0.432443;910GWLTHQRD;Walthamstow Queens Road Rail Station;51.581509;-0.023838;15;19
+60896;910GSTNBGPK;Stonebridge Park Rail Station;51.544117;-0.275828;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;14;17
+60897;910GWCROYDN;West Croydon Rail Station;51.378428;-0.102581;940GZZLUNWH;Northwood Hills Underground Station;51.60057;-0.409453;15;19
+60898;940GZZLUGPK;Green Park Underground Station;51.506951;-0.142783;910GFORESTH;Forest Hill Rail Station;51.439282;-0.053151;13;17
+60899;910GWLSDJHL;Willesden Junction Rail Station;51.532502;-0.244547;910GFORESTH;Forest Hill Rail Station;51.439282;-0.053151;18;21
+60900;940GZZLUHWY;Holloway Road Underground Station;51.552702;-0.113239;940GZZLUHPK;Holland Park Underground Station;51.507148;-0.205677;13;19
+60901;910GKENOLYM;Kensington (Olympia) Rail Station;51.497903;-0.210362;940GZZLUBDS;Bounds Green Underground Station;51.607042;-0.12423;6;11
+60902;910GLIVST;London Liverpool Street Rail Station;51.517996;-0.08142;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;12;20
+60903;910GSTNBGPK;Stonebridge Park Rail Station;51.544117;-0.275828;940GZZLUNHG;Notting Hill Gate Underground Station;51.509132;-0.196102;9;17
+60904;940GZZLUCSM;Chesham Underground Station;51.70521;-0.611241;940GZZLUTMH;Tottenham Hale Underground Station;51.588115;-0.060234;13;22
+60905;910GRICHMND;Richmond (London) Rail Station;51.463064;-0.301559;910GWAPPING;Wapping Rail Station;51.504392;-0.055925;11;17
+60906;910GSEVNSIS;Seven Sisters Rail Station;51.582274;-0.075264;940GZZLUWRR;Warren Street Underground Station;51.524956;-0.138317;13;22
+60907;940GZZLUKOY;Kensington (Olympia) Underground Station;51.497628;-0.210013;910GHONROPK;Honor Oak Park Rail Station;51.449992;-0.045499;8;21
+60908;940GZZLUWRP;West Ruislip Underground Station;51.569686;-0.437875;940GZZLUCWR;Canada Water Underground Station;51.497949;-0.049715;6;13
+60909;940GZZLUCGN;Covent Garden Underground Station;51.513098;-0.124431;910GUPMNSTR;Upminster Rail Station;51.559023;0.250895;9;12
+60910;940GZZLUHGR;Hanger Lane Underground Station;51.530182;-0.292704;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;6;13
+60911;940GZZLUHOH;Harrow-on-the-Hill Underground Station;51.579202;-0.337226;910GCLAPTON;Clapton Rail Station;51.56165;-0.057018;11;14
+60912;940GZZDLLDP;Langdon Park DLR Station;51.515176;-0.014143;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;7;11
+60913;910GENFLDTN;Enfield Town Rail Station;51.652034;-0.079321;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;14;17
+60914;940GZZLUDGY;Dagenham Heathway Underground Station;51.541644;0.147539;940GZZLUERB;Edgware Road (Bakerloo) Underground Station;51.520304;-0.170147;7;14
+60915;940GZZLUKOY;Kensington (Olympia) Underground Station;51.497628;-0.210013;940GZZLUNKP;Northwick Park Underground Station;51.578488;-0.318057;17;22
+60916;910GWAPPING;Wapping Rail Station;51.504392;-0.055925;940GZZDLRVC;Royal Victoria DLR Station;51.50934;0.018505;11;21
+60917;940GZZLUHWT;Hounslow West Underground Station;51.473473;-0.386533;940GZZLUHWE;Hounslow East Underground Station;51.473217;-0.356476;8;21
+60918;940GZZLUSJP;St. James's Park Underground Station;51.499548;-0.133604;910GBUSHEY;Bushey Rail Station;51.645582;-0.384752;9;13
+60919;910GSHRDHST;Shoreditch High Street Rail Station;51.52338;-0.07524;940GZZLUWLO;Waterloo Underground Station;51.503303;-0.114776;12;17
+60920;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;940GZZLUTMP;Temple Underground Station;51.51101;-0.114256;7;16
+60921;940GZZDLSIT;Stratford International DLR Station;51.545271;-0.00963;940GZZLUACT;Acton Town Underground Station;51.503062;-0.280462;16;21
+60922;910GKENSLG;Kensal Green Rail Station;51.530546;-0.225086;940GZZLUSGP;Stonebridge Park Underground Station;51.543965;-0.275891;6;9
+60923;940GZZLURSQ;Russell Square Underground Station;51.523077;-0.124281;940GZZLURSQ;Russell Square Underground Station;51.523077;-0.124281;10;22
+60924;940GZZLURGP;Regent's Park Underground Station;51.523349;-0.146441;940GZZLUBDS;Bounds Green Underground Station;51.607042;-0.12423;8;18
+60925;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;910GENFLDTN;Enfield Town Rail Station;51.652034;-0.079321;8;16
+60926;940GZZLUEAE;Eastcote Underground Station;51.576504;-0.397376;940GZZLUHWC;Hounslow Central Underground Station;51.471299;-0.366581;10;21
+60927;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;940GZZLUVIC;Victoria Underground Station;51.496363;-0.143098;19;22
+60928;910GQPRK;Queens Park (London) Rail Station;51.533972;-0.204983;940GZZDLSHS;Stratford High Street DLR Station;51.538201;-0.00107;19;22
+60929;910GBARKING;Barking Rail Station;51.5395;0.080913;940GZZLUEPY;East Putney Underground Station;51.459208;-0.210998;9;16
+60930;910GSTJMSST;St James Street (London) Rail Station;51.580987;-0.032911;940GZZDLGAL;Gallions Reach DLR Station;51.508945;0.071565;7;13
+60931;940GZZLUSRP;South Ruislip Underground Station;51.556859;-0.398904;940GZZLUGTH;Gants Hill Underground Station;51.57655;0.066195;6;19
+60932;910GWMBY;Wembley Central Rail Station;51.552331;-0.296433;940GZZDLCAN;Canary Wharf DLR Station;51.504842;-0.02099;14;19
+60933;910GBRBYPK;Brondesbury Park Rail Station;51.540705;-0.210125;940GZZDLBPK;Beckton Park DLR Station;51.508797;0.054942;10;19
+60934;940GZZLUDGY;Dagenham Heathway Underground Station;51.541644;0.147539;910GWATFDHS;Watford High Street Rail Station;51.652655;-0.391714;8;17
+60935;940GZZLUFPK;Finsbury Park Underground Station;51.564164;-0.106819;910GWLTWCEN;Walthamstow Central Rail Station;51.582925;-0.019807;7;21
+60936;940GZZLUCKS;Cockfosters Underground Station;51.651519;-0.149167;910GEUSTON;London Euston Rail Station;51.528141;-0.133919;8;22
+60937;940GZZLUCSM;Chesham Underground Station;51.70521;-0.611241;940GZZLUTWH;Tower Hill Underground Station;51.509975;-0.07654;6;16
+60938;940GZZDLLEW;Lewisham DLR Station;51.464668;-0.012867;910GWNDSWRD;Wandsworth Road Rail Station;51.47022;-0.138516;8;20
+60939;940GZZLUMPK;Moor Park Underground Station;51.629844;-0.432443;940GZZDLCUT;Cutty Sark (for Maritime Greenwich) DLR Station;51.481675;-0.010802;7;18
+60940;940GZZDLISL;Island Gardens DLR Station;51.487814;-0.010132;940GZZLUWJN;Willesden Junction Underground Station;51.532264;-0.244282;8;11
+60941;940GZZLUHBN;Holborn Underground Station;51.517585;-0.12047;940GZZLUWRP;West Ruislip Underground Station;51.569686;-0.437875;15;22
+60942;940GZZLUNHA;North Harrow Underground Station;51.58487;-0.36241;910GFORESTH;Forest Hill Rail Station;51.439282;-0.053151;9;18
+60943;940GZZLUHWT;Hounslow West Underground Station;51.473473;-0.386533;940GZZLURSG;Ruislip Gardens Underground Station;51.560742;-0.410699;6;15
+60944;940GZZLUBWR;Bow Road Underground Station;51.526944;-0.025121;940GZZLUWIG;Willesden Green Underground Station;51.549151;-0.221535;8;18
+60945;910GHOMRTON;Homerton Rail Station;51.547017;-0.042353;910GSHPDSB;Shepherds Bush Rail Station;51.505289;-0.217652;6;13
+60946;940GZZLUGTR;Gloucester Road Underground Station;51.494321;-0.182655;940GZZLUWWL;Walthamstow Central Underground Station;51.582971;-0.019877;7;14
+60947;940GZZLUMVL;Maida Vale Underground Station;51.529782;-0.185756;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;11;14
+60948;940GZZDLPRE;Prince Regent DLR Station;51.509267;0.034167;940GZZLURVY;Roding Valley Underground Station;51.617206;0.043657;11;16
+60949;940GZZLUBNK;Bank Underground Station;51.513424;-0.088948;910GRCTRYRD;Rectory Road Rail Station;51.558508;-0.068261;8;11
+60950;940GZZLUBLG;Bethnal Green Underground Station;51.527227;-0.0555;910GLEYTNMR;Leyton Midland Road Rail Station;51.569731;-0.008042;8;17
+60951;940GZZLUOXC;Oxford Circus Underground Station;51.515228;-0.141899;940GZZLUERC;Edgware Road (Circle Line) Underground Station;51.519863;-0.167829;12;15
+60952;910GBUSHEY;Bushey Rail Station;51.645582;-0.384752;910GWCROYDN;West Croydon Rail Station;51.378428;-0.102581;10;21
+60953;910GHACKNYC;Hackney Central Rail Station;51.54711;-0.056051;910GWNDSWRD;Wandsworth Road Rail Station;51.47022;-0.138516;7;17
+60954;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;940GZZLUTCR;Tottenham Court Road Underground Station;51.516431;-0.130406;9;16
+60955;910GKNTSHTW;Kentish Town West Rail Station;51.546553;-0.146651;940GZZLUSTM;Stanmore Underground Station;51.619838;-0.303267;7;13
+60956;940GZZDLMUD;Mudchute DLR Station;51.490707;-0.014731;940GZZLUHCH;Hornchurch Underground Station;51.554098;0.219131;8;20
+60957;940GZZLUICK;Ickenham Underground Station;51.561989;-0.441991;940GZZDLLCA;London City Airport DLR Station;51.503419;0.048749;17;20
+60958;940GZZLUCPK;Canons Park Underground Station;51.6077;-0.294693;940GZZLULVT;Liverpool Street Underground Station;51.517377;-0.083176;8;19
+60959;940GZZLUWJN;Willesden Junction Underground Station;51.532264;-0.244282;910GHMPSTDH;Hampstead Heath Rail Station;51.555216;-0.165702;10;17
+60960;910GSHMPSTD;South Hampstead Rail Station;51.541438;-0.178875;940GZZLUWLO;Waterloo Underground Station;51.503303;-0.114776;14;22
+60961;940GZZLUCGT;Canning Town Underground Station;51.513588;0.00833;940GZZLULYS;Leytonstone Underground Station;51.56833;0.008202;7;15
+60962;910GRTHERHI;Rotherhithe Rail Station;51.500821;-0.052042;940GZZLUDBN;Debden Underground Station;51.645394;0.083793;12;18
+60963;940GZZLUBST;Baker Street Underground Station;51.522888;-0.157127;910GQPRK;Queens Park (London) Rail Station;51.533972;-0.204983;10;14
+60964;910GHARLSDN;Harlesden Rail Station;51.536295;-0.257667;940GZZLUFYR;Finchley Road Underground Station;51.54683;-0.179842;6;12
+60965;910GKNTSHTW;Kentish Town West Rail Station;51.546553;-0.146651;940GZZLUCPK;Canons Park Underground Station;51.6077;-0.294693;7;14
+60966;940GZZDLPRE;Prince Regent DLR Station;51.509267;0.034167;910GTURKYST;Turkey Street Rail Station;51.672637;-0.047209;10;22
+60967;940GZZDLPDK;Pontoon Dock DLR Station;51.502216;0.032124;940GZZLUGPS;Great Portland Street Underground Station;51.523845;-0.144258;6;17
+60968;910GEMRSPKH;Emerson Park Rail Station;51.568648;0.220128;940GZZDLWSV;West Silvertown DLR Station;51.502841;0.022469;9;22
+60969;910GSTMFDHL;Stamford Hill Rail Station;51.574474;-0.076676;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;15;19
+60970;940GZZLUMGT;Moorgate Underground Station;51.51818;-0.088317;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;7;14
+60971;940GZZLUOAK;Oakwood Underground Station;51.647734;-0.132177;940GZZDLALL;All Saints DLR Station;51.511004;-0.013128;13;20
+60972;910GKNTSHTW;Kentish Town West Rail Station;51.546553;-0.146651;940GZZLUWPL;Whitechapel Underground Station;51.519522;-0.059965;7;20
+60973;940GZZLUBKH;Buckhurst Hill Underground Station;51.626612;0.046767;940GZZLUPVL;Perivale Underground Station;51.536723;-0.323447;7;19
+60974;940GZZDLLIM;Limehouse DLR Station;51.512397;-0.039802;940GZZLUKWG;Kew Gardens Underground Station;51.477062;-0.285242;10;14
+60975;910GCLPHHS;Clapham High Street Rail Station;51.465394;-0.132784;910GNWEMBLY;North Wembley Rail Station;51.562602;-0.303984;12;15
+60976;910GWHHRTLA;White Hart Lane Rail Station;51.605044;-0.070907;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;17;22
+60977;940GZZDLRAL;Royal Albert DLR Station;51.508361;0.045944;940GZZLUSGN;Stepney Green Underground Station;51.521863;-0.046589;14;19
+60978;910GHACKNYW;Hackney Wick Rail Station;51.543416;-0.024912;910GUPRHLWY;Upper Holloway Rail Station;51.563637;-0.129508;7;18
+60979;940GZZLULAD;Ladbroke Grove Underground Station;51.517454;-0.210389;910GBRBYPK;Brondesbury Park Rail Station;51.540705;-0.210125;13;16
+60980;940GZZLUWIP;Wimbledon Park Underground Station;51.434575;-0.199717;940GZZLUMED;Mile End Underground Station;51.525127;-0.033633;10;14
+60981;940GZZLUFCN;Farringdon Underground Station;51.520257;-0.104908;940GZZLUMED;Mile End Underground Station;51.525127;-0.033633;7;13
+60982;910GWDST;Wood Street Rail Station;51.586587;-0.002397;940GZZLUWYC;Wembley Central Underground Station;51.55231;-0.296852;6;16
+60983;940GZZLUWHW;West Harrow Underground Station;51.579717;-0.353401;940GZZLUHWY;Holloway Road Underground Station;51.552702;-0.113239;16;19
+60984;940GZZLUWKA;Warwick Avenue Underground Station;51.523268;-0.18378;940GZZDLCUT;Cutty Sark (for Maritime Greenwich) DLR Station;51.481675;-0.010802;11;21
+60985;910GCLAPTON;Clapton Rail Station;51.56165;-0.057018;910GEDMNGRN;Edmonton Green Rail Station;51.624936;-0.061106;7;17
+60986;910GBRUCGRV;Bruce Grove Rail Station;51.593966;-0.069861;940GZZLUAMS;Amersham Underground Station;51.674127;-0.607708;8;20
+60987;940GZZLUBMY;Bermondsey Underground Station;51.497957;-0.063762;910GWCHAPEL;Whitechapel Rail Station;51.519474;-0.059751;7;22
+60988;940GZZLUHSN;Harlesden Underground Station;51.536316;-0.257882;940GZZLUCXY;Croxley Underground Station;51.647044;-0.441708;12;21
+60989;940GZZLUWSD;Wanstead Underground Station;51.575507;0.028537;940GZZLUBBB;Bromley-by-Bow Underground Station;51.524844;-0.011531;12;21
+60990;940GZZLUSWF;South Woodford Underground Station;51.591913;0.027347;940GZZLURSQ;Russell Square Underground Station;51.523077;-0.124281;8;21
+60991;940GZZLURYL;Rayners Lane Underground Station;51.575154;-0.37113;940GZZLUDOH;Dollis Hill Underground Station;51.551961;-0.239066;13;17
+60992;940GZZDLDEV;Devons Road DLR Station;51.522672;-0.017608;940GZZLUWLA;Wood Lane Underground Station;51.509674;-0.224528;17;22
+60993;940GZZLUADE;Aldgate East Underground Station;51.515042;-0.072378;910GWNDSWRD;Wandsworth Road Rail Station;51.47022;-0.138516;8;20
+60994;910GTURKYST;Turkey Street Rail Station;51.672637;-0.047209;940GZZLUWIP;Wimbledon Park Underground Station;51.434575;-0.199717;6;17
+60995;940GZZLUWHW;West Harrow Underground Station;51.579717;-0.353401;940GZZLUTHB;Theydon Bois Underground Station;51.671768;0.103097;6;16
+60996;910GPENEW;Penge West Rail Station;51.417557;-0.060834;910GEUSTON;London Euston Rail Station;51.528141;-0.133919;8;12
+60997;940GZZLUKPK;Kilburn Park Underground Station;51.534985;-0.194229;940GZZLUSRP;South Ruislip Underground Station;51.556859;-0.398904;12;15
+60998;940GZZLUQWY;Queensway Underground Station;51.510316;-0.187149;910GBARKING;Barking Rail Station;51.5395;0.080913;8;20
+60999;940GZZLUSFB;Stamford Brook Underground Station;51.494921;-0.245703;940GZZLUGPS;Great Portland Street Underground Station;51.523845;-0.144258;7;16
