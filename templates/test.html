@@ -21,26 +21,72 @@
 
             <div class="row">
                 <div class="col-lg-9">
-                    <div id="map">
+                    <div class="row">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-info active query-button">
+                                <input type="radio" name="options" id="option1" onchange="initMap()" autocomplete="off" checked> Stop points list
+                            </label>
+                            <label class="btn btn-info query-button">
+                                <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Syntactic Query 1 Area
+                            </label>
+                            <label class="btn btn-info query-button">
+                                <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Syntactic Query 2 Areas
+                            </label>
+                            <label class="btn btn-info query-button">
+                                <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Semantic Query 1 Area
+                            </label>
+                            <label class="btn btn-info query-button">
+                                <input type="radio" name="options" id="option3" autocomplete="off"> Semantic Query 2 Areas
+                            </label>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div id="map">
+                        </div>
+                    </div>
+
                 </div>
                 <div class="col-lg-3">
                     <div class="row">
-                        <div class="cointainer">
-                            <div class="btn-group-vertical" data-toggle="buttons">
-                              <label class="btn btn-info active query-button">
-                                <input type="radio" name="options" id="option1" onchange="initMap()" autocomplete="off" checked> Stop points list
-                              </label>
-                              <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Syntactic Query
-                              </label>
-                              <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="option3" autocomplete="off"> Semantic Query
-                              </label>
+                        <div class="cointainer form-wrapper-div">
+                            <div class="input-group">
+                                <label class="query-form-label" for="basic-addon1">From Latitude-Longitude Coordinates:</label>
+                                <div class="input-group query-form">
+                                    <span class="input-group-addon" id="basic-addon1">Lat.</span>
+                                    <input type="text" class="form-control" placeholder="Latitude" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group query-form">
+                                    <span class="input-group-addon" id="basic-addon2">Lon.</span>
+                                    <input type="text" class="form-control" placeholder="Longitude" aria-describedby="basic-addon2">
+                                </div>
                             </div>
+
+                            <div class="input-group">
+                                <label class="query-form-label" for="from-stop"><it>... or </it>from Tube Stop: </label>
+                                <input type="text" class="form-control" id="from-stop" placeholder="Name of tube stop">
+                            </div>
+
+                            <div class="input-group">
+                                <label class="query-form-label" for="basic-addon3">To Latitude-Longitude Coordinates:</label>
+                                <div class="input-group query-form">
+                                    <span class="input-group-addon" id="basic-addon3">Lat.</span>
+                                    <input type="text" class="form-control" placeholder="Latitude" aria-describedby="basic-addon3">
+                                </div>
+                                <div class="input-group query-form">
+                                    <span class="input-group-addon" id="basic-addon4">Lon.</span>
+                                    <input type="text" class="form-control" placeholder="Longitude" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label class="query-form-label" for="to-stop"><it>... or </it>to Tube Stop: </label>
+                                <input type="text" class="form-control" id="to-stop" placeholder="Name of tube stop">
+                            </div>
+
+                            <button type="button" class="btn btn-info query-button">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Send Query
+                            </button>
                         </div>
-                    </div>
-                    <div class="row" id="query-form">
                     </div>
                 </div>
             </div>
@@ -100,26 +146,11 @@
                         infowindow.open(map, this);
                     });
                 {% endfor %}
-
-                var synButton = document.
-                getElementById('option2');
             }
 
-            function addForm() {
-                var formContent = '<button type="button" class="btn btn-primary">Send Query</button>';
-                var queryFormDiv = document.getElementById('query-form');
-                queryFormDiv.innerHTML=formContent;
+            function addAreaOptions() {
 
-            }
-
-            function getSyntacticMap() {
-                    var mapDiv = document.getElementById('map');
-                    var map = new google.maps.Map(mapDiv, {
-                        center: {lat: 51.508226, lng: -0.128404},
-                        zoom: 10
-                    });
-
-                    var bounds = {
+                var bounds = {
                         north: 51.548154,
                         south: 51.648154,
 
@@ -131,7 +162,16 @@
                     editable: true
                     });
                     rectangle.setMap(map);
-                    addForm();
+                addForm();
+            }
+
+            function getSyntacticMap() {
+                    var mapDiv = document.getElementById('map');
+                    var map = new google.maps.Map(mapDiv, {
+                        center: {lat: 51.508226, lng: -0.128404},
+                        zoom: 10
+                    });
+                    addAreaOptions();
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer>

@@ -1,18 +1,37 @@
 
 #map {
-    width: 800px;
+    width: 810px;
     height: 500px;
 }
 
 .query-button {
     margin-top: 30px;
     margin-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 
 .mygrid-wrapper-div {
     border: solid red 5px;
     overflow: scroll;
     height: 180px;
+}
+
+.form-wrapper-div {
+    border: solid black 2px;
+    height: 500px;
+    margin-top: 73px;
+    margin-left: -50px;
+    overflow: scroll;
+    padding: 10px;
+    width: 100%;
+}
+
+.query-form {
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width:100%;
+
+}
+
+.query-form-label {
+    margin-top: 15px;
 }

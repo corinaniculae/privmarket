@@ -58,6 +58,19 @@ def get_test():
                                  stop_points=tfl_manager._stops_set)
 
 
+@app.route('/issue_query1?loc=<location>')
+@app.route('/issue_query1?lat=<lat>&lon=<lon>&timestamp=<timestamp>')
+def issue_query_1():
+    return
+
+
+@app.route('/issue_query2?from=<from_location>&to=<to_location>')
+@app.route('/issue_query2?lat=<lat>&lon=<lon>&timestamp=<timestamp>')
+def issue_query_2():
+    return
+
+
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
