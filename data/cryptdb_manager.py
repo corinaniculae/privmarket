@@ -43,7 +43,7 @@ class CryptDBManager:
                                  user=datalib.CRYPTDB_USER,  # username
                                  passwd=datalib.CRYPTDB_PASSWORD,  # password
                                  port=datalib.CRYPTDB_PORT)         # port no.
-            cursor = self._db.cursor()  # Cursor object for following queries.
+            cursor = db.cursor()  # Cursor object for following queries.
             self._logger.info('Connected to CryptDB.')
 
             # Create the needed database and/or table.
@@ -70,11 +70,15 @@ class CryptDBManager:
     """
     def insert_csv_file(self, csv_file_path):
         try:
-            reader = csv.reader(csv_file_path,
+            csv_file = file(csv_file_path, 'rb')
+            reader = csv.reader(csv_file,
                                 delimiter=';',
                                 quotechar='"',
                                 quoting=csv.QUOTE_MINIMAL)
             for row in reader:
+                if int(row[0]) > 500:
+                    break
+                self._logger.info('Now row: %s' % row)
                 insert_csv_query = (
                     datalib.MYSQL_INSERT_GEN_VALUES % (self._table,
                                                        row[0],
@@ -87,6 +91,8 @@ class CryptDBManager:
 
         except MySQLdb.Error, e:
             self._logger.error("Error %d: %s" % (e.args[0], e.args[1]))
+        
+        csv_file.close()
 
 
 class MySQLError(Exception):
