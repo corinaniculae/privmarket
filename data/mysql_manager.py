@@ -4,11 +4,11 @@
 
 
 import argparse
-import MySQLdb
 import sys
 
-import datalib
+import MySQLdb
 
+import datalib
 
 parser = argparse.ArgumentParser(description='MySQL query handler.')
 parser.add_argument('--db',
@@ -49,9 +49,9 @@ class MySQLManager:
     def insert_CSV_file(self, csv_file_path):
         try:
             # Connect to the MySQL server.
-            db = MySQLdb.connect(host=datalib.MYSQL_HOST,           # host name
-                                 user=datalib.MYSQL_USER,           # username
-                                 passwd=datalib.MYSQL_PASSWORD,     # password
+            db = MySQLdb.connect(host=datalib.MYSQL_HOST,  # host name
+                                 user=datalib.MYSQL_USER,  # username
+                                 passwd=datalib.MYSQL_PASSWORD,  # password
                                  local_infile=datalib.MYSQL_LOCAL_INFILE)
             cur = db.cursor() # Cursor object for executing MySQL queries.
 

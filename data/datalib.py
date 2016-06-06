@@ -1,4 +1,18 @@
+""" Common utilities and constants library.
 
+    Constant list includes:
+        - CSV Files;
+        - CSV Folders;
+        - CSV Misc.;
+        - Map's Topology Related;
+        - TFL API Auth.;
+        - TFL API Misc.;
+        - TFL API Requests;
+        - TFL API Response Entities;
+        - MySQL/CryptDB Auth.;
+        - MySQL/CryptDB Queries;
+        - Logging Misc.;
+"""
 
 import calendar
 import datetime
@@ -6,47 +20,37 @@ import logging
 import random
 
 
-# Data Files.
-WEEKDAY_PATHS_CSV = 'weekday_1.csv'
-WEEKEND_PATHS_CSV = 'weekend_paths_%s.csv'
-CSV_FOLDER = 'data/csv_files/'
-CSV_FOLDER_GENERATED = 'data/csv_files/generated/'
-STOP_POINTS_FILE = 'stop_points.csv'
+# CSV Files.
+WEEKDAY_PATHS_CSV = 'weekday_%d.csv'     # Generic name for weekday paths file.
+WEEKEND_PATHS_CSV = 'weekend_%d_%s.csv'  # Generic name for weekend paths file.
+STOP_POINTS_FILE = 'stop_points.csv'     # List of all used map network stops.
 
+# CSV Folder.
+CSV_FOLDER = 'data/csv_files/'                      # Main CSV folder.
+CSV_GENERATED_FOLDER = 'data/csv_files/generated/'  # Daily CSV data folder.
+CSV_PATH_FOLDER = 'data/csv_files/paths'            # Path CSV data folder.
 
-# TFL API Related Misc.
-#APP_ID = 'ce6bfcc9'
-#APP_KEY = '9b365537a90d6e5427240840cb1bfee8'
-APP_ID = 'ec039efe'
-APP_KEY = 'fb265b0c73f86b5835afcde5d3585c18'
-API_LIMIT = 420
-SLEEP_API = 60
+# CSV Miscellaneous.
+DURATION = 3                    # Minimum time spent travelling in a cycle, pp.
+JOURNEY_TIMES = range(6, 23)    # General commuting times to be simulated.
+MORNING_TIMES = range(6, 12)    # Morning commuting times to be simulated.
+EVENING_TIMES = range(4, 22)    # Evening commuting times to be simulated.
+WEEKEND_TIMES = range(7, 23)    # Weekend travelling times to be simulated.
+TOTAL_WEEKDAY_FILES = 1000      # No. of rows in a path data CSV file.
+# Column names in the path CSV files.
+USER_ID = 0
+FROM_ID = 1
+FROM_NAME = 2
+FROM_LAT = 3
+FROM_LON = 4
+TO_ID = 5
+TO_NAME = 6
+TO_LAT = 7
+TO_LON = 8
+OUTBOUND_TIME = 9
+INBOUND_TIME = 10
 
-
-# TFL API Requests.
-REQUEST_AUTHENTICATION_VARS = 'app_id=' + APP_ID + '&app_key=' + APP_KEY
-REQUEST_LINE_STOP_POINTS = ('https://api.tfl.gov.uk/Line/%s' +
-                            '/StopPoints?' +
-                            REQUEST_AUTHENTICATION_VARS)
-REQUEST_JOURNEY = ('https://api.tfl.gov.uk/Journey/JourneyResults/%s/to/%s?' +
-                   'nationalSearch=False&date=%s&time=%s&timeIs=Departing&' +
-                   'journeyPreference=LeastTime&walkingSpeed=Average&' +
-                   'cyclePreference=None&alternativeCycle=False&' +
-                   'alternativeWalking=True&' +
-                   'applyHtmlMarkup=False&useMultiModalCall=False&' +
-                   'walkingOptimization=False&' +
-                   REQUEST_AUTHENTICATION_VARS)
-REQUEST_TIMETABLE = ('https://api.tfl.gov.uk/Line/%s/Timetable/%s/to/%s?' +
-                     REQUEST_AUTHENTICATION_VARS)
-
-
-# TFL API Response Entities.
-TFL_REQUEST_ERROR = 'Tfl.Api.Presentation.Entities.ApiError'
-TFL_FROM_DISAM = 'fromLocationDisambiguation'
-TFL_TO_DISAM = 'toLocationDisambiguation'
-TFL_VIA_DISAM = 'viaLocationDisambiguation'
-
-# TFL Network.
+# Map's Topology Related.
 TUBE_LINES_IDS = ['bakerloo',
                   'central',
                   'circle',
@@ -58,61 +62,77 @@ TUBE_LINES_IDS = ['bakerloo',
                   'victoria',
                   'waterloo-city',
                   'london-overground',
-                  'dlr']
+                  'dlr']        # Used lines for queries.
 
+# TFL API Authentication.
+APP_ID = 'ec039efe'                           # App ID for TFL API requests.
+APP_KEY = 'fb265b0c73f86b5835afcde5d3585c18'  # App Key for TFL API requests.
+# APP_ID_SPARE = 'ce6bfcc9'                              # Spare App ID.
+# APP_KEY_SPARE = '9b365537a90d6e5427240840cb1bfee8'     # Spare App Key.
 
-# MYSQL variables.
-MYSQL_DB = 'priv_proxy'
-MYSQL_GEN_TABLE = 'generated'
-MYSQL_HOST = 'localhost'
-MYSQL_USER = 'root'
-MYSQL_PASSWORD = 'letmein'
-MYSQL_PORT = 3307
-MYSQL_LOCAL_INFILE = 1
+# TFL API Miscellaneous.
+API_LIMIT = 420                 # Limit of requests per minute.
+SLEEP_API = 60                  # Sleeping time when API LIMIT is achieved.
+TIME_GET_DAILY_PATHS = '5:00'   # Time to query the TFL API for daily data.
 
+# TFL API Requests.
+REQUEST_AUTH_VARS = 'app_id=%s&app_key=%s' % (APP_ID, APP_KEY)
+REQUEST_STOP_POINTS_BY_LINE = ('https://api.tfl.gov.uk/Line/%s/StopPoints?' +
+                               REQUEST_AUTH_VARS)
+REQUEST_JOURNEY = ('https://api.tfl.gov.uk/Journey/JourneyResults/%s/to/%s?' +
+                   'nationalSearch=False&date=%s&time=%s&timeIs=Departing&' +
+                   'journeyPreference=LeastTime&walkingSpeed=Average&' +
+                   'cyclePreference=None&alternativeCycle=False&' +
+                   'alternativeWalking=True&' +
+                   'applyHtmlMarkup=False&useMultiModalCall=False&' +
+                   'walkingOptimization=False&' +
+                   REQUEST_AUTH_VARS)
+REQUEST_TIMETABLE = ('https://api.tfl.gov.uk/Line/%s/Timetable/%s/to/%s?' +
+                     REQUEST_AUTH_VARS)
 
-# MYSQL queries.
+# TFL API Response Entities.
+TFL_REQUEST_ERROR = 'Tfl.Api.Presentation.Entities.ApiError'
+TFL_FROM_DISAMBIGUATION = 'fromLocationDisambiguation'
+TFL_TO_DISAMBIGUATION = 'toLocationDisambiguation'
+TFL_VIA_DISAMBIGUATION = 'viaLocationDisambiguation'
+
+# MYSQL/CryptDB Authentication.
+CRYPTDB_DB = 'priv_coll'            # Database name in CryptDB.
+CRYPTDB_TABLE = 'generated'         # Table name in CryptDB.
+CRYPTDB_HOST = '127.0.0.1'          # Host name in CryptDB.
+CRYPTDB_USER = 'root'               # Root user name in CryptDB.
+CRYPTDB_PASSWORD = 'letmein'        # Root user password in CryptDB.
+CRYPTDB_PORT = 3307                 # Proxy connection port for CryptDB.
+MYSQL_DB = 'priv_proxy'             # Database name in MySQL.
+MYSQL_GEN_TABLE = 'generated'       # Table name in MySQL.
+MYSQL_HOST = 'localhost'            # Host name in MySQL.
+MYSQL_USER = 'root'                 # Root user name in MySQL.
+MYSQL_PASSWORD = 'letmein'          # Root user password in MySQL.
+MYSQL_LOCAL_INFILE = 1              # Param. for running LOAD queries in MySQL.
+
+# MYSQL/CryptDB queries.
 MYSQL_CREATE_DB = 'CREATE DATABASE IF NOT EXISTS %s ;'
 MYSQL_USE_DB = 'USE %s;'
-MYSQL_CREATE_TABLE = """CREATE TABLE IF NOT EXISTS %s (
-                                RecordId VARCHAR(60) NOT NULL,
-                                Timestamp VARCHAR(60) NOT NULL,
-                                Location VARCHAR(60) NOT NULL
-                                );"""
-
 MYSQL_CREATE_GEN_TABLE = """CREATE TABLE IF NOT EXISTS %s (
                                 RecordId VARCHAR(60) NOT NULL,
                                 Latitude VARCHAR(60) NOT NULL,
                                 Longitude VARCHAR(60) NOT NULL,
                                 Timestamp VARCHAR(60) NOT NULL
                                 );"""
-MYSQL_LOAD_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
-                                fields terminated by ';'
-                                lines terminated by '\n'
-                                (RecordId, Timestamp, Location); """
 MYSQL_LOAD_GEN_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
                                 fields terminated by ';'
                                 lines terminated by '\n'
                                 (RecordId, Latitude, Longitude, Timestamp); """
-MYSQL_INSERT_VALUES = """INSERT INTO %s VALUES ('%s', '%s', '%s', '%s');"""
+MYSQL_INSERT_GEN_VALUES = """INSERT INTO %s VALUES ('%s', '%s', '%s', '%s');"""
 
-
-# Daily path generation related.
-TIME_GET_DAILY_PATHS = '5:00'
-DURATION = 3
-JOURNEY_TIMES = range(6, 23)
-MORNING_TIMES = range(6, 12)
-EVENING_TIMES = range(4, 22)
-WEEKEND_TIMES = range(7, 23)
-TOTAL_WEEKDAY_FILES = 1000
-
-
-# Logging related.
+# Logging Miscellaneous.
 LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-LOG_FILE_GEN_TODAY = 'logs/today_daily_paths.log'
+LOG_FILE_CRYPTDB = 'logs/cryptdb_manager.log'
+LOG_FILE_GEN_TODAY = 'logs/today_daily.log'
 LOF_FILE_MYSQL = 'logs/MySQLManager.log'
-LOG_FILE_TFL = 'logs/TFLManager_%d.log'
-LOG_GEN_TODAY = 'today_daily_paths'
+LOG_FILE_TFL = 'logs/TFLManager_%s.log'
+LOG_NAME_CRYPTDB = 'CryptDBManager'
+LOG_NAME_GEN_TODAY = 'today_daily'
 LOG_NAME_MYSQL = 'MySQLManager'
 LOG_NAME_TFL = 'TFLManager'
 
@@ -121,7 +141,7 @@ def is_weekend(path_date=None):
     """Returns true if it's a weekend day; false otherwise.
 
     Arguments:
-        paths_date: If present, datetime object of the date to be queried;
+        path_date: If present, datetime object of the date to be queried;
         otherwise, today's date will be used.
     """
     date_today = path_date if path_date else datetime.date.today()
@@ -180,6 +200,29 @@ def get_formatted_date(travel_date=None):
     if travel_date is None:
         return datetime.date.today().strftime('%Y%m%d')
     return travel_date.strftime('%Y%m%d')
+
+
+def date_range(str_start_date, str_end_date):
+    """ Generate a date range between the specified dates.
+
+    Arguments:
+        str_start_date: String DD-MM-YYYY, representing the start date of
+        the time range.
+        str_end_date: String DD-MM-YYYY, representing the end date of the range.
+
+    Returns:
+        An iterator for the specified date range.
+    """
+    start_tokens = str_start_date.split('-')
+    end_tokens = str_end_date.split('-')
+    start_date = datetime.date(int(start_tokens[2]),
+                               int(start_tokens[1]),
+                               int(start_tokens[0]))
+    end_date = datetime.date(int(end_tokens[2]),
+                             int(end_tokens[1]),
+                             int(end_tokens[0]))
+    for n in range(int ((end_date - start_date).days)):
+        yield start_date + datetime.timedelta(n)
 
 
 def get_datetime_from_string(str_time):

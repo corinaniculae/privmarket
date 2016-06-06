@@ -13,9 +13,8 @@ import logging
 import os
 import sys
 
-import datalib
+from data import datalib
 from tfl_manager import TFLManager
-
 
 parser = argparse.ArgumentParser(
     description='Generate daily paths for the specified time interval.')

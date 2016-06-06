@@ -1,0 +1,18 @@
+
+#map {
+    width: 800px;
+    height: 500px;
+}
+
+.query-button {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.mygrid-wrapper-div {
+    border: solid red 5px;
+    overflow: scroll;
+    height: 180px;
+}

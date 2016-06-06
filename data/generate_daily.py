@@ -5,14 +5,13 @@
 
 import logging
 import os
-import schedule
 import sys
 
+import schedule
 
-import datalib
+from data import datalib
 from mysql_manager import MySQLManager
 from tfl_manager import TFLManager
-
 
 """ Generates today's path points and inserts them into the MySQL table. """
 def daily_paths():

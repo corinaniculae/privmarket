@@ -1,9 +1,10 @@
 # Main routing file for mapping the webapp requests.
 
 import flask
-import gmplot
-import shutil
+import sys
 
+sys.path.append('data/')
+from tfl_manager import TFLManager
 
 app = flask.Flask(__name__)
 
@@ -13,7 +14,7 @@ app = flask.Flask(__name__)
 def index():
     return flask.render_template('index.html')
 
-
+"""
 def _generate_html_map():
     gmap = gmplot.GoogleMapPlotter(51.4700, 0.4543, 10)
     gmap.plot([51.4988], [0.1749], 'cornflowerblue', edge_width=10)
@@ -26,7 +27,7 @@ def _generate_html_map():
 def get_tube_map():
     _generate_html_map()
     return flask.render_template('mymap.html')
-
+"""
 
 @app.route('/ubicomp')
 def get_ubicomp_map():
@@ -47,6 +48,14 @@ def get_query_page():
 def static_proxy(path):
     # send_static_file will guess the correct MIME type
     return app.send_static_file(path)
+
+
+@app.route('/gettest')
+def get_test():
+    user = {'nickname': 'Miguel'}  # fake user
+    tfl_manager = TFLManager()
+    return flask.render_template('test.html',
+                                 stop_points=tfl_manager._stops_set)
 
 
 if __name__ == "__main__":
