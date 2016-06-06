@@ -8,20 +8,14 @@ import datalib
 import mysql_manager
 
 PATHS_FOLDER = 'data/csv_files/paths'
-LOAD_PATH_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
-                  	fields terminated by ';'
-                        lines terminated by '\n'
-                        (RecordId, FromStopId, FromStopName, FromLat, FromLon, \
-                                   ToStopId, ToStopName, ToLat, ToLon,
-                                   FromHour, ToHour);"""
 MYSQL_PATH_DB = 'priv_coll'
 MYSQL_PATH_TABLE = 'paths'
 
 
 def main():
+    logger = datalib.get_new_logger('paths_to_mysql', 'paths_to_mysql.log')
     try:
-        mm = mysql_manager.MySQLManager(MYSQL_PATH_DB, MYSQL_PATH_TABLE)
-        logger = datalib.get_new_logger('paths_to_mysql', 'paths_to_mysql.log')
+        mm = mysql_manager.MySQLManager(MYSQL_PATH_DB, MYSQL_PATH_TABLE, False)
         for fl in PATHS_FOLDER:
             logger.info('Preparing to insert file: %s' % fl)
             source_path = os.path.join(PATHS_FOLDER, fl)

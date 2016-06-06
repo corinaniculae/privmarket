@@ -119,10 +119,37 @@ MYSQL_CREATE_GEN_TABLE = """CREATE TABLE IF NOT EXISTS %s (
                                 Longitude VARCHAR(60) NOT NULL,
                                 Timestamp VARCHAR(60) NOT NULL
                                 );"""
+MYSQL_CREATE_PATHS_TABLE = """CREATE TABLE IF NOT EXISTS %s (
+                                    RecordId VARCHAR(60) NOT NULL, \
+                                    FromStopId varchar(60) not null, \
+                                    FromStopName varchar(120) not null, \
+                                    FromLat varchar(60) not null, \
+                                    FromLon varchar(60) not null, \
+                                    ToStopId varchar(60) not null, \
+                                    ToStopName varchar(120) not null, \
+                                    ToStopLat varchar(60) not null, \
+                                    ToStopLon varchar(60) not null, \
+                                    FromHour int(16) not null, \
+                                    ToHour int(16) not null
+                                    );"""
 MYSQL_LOAD_GEN_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
                                 fields terminated by ';'
                                 lines terminated by '\n'
                                 (RecordId, Latitude, Longitude, Timestamp); """
+MYSQL_LOAD_PATH_FILE = """LOAD DATA LOCAL INFILE '%s' into table %s
+                                fields terminated by ';'
+                                lines terminated by '\n'
+                                (RecordId,
+                                 FromStopId,
+                                 FromStopName,
+                                 FromLat,
+                                 FromLon,
+                                 ToStopId,
+                                 ToStopName,
+                                 ToLat,
+                                 ToLon,
+                                 FromHour,
+                                 ToHour);"""
 MYSQL_INSERT_GEN_VALUES = """INSERT INTO %s VALUES ('%s', '%s', '%s', '%s');"""
 
 # Logging Miscellaneous.
