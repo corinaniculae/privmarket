@@ -1,7 +1,7 @@
 # Main routing file for mapping the webapp requests.
 
 import flask
-import gmplot
+# import gmplot
 import shutil
 import sys
 
@@ -16,14 +16,14 @@ app = flask.Flask(__name__)
 def index():
     return flask.render_template('index.html')
 
-
+"""
 def _generate_html_map():
     gmap = gmplot.GoogleMapPlotter(51.4700, 0.4543, 10)
     gmap.plot([51.4988], [0.1749], 'cornflowerblue', edge_width=10)
     gmap.draw("mymap.html")
     shutil.move("./mymap.html",
                 "./templates/mymap.html")
-
+"""
 
 @app.route('/test')
 def get_tube_map():
