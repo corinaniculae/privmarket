@@ -26,7 +26,7 @@ parser.add_argument('--users',
 parser.add_argument('--start',
                     dest='start_date',
                     type=str,
-                    default='08-05-2016',
+                    default='01-05-2016',
                     help='Start date as DD-MM-YYYY.')
 parser.add_argument('--end',
                     dest='end_date',
