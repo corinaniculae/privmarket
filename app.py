@@ -2,12 +2,16 @@
 
 import flask
 import sys
+#import pysftp
 
 sys.path.append('data/')
 from tfl_manager import TFLManager
+from mysql_manager import MySQLManager
+from cryptdb_manager import CryptDBManager
+
 
 app = flask.Flask(__name__)
-
+tfl_manager = TFLManager()
 
 # Routing the webapp's main URL GET request.
 @app.route('/')
@@ -52,19 +56,37 @@ def static_proxy(path):
 
 @app.route('/gettest')
 def get_test():
-    user = {'nickname': 'Miguel'}  # fake user
-    tfl_manager = TFLManager()
+    #sftp = pysftp.Connection('146.169.46.236', username='cn1612', password='Lala.2116')
+    #test = sftp.pwd
+    #sftp.close()
+    #cryptdb_manager = CryptDBManager()
+    #size = cryptdb_manager.count_size()
     return flask.render_template('test.html',
+                                 stop_points=tfl_manager._stops_set,
+                                 size="")
+
+
+@app.route('/new_test')
+def get_new_test():
+    return flask.render_template('new_test.html')
+
+
+@app.route('/templates/<file_name>')
+def get_template_with_name(file_name):
+    return flask.render_template(file_name + '.html')
+
+
+@app.route('/possible_forms')
+def get_possible_forms():
+    return flask.render_template('possible_forms.html',
                                  stop_points=tfl_manager._stops_set)
 
 
-@app.route('/issue_query1?loc=<location>')
 @app.route('/issue_query1?lat=<lat>&lon=<lon>&timestamp=<timestamp>')
 def issue_query_1():
     return
 
 
-@app.route('/issue_query2?from=<from_location>&to=<to_location>')
 @app.route('/issue_query2?lat=<lat>&lon=<lon>&timestamp=<timestamp>')
 def issue_query_2():
     return

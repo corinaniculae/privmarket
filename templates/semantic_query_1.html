@@ -1,0 +1,49 @@
+<div class="cointainer form-wrapper-div">
+        <h4>Semantic Query 1 Area</h4>
+        <div class="input-group">
+            <label class="query-form-label">TFL stop:</label>
+            <select class="form-control" id="select-one">
+                <option selected disabled>Select one</option>
+                {% for stop in stop_points %}
+                <option value= "{{ stop[0] }}">{{ stop[1] }}</option>
+                {% endfor %}
+            </select><br><br>
+            <label class="query-form-label">Time interval:</label>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon">From:</span>
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon">To:</span>
+                <div class='input-group date' id='datetimepicker2'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-info query-button">
+            <span class="glyphicon glyphicon-star" id="queryButton" aria-hidden="true"></span> Send Query
+        </button>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker1").on("dp.change", function (e) {
+            $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker2").on("dp.change", function (e) {
+            $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+ </script>

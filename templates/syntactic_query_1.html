@@ -1,0 +1,53 @@
+<div class="cointainer form-wrapper-div">
+        <h4>Syntactic Query 1 Area</h4>
+        <div class="input-group">
+            <label class="query-form-label">Area defined by:</label>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon-point">NE:</span>
+                <input type="text" class="form-control" id="a2" placeholder="51.648154" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" id="b2" placeholder="-0.044695" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon-point">SW:</span>
+                <input type="text" class="form-control" id="a1" placeholder="-0.044695" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" id="b1" placeholder="51.648154" aria-describedby="basic-addon1">
+            </div>
+            <label class="query-form-label">Time interval:</label>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon">From:</span>
+                <div class='input-group date' id='datetimepicker5'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon">To:</span>
+                <div class='input-group date' id='datetimepicker6'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-info query-button">
+            <span class="glyphicon glyphicon-star" id="queryButton" aria-hidden="true" disabled></span> Send Query
+        </button>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker5').datetimepicker();
+        $('#datetimepicker6').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker5").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker5').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+</script>
