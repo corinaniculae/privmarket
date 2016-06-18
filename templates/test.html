@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <title>PrivMarket</title>
         <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="../static/css/query.css" rel="stylesheet">
-        <script src="../static/js/jquery.js"></script>
-        <script src="../static/js/bootstrap.min.js"></script>
-
+        <link rel="stylesheet" href="../static/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+        <script type="text/javascript" src="../static/js/jquery.js"></script>
+        <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../static/bower_components/moment/min/moment.min.js"></script>
+        <script type="text/javascript" src="../static/js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="../static/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -20,23 +25,23 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-8">
                     <div class="row">
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-info active query-button">
-                                <input type="radio" name="options" id="option1" onchange="initMap()" autocomplete="off" checked> Stop points list
+                                <input type="radio" name="options" id="opt_stop" onchange="getSemanticMap()" autocomplete="off"> Stop points
                             </label>
                             <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Syntactic Query 1 Area
+                                <input type="radio" name="options" id="opt_syn_1" onchange="getSyntacticOneArea()" autocomplete="off"> Syntactic 1 Area
                             </label>
                             <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Syntactic Query 2 Areas
+                                <input type="radio" name="options" id="opt_syn_2" onchange="getSyntacticTwoAreas()" autocomplete="off"> Syntactic 2 Areas
                             </label>
                             <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="option2" onchange="getSyntacticMap()" autocomplete="off"> Semantic Query 1 Area
+                                <input type="radio" name="options" id="opt_sem_1" onchange="getSemanticOneArea()" autocomplete="off"> Semantic 1 Area
                             </label>
                             <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="option3" autocomplete="off"> Semantic Query 2 Areas
+                                <input type="radio" name="options" id="opt_sem_2" onchange="getSemanticTwoAreas()" autocomplete="off"> Semantic 2 Areas
                             </label>
                         </div>
                     </div>
@@ -44,69 +49,32 @@
                         <div id="map">
                         </div>
                     </div>
-
-                </div>
-                <div class="col-lg-3">
                     <div class="row">
-                        <div class="cointainer form-wrapper-div">
-                            <div class="input-group">
-                                <label class="query-form-label" for="basic-addon1">From Latitude-Longitude Coordinates:</label>
-                                <div class="input-group query-form">
-                                    <span class="input-group-addon" id="basic-addon1">Lat.</span>
-                                    <input type="text" class="form-control" placeholder="Latitude" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group query-form">
-                                    <span class="input-group-addon" id="basic-addon2">Lon.</span>
-                                    <input type="text" class="form-control" placeholder="Longitude" aria-describedby="basic-addon2">
-                                </div>
+                        Also, we have: {{ size }}
+                        Current stop points:
+                            <div class="mygrid-wrapper-div">
+                                <ul class="stops">
+                                    {% for stop in stop_points %}
+                                    <li> {{ stop[0] }}; {{ stop[1] }}; {{ stop[2] }}; {{ stop[3] }}</li>
+                                    {% endfor %}
+                                </ul>
                             </div>
-
-                            <div class="input-group">
-                                <label class="query-form-label" for="from-stop"><it>... or </it>from Tube Stop: </label>
-                                <input type="text" class="form-control" id="from-stop" placeholder="Name of tube stop">
-                            </div>
-
-                            <div class="input-group">
-                                <label class="query-form-label" for="basic-addon3">To Latitude-Longitude Coordinates:</label>
-                                <div class="input-group query-form">
-                                    <span class="input-group-addon" id="basic-addon3">Lat.</span>
-                                    <input type="text" class="form-control" placeholder="Latitude" aria-describedby="basic-addon3">
-                                </div>
-                                <div class="input-group query-form">
-                                    <span class="input-group-addon" id="basic-addon4">Lon.</span>
-                                    <input type="text" class="form-control" placeholder="Longitude" aria-describedby="basic-addon4">
-                                </div>
-                            </div>
-
-                            <div class="input-group">
-                                <label class="query-form-label" for="to-stop"><it>... or </it>to Tube Stop: </label>
-                                <input type="text" class="form-control" id="to-stop" placeholder="Name of tube stop">
-                            </div>
-
-                            <button type="button" class="btn btn-info query-button">
-                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Send Query
-                            </button>
-                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10">
-                    Current stop points:
-                    <div class="mygrid-wrapper-div">
-                        <ul class="stops">
-                            {% for stop in stop_points %}
-                            <li> {{ stop[0] }}; {{ stop[1] }}; {{ stop[2] }}; {{ stop[3] }}</li>
-                            {% endfor %}
-                        </ul>
+                <div class="col-lg-4">
+                    <div id="query-form">
                     </div>
                 </div>
             </div>
         </div>
         <script>
-            function initMap() {
+            var rectangle;
+            var map;
+            var infoWindow;
+
+            function getSemanticMap() {
                 var mapDiv = document.getElementById('map');
-                var map = new google.maps.Map(mapDiv, {
+                map = new google.maps.Map(mapDiv, {
                     center: {lat: 51.508226, lng: -0.128404},
                     zoom: 10
                 });
@@ -148,33 +116,79 @@
                 {% endfor %}
             }
 
-            function addAreaOptions() {
-
+            function addAreaOptions(map) {
                 var bounds = {
                         north: 51.548154,
                         south: 51.648154,
 
-                        east: -0.074695,
+                        east: -0.044695,
                         west: -0.195695
                     };
-                    var rectangle = new google.maps.Rectangle({
+                rectangle = new google.maps.Rectangle({
                     bounds: bounds,
-                    editable: true
-                    });
-                    rectangle.setMap(map);
-                addForm();
+                    editable: true,
+                    draggable: true
+                });
+                rectangle.setMap(map);
+                // Add an event listener on the rectangle.
+                rectangle.addListener('bounds_changed', showNewRect);
+
+                // Define an info window on the map.
+                infoWindow = new google.maps.InfoWindow();
+            }
+
+            // Show the new coordinates for the rectangle in an info window.
+            /** @this {google.maps.Rectangle} */
+            function showNewRect(event) {
+                var ne = rectangle.getBounds().getNorthEast();
+                var sw = rectangle.getBounds().getSouthWest();
+                var contentString = '<b>Rectangle moved.</b><br>' +
+                        'NE: ' + ne.lat() + ', ' + ne.lng() + '<br>' +
+                        'SW: ' + sw.lat() + ', ' + sw.lng();
+                // Set the info window's content and position.
+                infoWindow.setContent(contentString);
+                infoWindow.setPosition(ne);
+                infoWindow.open(map);
             }
 
             function getSyntacticMap() {
-                    var mapDiv = document.getElementById('map');
-                    var map = new google.maps.Map(mapDiv, {
-                        center: {lat: 51.508226, lng: -0.128404},
-                        zoom: 10
-                    });
-                    addAreaOptions();
+                var mapDiv = document.getElementById('map');
+                map = new google.maps.Map(mapDiv, {
+                    center: {lat: 51.508226, lng: -0.128404},
+                    zoom: 10
+                });
+                addAreaOptions(map);
+            }
+
+            function getSyntacticOneArea() {
+                $(function(){
+                    $("#query-form").load("templates/syntactic_query_1");
+                });
+                getSyntacticMap();
+            }
+
+            function getSyntacticTwoAreas() {
+                $(function(){
+                    $("#query-form").load("templates/syntactic_query_2");
+                });
+                getSyntacticMap();
+            }
+
+            function getSemanticOneArea() {
+                $(function(){
+                    $("#query-form").load("templates/semantic_query_1");
+                });
+                getSemanticMap();
+            }
+
+            function getSemanticTwoAreas() {
+                $(function(){
+                    $("#query-form").load("templates/semantic_query_2");
+                });
+                getSemanticMap();
             }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9j7cn2KqYk6cmlmDcXEJmpxSUzEPUWw&callback=getSemanticMap" async defer>
         </script>
   </body>
 </html>
