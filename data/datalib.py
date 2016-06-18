@@ -99,7 +99,7 @@ TFL_VIA_DISAMBIGUATION = 'viaLocationDisambiguation'
 # MYSQL/CryptDB Authentication.
 CRYPTDB_DB = 'priv_coll'            # Database name in CryptDB.
 CRYPTDB_TABLE = 'generated'         # Table name in CryptDB.
-CRYPTDB_HOST = '127.0.0.1'          # Host name in CryptDB.
+CRYPTDB_HOST = '146.169.46.236'          # Host name in CryptDB.
 CRYPTDB_USER = 'root'               # Root user name in CryptDB.
 CRYPTDB_PASSWORD = 'letmein'        # Root user password in CryptDB.
 CRYPTDB_PORT = 3307                 # Proxy connection port for CryptDB.
