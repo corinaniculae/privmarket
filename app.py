@@ -5,13 +5,14 @@ import sys
 #import pysftp
 
 sys.path.append('data/')
-from tfl_manager import TFLManager
-from mysql_manager import MySQLManager
-from cryptdb_manager import CryptDBManager
+import query_agent
+import tfl_manager
 
 
 app = flask.Flask(__name__)
-tfl_manager = TFLManager()
+tfl_man = tfl_manager.TFLManager()
+#agent = query_agent.QueryAgent(tfl_man.get_all_tube_stops())
+
 
 # Routing the webapp's main URL GET request.
 @app.route('/')
@@ -56,14 +57,8 @@ def static_proxy(path):
 
 @app.route('/gettest')
 def get_test():
-    #sftp = pysftp.Connection('146.169.46.236', username='cn1612', password='Lala.2116')
-    #test = sftp.pwd
-    #sftp.close()
-    #cryptdb_manager = CryptDBManager()
-    #size = cryptdb_manager.count_size()
     return flask.render_template('test.html',
-                                 stop_points=tfl_manager._stops_set,
-                                 size="")
+                                 stop_points=tfl_man.get_all_tube_stops())
 
 
 @app.route('/new_test')
@@ -79,7 +74,24 @@ def get_template_with_name(file_name):
 @app.route('/possible_forms')
 def get_possible_forms():
     return flask.render_template('possible_forms.html',
-                                 stop_points=tfl_manager._stops_set)
+                                 stop_points=tfl_man.get_all_tube_stops())
+
+
+@app.route('/get_syntactic_query_1', methods=['POST'])
+def get_query_1():
+    print 'does this get requested?'
+    a1 = flask.request.form.get('a1')
+    a2 = flask.request.form.get('a2')
+    b1 = flask.request.form.get('b1')
+    b2 = flask.request.form.get('b2')
+    from_time = flask.request.form.get('from_time')
+    to_time = flask.request.form.get('to_time')
+    return ('a1: ' + str(a1) +
+            '\na2: ' + str(a2) +
+            '\nb1: ' + str(b1) +
+            '\nb2: ' + str(b2) +
+            '\nfrom time: ' + str(from_time) +
+            '\nto time: ' + str(to_time))
 
 
 @app.route('/issue_query1?lat=<lat>&lon=<lon>&timestamp=<timestamp>')
@@ -92,7 +104,5 @@ def issue_query_2():
     return
 
 
-
 if __name__ == "__main__":
-    app.debug = True
-    app.run()
+    app.run(debug=True, use_reloader=True)

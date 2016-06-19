@@ -50,15 +50,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        Also, we have: {{ size }}
                         Current stop points:
-                            <div class="mygrid-wrapper-div">
-                                <ul class="stops">
-                                    {% for stop in stop_points %}
-                                    <li> {{ stop[0] }}; {{ stop[1] }}; {{ stop[2] }}; {{ stop[3] }}</li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
+                        <div class="mygrid-wrapper-div">
+                            <ul class="stops">
+                                {% for stop in stop_points %}
+                                <li> {{ stop[0] }}; {{ stop[1] }}; {{ stop[2] }}; {{ stop[3] }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -116,13 +115,27 @@
                 {% endfor %}
             }
 
+
+            function fillFormById(id, value) {
+                $(function(){
+                    document.getElementById(id).value = value;
+                })
+            }
+
+            function fillRectangleCoordinates(ne, sw) {
+                fillFormById('a1', sw.lng());
+                fillFormById('a2', ne.lng());
+                fillFormById('b1', sw.lat());
+                fillFormById('b2', ne.lat());
+            }
+
             function addAreaOptions(map) {
                 var bounds = {
-                        north: 51.548154,
-                        south: 51.648154,
+                        north: 51.50295659940793,
+                        south: 51.49004560059794,
 
-                        east: -0.044695,
-                        west: -0.195695
+                        east: -0.15713320190434388,
+                        west: -0.18968685180664124
                     };
                 rectangle = new google.maps.Rectangle({
                     bounds: bounds,
@@ -130,6 +143,8 @@
                     draggable: true
                 });
                 rectangle.setMap(map);
+                ne = rectangle.getBounds().getNorthEast();
+                sw = rectangle.getBounds().getSouthWest();
                 // Add an event listener on the rectangle.
                 rectangle.addListener('bounds_changed', showNewRect);
 
@@ -137,25 +152,11 @@
                 infoWindow = new google.maps.InfoWindow();
             }
 
-            // Show the new coordinates for the rectangle in an info window.
-            /** @this {google.maps.Rectangle} */
-            function showNewRect(event) {
-                var ne = rectangle.getBounds().getNorthEast();
-                var sw = rectangle.getBounds().getSouthWest();
-                var contentString = '<b>Rectangle moved.</b><br>' +
-                        'NE: ' + ne.lat() + ', ' + ne.lng() + '<br>' +
-                        'SW: ' + sw.lat() + ', ' + sw.lng();
-                // Set the info window's content and position.
-                infoWindow.setContent(contentString);
-                infoWindow.setPosition(ne);
-                infoWindow.open(map);
-            }
-
             function getSyntacticMap() {
                 var mapDiv = document.getElementById('map');
                 map = new google.maps.Map(mapDiv, {
                     center: {lat: 51.508226, lng: -0.128404},
-                    zoom: 10
+                    zoom: 12
                 });
                 addAreaOptions(map);
             }
@@ -186,6 +187,26 @@
                     $("#query-form").load("templates/semantic_query_2");
                 });
                 getSemanticMap();
+            }
+
+            // Show the new coordinates for the rectangle in an info window.
+            /** @this {google.maps.Rectangle} */
+            function showNewRect(event) {
+                var ne = rectangle.getBounds().getNorthEast();
+                var sw = rectangle.getBounds().getSouthWest();
+                var contentString = '<b>Rectangle moved.</b><br>' +
+                        'NE: ' + ne.lat() + ', ' + ne.lng() + '<br>' +
+                        'SW: ' + sw.lat() + ', ' + sw.lng();
+                // Set the info window's content and position.
+                infoWindow.setContent(contentString);
+                infoWindow.setPosition(ne);
+                infoWindow.open(map);
+                fillRectangleCoordinates(ne, sw);
+            }
+
+            function showResult(value) {
+                var resDiv = document.getElementBYId('result-div');
+                resDiv.html = value;
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9j7cn2KqYk6cmlmDcXEJmpxSUzEPUWw&callback=getSemanticMap" async defer>
