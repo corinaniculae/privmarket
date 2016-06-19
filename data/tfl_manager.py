@@ -73,6 +73,7 @@ class TFLManager:
         self._initial_shift = initial_shift
         self._no_users = no_users
         self._counter = 0
+        self._stops_set = None
         self.__get_all_tube_stops()
 
     """ Makes a GET request to TFL API and fetches the result.
@@ -91,7 +92,17 @@ class TFLManager:
         self._counter += 1
         return requests.get(request)
 
-    """ Gets a set of all tube stops.
+    """ Returns the set of tube stops used by the TFLManager.
+
+    Returns:
+        A set of tuples (station_id, station_common_name, latitude, longitude)
+        of all corresponding stops of the lines defined in
+        datalib.TUBE_LINES_IDS.
+    """
+    def get_all_tube_stops(self):
+        return self._stops_set
+
+    """ Gets a set of all tube stops from the TFL API.
 
     Returns:
         A set of tuples (station_id, station_common_name, latitude, longitude)
@@ -102,6 +113,8 @@ class TFLManager:
         TFLError: Any error given by the TFL API calls.
     """
     def __get_all_tube_stops(self):
+        if self._stops_set is not None:
+            return
         self._stops_set = set([])
         for line_id in datalib.TUBE_LINES_IDS:
             request = (datalib.REQUEST_STOP_POINTS_BY_LINE % line_id)
