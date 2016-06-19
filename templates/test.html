@@ -193,13 +193,17 @@
              *  Arguments:
              *      bounds: Dictionary of the N, S, E and W bounds of the area.
              *      queryFields: Fields to be filled upon changing the area.
+             *      colour: String hex of the colour of the rectangle's edges.
              */
-            function addRectangleOnMap(bounds, queryFields) {
+            function addRectangleOnMap(bounds, queryFields, colour) {
                 // Add the rectangle on the map.
                 rectangle = new google.maps.Rectangle({
                     bounds: bounds,
                     editable: true,
-                    draggable: true
+                    draggable: true,
+                    strokeColor: colour,
+                    strokeOpacity: 0.8,
+                    strokeWeight: 3
                 });
                 rectangle.setMap(map);
 
@@ -254,7 +258,7 @@
                     west: -0.18968685180664124
                 };
                 var queryFields = ['a1', 'a2', 'b1', 'b2'];
-                addRectangleOnMap(bounds, queryFields);
+                addRectangleOnMap(bounds, queryFields, '#32cd32');
             }
 
             /** Creates the view for a syntactic query of two areas. */
@@ -284,8 +288,8 @@
                 };
                 var queryFields1 = ['a1', 'a2', 'b1', 'b2'];
                 var queryFields2 = ['c1', 'c2', 'd1', 'd2'];
-                addRectangleOnMap(bounds1, queryFields1);
-                addRectangleOnMap(bounds2, queryFields2);
+                addRectangleOnMap(bounds1, queryFields1, '#32cd32');
+                addRectangleOnMap(bounds2, queryFields2, '#ffff00');
             }
 
             /** Adds a new listener for every given pin to fill the form.
