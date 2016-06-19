@@ -60,6 +60,24 @@ class CryptDBManager:
             sys.exit(1)
         return db, cursor
 
+    """ Executes the given count query over CryptDB.
+
+    Arguments:
+        sql_query: MySQL query having a count aggregate in projection.
+
+    Returns:
+        An integer, representing the result of the aggregate.
+        In case of an error, -1 is returned.
+    """
+    def execute_count_query(self, sql_query):
+        try:
+            self._cursor.execute(sql_query)
+            self._db.commit()
+            return self._cursor.fetchone()
+        except MySQLdb.Error, e:
+            self._logger.error("Error %d: %s" % (e.args[0], e.args[1]))
+            return -1
+
     """ Inserts the given CSV file into CryptDB.
 
     Arguments:
@@ -91,8 +109,9 @@ class CryptDBManager:
 
         except MySQLdb.Error, e:
             self._logger.error("Error %d: %s" % (e.args[0], e.args[1]))
-        
-        csv_file.close()
+
+        finally:
+            csv_file.close()
 
 
 class MySQLError(Exception):
