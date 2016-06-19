@@ -86,11 +86,11 @@ def get_query_1():
     from_time = flask.request.form.get('from_time')
     to_time = flask.request.form.get('to_time')
     return ('a1: ' + str(a1) +
-            '\na2: ' + str(a2) +
-            '\nb1: ' + str(b1) +
-            '\nb2: ' + str(b2) +
-            '\nfrom time: ' + str(from_time) +
-            '\nto time: ' + str(to_time))
+            '<br>a2: ' + str(a2) +
+            '<br>b1: ' + str(b1) +
+            '<br>b2: ' + str(b2) +
+            '<br>from time: ' + str(from_time) +
+            '<br>to time: ' + str(to_time))
 
 
 @app.route('/get_syntactic_query_2', methods=['POST'])
@@ -106,15 +106,15 @@ def get_query_2():
     from_time = flask.request.form.get('from_time')
     to_time = flask.request.form.get('to_time')
     return ('a1: ' + str(a1) +
-            '\na2: ' + str(a2) +
-            '\nb1: ' + str(b1) +
-            '\nb2: ' + str(b2) +
-            '\nc1: ' + str(c1) +
-            '\nc2: ' + str(c2) +
-            '\nd1: ' + str(d1) +
-            '\nd2: ' + str(d2) +
-            '\nfrom time: ' + str(from_time) +
-            '\nto time: ' + str(to_time))
+            '<br>a2: ' + str(a2) +
+            '<br>b1: ' + str(b1) +
+            '<br>b2: ' + str(b2) +
+            '<br>c1: ' + str(c1) +
+            '<br>c2: ' + str(c2) +
+            '<br>d1: ' + str(d1) +
+            '<br>d2: ' + str(d2) +
+            '<br>from time: ' + str(from_time) +
+            '<br>to time: ' + str(to_time))
 
 
 @app.route('/get_semantic_query_form_1')
@@ -129,8 +129,8 @@ def get_query_3():
     from_time = flask.request.form.get('from_time')
     to_time = flask.request.form.get('to_time')
     return ('tube stop: ' + tube_stop +
-            '\nfrom time: ' + str(from_time) +
-            '\nto time: ' + str(to_time))
+            '<br>from time: ' + str(from_time) +
+            '<br>to time: ' + str(to_time))
 
 @app.route('/get_semantic_query_form_2')
 def get_form_4():
@@ -155,9 +155,9 @@ def get_query_4():
     from_time = flask.request.form.get('from_time')
     to_time = flask.request.form.get('to_time')
     return ('from tube stop: ' + from_tube_stop +
-            '\nto tube stop: ' + to_tube_stop +
-            '\nfrom time: ' + str(from_time) +
-            '\nto time: ' + str(to_time))
+            '<br>to tube stop: ' + to_tube_stop +
+            '<br>from time: ' + str(from_time) +
+            '<br>to time: ' + str(to_time))
 
 
 if __name__ == "__main__":

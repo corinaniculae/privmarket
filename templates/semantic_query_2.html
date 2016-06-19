@@ -1,42 +1,47 @@
-<div class="cointainer form-wrapper-div">
-    <h4>Semantic Query 2 Areas</h4>
-    <div class="input-group">
-        <label class="query-form-label">From TFL stop: </label>
-        <select class="form-control" id="select_from">
-            <option selected disabled>Select one</option>
-            {% for stop in stop_points %}
-            <option id="{{ stop[0] }}">{{ stop[1] }}</option>
-            {% endfor %}
-        </select><br><br>
-        <label class="query-form-label">To TFL stop: </label>
-        <select class="form-control" id="select_to">
-            <option selected disabled>Select one</option>
-            {% for stop in stop_points %}
-            <option id="{{ stop[0] }}">{{ stop[1] }}</option>
-            {% endfor %}
-        </select><br><br>
-        <label class="query-form-label">Time interval:</label>
-        <div class="input-group query-form">
-            <span class="input-group-addon form-addon">From:</span>
-            <div class='input-group date' id='datetimepicker3'>
-                <input type='text' class="form-control" id="from_time"/>
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
+<div class="row">
+    <div class="cointainer form-wrapper-div">
+        <h4>Semantic Query 2 Areas</h4>
+        <div class="input-group">
+            <label class="query-form-label">From TFL stop: </label>
+            <select class="form-control" id="select_from">
+                <option selected disabled>Select one</option>
+                {% for stop in stop_points %}
+                <option id="{{ stop[0] }}">{{ stop[1] }}</option>
+                {% endfor %}
+            </select><br><br>
+            <label class="query-form-label">To TFL stop: </label>
+            <select class="form-control" id="select_to">
+                <option selected disabled>Select one</option>
+                {% for stop in stop_points %}
+                <option id="{{ stop[0] }}">{{ stop[1] }}</option>
+                {% endfor %}
+            </select><br><br>
+            <label class="query-form-label">Time interval:</label>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon">From:</span>
+                <div class='input-group date' id='datetimepicker3'>
+                    <input type='text' class="form-control" id="from_time"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon" id="basic-addon4">To:</span>
+                <div class='input-group date' id='datetimepicker4'>
+                    <input type='text' class="form-control" id="to_time"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
             </div>
         </div>
-        <div class="input-group query-form">
-            <span class="input-group-addon form-addon" id="basic-addon4">To:</span>
-            <div class='input-group date' id='datetimepicker4'>
-                <input type='text' class="form-control" id="to_time"/>
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
+        <button type="button" class="btn btn-info query-button" onclick="issuePOSTRequest(formFields4, url4);">
+            <span class="glyphicon glyphicon-star" id="queryButton" aria-hidden="true"></span> Send Query
+        </button>
     </div>
-    <button type="button" class="btn btn-info query-button" onclick="issuePOSTRequest(formFields4, url4);">
-        <span class="glyphicon glyphicon-star" id="queryButton" aria-hidden="true"></span> Send Query
-    </button>
 </div>
-
+<div class="row">
+    <div class="result-wrapper-div" id="results-div">
+    </div>
+</div>

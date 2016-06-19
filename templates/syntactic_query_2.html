@@ -1,49 +1,55 @@
-<div class="cointainer form-wrapper-div">
-    <h4>Syntactic Query 2 Areas</h4>
-    <div class="input-group">
-        <label class="query-form-label">From area defined by:</label>
-        <div class="input-group query-form">
-            <span class="input-group-addon form-addon-point">NE:</span>
-            <input type="text" class="form-control" id="b2" placeholder="51.648154" aria-describedby="basic-addon1">
-            <input type="text" class="form-control" id="a2" placeholder="-0.044695" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group query-form">
-            <span class="input-group-addon form-addon-point">SW:</span>
-            <input type="text" class="form-control" id="b1" placeholder="51.648154" aria-describedby="basic-addon1">
-            <input type="text" class="form-control" id="a1" placeholder="-0.044695" aria-describedby="basic-addon2">
-        </div>
-        <label class="query-form-label">To area defined by:</label>
-        <div class="input-group query-form">
-            <span class="input-group-addon form-addon-point">NE:</span>
-            <input type="text" class="form-control" id="d2" placeholder="51.648154" aria-describedby="basic-addon1">
-            <input type="text" class="form-control" id="c2" placeholder="-0.044695" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group query-form">
-            <span class="input-group-addon form-addon-point">SW:</span>
-            <input type="text" class="form-control" id="d1" placeholder="51.648154" aria-describedby="basic-addon1">
-            <input type="text" class="form-control" id="c1" placeholder="-0.044695" aria-describedby="basic-addon2">
-        </div>
-        <label class="query-form-label">Time interval:</label>
-        <div class="input-group query-form">
-            <span class="input-group-addon form-addon">From:</span>
-            <div class='input-group date' id='datetimepicker7'>
-                <input type='text' class="form-control" id="from_time"/>
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
+<div class="row">
+    <div class="cointainer form-wrapper-div">
+        <h4>Syntactic Query 2 Areas</h4>
+        <div class="input-group">
+            <label class="query-form-label">From area defined by:</label>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon-point">NE:</span>
+                <input type="text" class="form-control" id="b2" placeholder="51.648154" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" id="a2" placeholder="-0.044695" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon-point">SW:</span>
+                <input type="text" class="form-control" id="b1" placeholder="51.648154" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" id="a1" placeholder="-0.044695" aria-describedby="basic-addon2">
+            </div>
+            <label class="query-form-label">To area defined by:</label>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon-point">NE:</span>
+                <input type="text" class="form-control" id="d2" placeholder="51.648154" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" id="c2" placeholder="-0.044695" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon-point">SW:</span>
+                <input type="text" class="form-control" id="d1" placeholder="51.648154" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" id="c1" placeholder="-0.044695" aria-describedby="basic-addon2">
+            </div>
+            <label class="query-form-label">Time interval:</label>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon">From:</span>
+                <div class='input-group date' id='datetimepicker7'>
+                    <input type='text' class="form-control" id="from_time"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="input-group query-form">
+                <span class="input-group-addon form-addon">To:</span>
+                <div class='input-group date' id='datetimepicker8'>
+                    <input type='text' class="form-control" id="to_time"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
             </div>
         </div>
-        <div class="input-group query-form">
-            <span class="input-group-addon form-addon">To:</span>
-            <div class='input-group date' id='datetimepicker8'>
-                <input type='text' class="form-control" id="to_time"/>
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
+        <button type="button" class="btn btn-info query-button" onclick="issuePOSTRequest(formFields2, url2);">
+            <span class="glyphicon glyphicon-star" id="queryButton" aria-hidden="true" disabled></span> Send Query
+        </button>
     </div>
-    <button type="button" class="btn btn-info query-button" onclick="issuePOSTRequest(formFields2, url2);">
-        <span class="glyphicon glyphicon-star" id="queryButton" aria-hidden="true" disabled></span> Send Query
-    </button>
+</div>
+<div class="row">
+    <div class="result-wrapper-div" id="results-div">
+    </div>
 </div>

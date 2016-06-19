@@ -55,8 +55,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        Current stop points:
                         <div class="mygrid-wrapper-div">
+                            <h5>&nbsp;&nbsp;Current stop points:</h5>
                             <ul class="stops">
                                 {% for stop in stop_points %}
                                 <li> {{ stop[0] }}; {{ stop[1] }}; {{ stop[2] }}; {{ stop[3] }}</li>
@@ -379,10 +379,8 @@
              *      value: String value to be displayed.
              */
             function showResult(value) {
-                var resDiv = document.getElementBYId('result-div');
-                resDiv.html = ('The result of the query is: <b>' +
-                               value +
-                               '</b>');
+                var resDiv = document.getElementById('results-div');
+                resDiv.innerHTML = ('<h5>Current stop points:</h5>' + value);
             }
 
             /** Sends a POST request based on the specified form fields.
@@ -409,7 +407,8 @@
                 xhttp.open('POST', url, false);
                 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xhttp.send(vars);
-                window.alert(xhttp.responseText);
+                console.log(xhttp.responseText);
+                showResult(xhttp.responseText);
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9j7cn2KqYk6cmlmDcXEJmpxSUzEPUWw&callback=getSemanticMap" async defer>
