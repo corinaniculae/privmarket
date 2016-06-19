@@ -79,7 +79,6 @@ def get_possible_forms():
 
 @app.route('/get_syntactic_query_1', methods=['POST'])
 def get_query_1():
-    print 'does this get requested?'
     a1 = flask.request.form.get('a1')
     a2 = flask.request.form.get('a2')
     b1 = flask.request.form.get('b1')
@@ -94,14 +93,71 @@ def get_query_1():
             '\nto time: ' + str(to_time))
 
 
-@app.route('/issue_query1?lat=<lat>&lon=<lon>&timestamp=<timestamp>')
-def issue_query_1():
-    return
+@app.route('/get_syntactic_query_2', methods=['POST'])
+def get_query_2():
+    a1 = flask.request.form.get('a1')
+    a2 = flask.request.form.get('a2')
+    b1 = flask.request.form.get('b1')
+    b2 = flask.request.form.get('b2')
+    c1 = flask.request.form.get('c1')
+    c2 = flask.request.form.get('c2')
+    d1 = flask.request.form.get('d1')
+    d2 = flask.request.form.get('d2')
+    from_time = flask.request.form.get('from_time')
+    to_time = flask.request.form.get('to_time')
+    return ('a1: ' + str(a1) +
+            '\na2: ' + str(a2) +
+            '\nb1: ' + str(b1) +
+            '\nb2: ' + str(b2) +
+            '\nc1: ' + str(c1) +
+            '\nc2: ' + str(c2) +
+            '\nd1: ' + str(d1) +
+            '\nd2: ' + str(d2) +
+            '\nfrom time: ' + str(from_time) +
+            '\nto time: ' + str(to_time))
 
 
-@app.route('/issue_query2?lat=<lat>&lon=<lon>&timestamp=<timestamp>')
-def issue_query_2():
-    return
+@app.route('/get_semantic_query_form_1')
+def get_form_3():
+    return flask.render_template('semantic_query_1.html',
+                                 stop_points=tfl_man.get_all_tube_stops())
+
+
+@app.route('/get_semantic_query_1', methods=['POST'])
+def get_query_3():
+    tube_stop = flask.request.form.get('select_one')
+    from_time = flask.request.form.get('from_time')
+    to_time = flask.request.form.get('to_time')
+    return ('tube stop: ' + tube_stop +
+            '\nfrom time: ' + str(from_time) +
+            '\nto time: ' + str(to_time))
+
+@app.route('/get_semantic_query_form_2')
+def get_form_4():
+    return flask.render_template('semantic_query_2.html',
+                                 stop_points=tfl_man.get_all_tube_stops())
+
+
+@app.route('/get_syntactic_query_form_1')
+def get_form_1():
+    return flask.render_template('syntactic_query_1.html')
+
+
+@app.route('/get_syntactic_query_form_2')
+def get_form_2():
+    return flask.render_template('syntactic_query_2.html')
+
+
+@app.route('/get_semantic_query_2', methods=['POST'])
+def get_query_4():
+    from_tube_stop = flask.request.form.get('select_from')
+    to_tube_stop = flask.request.form.get('select_to')
+    from_time = flask.request.form.get('from_time')
+    to_time = flask.request.form.get('to_time')
+    return ('from tube stop: ' + from_tube_stop +
+            '\nto tube stop: ' + to_tube_stop +
+            '\nfrom time: ' + str(from_time) +
+            '\nto time: ' + str(to_time))
 
 
 if __name__ == "__main__":

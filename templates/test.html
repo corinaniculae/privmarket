@@ -29,19 +29,24 @@
                     <div class="row">
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-info active query-button">
-                                <input type="radio" name="options" id="opt_stop" onchange="getSemanticMap()" autocomplete="off"> Stop points
+                                <input type="radio" name="options" id="opt_stop" onchange="getSemanticMap()" autocomplete="off">
+                                Stop points
                             </label>
                             <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="opt_syn_1" onchange="getSyntacticOneArea()" autocomplete="off"> Syntactic 1 Area
+                                <input type="radio" name="options" id="opt_syn_1" onchange="getSyntacticOneArea()" autocomplete="off">
+                                Syntactic 1 Area
                             </label>
                             <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="opt_syn_2" onchange="getSyntacticTwoAreas()" autocomplete="off"> Syntactic 2 Areas
+                                <input type="radio" name="options" id="opt_syn_2" onchange="getSyntacticTwoAreas()" autocomplete="off">
+                                Syntactic 2 Areas
                             </label>
                             <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="opt_sem_1" onchange="getSemanticOneArea()" autocomplete="off"> Semantic 1 Area
+                                <input type="radio" name="options" id="opt_sem_1" onchange="getSemanticOneArea()" autocomplete="off">
+                                Semantic 1 Area
                             </label>
                             <label class="btn btn-info query-button">
-                                <input type="radio" name="options" id="opt_sem_2" onchange="getSemanticTwoAreas()" autocomplete="off"> Semantic 2 Areas
+                                <input type="radio" name="options" id="opt_sem_2" onchange="getSemanticTwoAreas()" autocomplete="off">
+                                Semantic 2 Areas
                             </label>
                         </div>
                     </div>
@@ -67,44 +72,78 @@
             </div>
         </div>
         <script>
-            var rectangle;
-            var map;
-            var infoWindow;
+            var map; // Map to be displayed.
+            var formFields3 = ['select_one', 'from_time', 'to_time'];
+            var formFields4 = ['select_from', 'select_to', 'from_time', 'to_time'];
+            var url3 = '/get_semantic_query_1';
+            var url4 = '/get_semantic_query_2';
+            var formFields1 = ['a1', 'a2', 'b1', 'b2', 'from_time', 'to_time'];
+            var url1 = '/get_syntactic_query_1';
+            var formFields2 = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2', 'd1', 'd2', 'from_time', 'to_time'];
+            var url2 = '/get_syntactic_query_2';
 
+            /** Returns a map pin in the specified colour.
+             *
+             *  Arguments:
+             *      colour: String '#<hex_code>' representing the pin colour.
+             *
+             *  Returns:
+             *      A MarkerImage object, representing a map pin.
+             */
+            function getNewPin(colour) {
+                return new google.maps.MarkerImage(
+                        "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + colour,
+                        new google.maps.Size(21, 34),
+                        new google.maps.Point(0, 0),
+                        new google.maps.Point(10, 34));
+            }
+
+            /** Sets the given pin maker with the desired specifications.
+             *
+             *  Sets the given pin type and opacity to the specified pin object.
+             *
+             *  Arguments:
+             *      pinMarker: A google.maps.Marker pin object.
+             *      pinType: A google.maps.MarkerImage representing the type
+             *      of pin to be displayed by the object.
+             *      opacity: Integer, representing the opacity of the display.
+             */
+            function setPinTypeForPinMarker(pinMarker, pinType, opacity) {
+                pinMarker.setIcon(pinType);
+                pinMarker.setOpacity(opacity);
+            }
+
+            /** Creates a semantic map of all tube stops and returns their markers.
+             *
+             *  Returns:
+             *      An array of markers that were placed on the map.
+             */
             function getSemanticMap() {
+                // Render the map.
                 var mapDiv = document.getElementById('map');
                 map = new google.maps.Map(mapDiv, {
                     center: {lat: 51.508226, lng: -0.128404},
                     zoom: 10
                 });
+                // Place the markers.
                 var markers = [];
                 var size = -1;
-                var pinColor = "BDBDBF";
-                var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
-                        new google.maps.Size(21, 34),
-                        new google.maps.Point(0, 0),
-                        new google.maps.Point(10, 34));
-                var pinColor2 = "FE7569";
-                var pinImage2 = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor2,
-                        new google.maps.Size(21, 34),
-                        new google.maps.Point(0, 0),
-                        new google.maps.Point(10, 34));
+                var pinTypes = [getNewPin("BDBDBF"), getNewPin("FE7569")];
                 {% for stop in stop_points %}
-                    var mkr = new google.maps.Marker({
+                    var marker = new google.maps.Marker({
                         position: {lat: {{ stop[2] }}, lng: {{ stop[3]}}},
                         map: map,
-                        icon: pinImage,
-                        opacity: 0.3
+                        icon: pinTypes[0],
+                        opacity: 0.3,
+                        title: "{{ stop[0] }}"
                     });
-                    markers.push(mkr);
+                    markers.push(marker);
                     size++;
-                    markers[size].addListener('mouseover', function () {
-                        this.setIcon(pinImage2);
-                        this.setOpacity(1);
+                    markers[size].addListener('mouseover', function() {
+                        setPinTypeForPinMarker(this, pinTypes[1], 1);
                     });
-                    markers[size].addListener('mouseout', function () {
-                        this.setIcon(pinImage);
-                        this.setOpacity(0.3);
+                    markers[size].addListener('mouseout', function() {
+                        setPinTypeForPinMarker(this, pinTypes[0], 0.3);
                     });
                     markers[size].addListener('click', function () {
                         var infowindow = new google.maps.InfoWindow({
@@ -113,100 +152,264 @@
                         infowindow.open(map, this);
                     });
                 {% endfor %}
+                return markers;
             }
 
-
-            function fillFormById(id, value) {
-                $(function(){
-                    document.getElementById(id).value = value;
-                })
+            function loadDateTimePickers(dateTimePicker1, dateTimePicker2) {
+                $(function () {
+                    $(dateTimePicker1).datetimepicker();
+                    $(dateTimePicker2).datetimepicker({
+                        useCurrent: false //Important! See issue #1075
+                    });
+                    $(dateTimePicker1).on("dp.change", function (e) {
+                        $(dateTimePicker2).data("DateTimePicker").minDate(e.date);
+                    });
+                    $(dateTimePicker2).on("dp.change", function (e) {
+                        $(dateTimePicker1).data("DateTimePicker").maxDate(e.date);
+                    });
+                });
             }
 
-            function fillRectangleCoordinates(ne, sw) {
-                fillFormById('a1', sw.lng());
-                fillFormById('a2', ne.lng());
-                fillFormById('b1', sw.lat());
-                fillFormById('b2', ne.lat());
+            /** Fills the given coordinates in the given form fields.
+             *
+             *  It assumes that both arrays have the same size.
+             *
+             *  Arguments:
+             *      coordinates: An array of the coordinates to be used.
+             *      queryFields: An array of the query fields to be completed.
+             */
+            function fillRectangleCoordinates(coordinates, queryFields) {
+                var numberCoords = coordinates.length;
+                for (var i = 0; i < numberCoords; ++i) {
+                    $(function(){
+                        document.getElementById(
+                                queryFields[i]).value = coordinates[i];
+                    });
+                }
             }
 
-            function addAreaOptions(map) {
-                var bounds = {
-                        north: 51.50295659940793,
-                        south: 51.49004560059794,
-
-                        east: -0.15713320190434388,
-                        west: -0.18968685180664124
-                    };
+            /** Adds a rectangle for the query form.
+             *
+             *  Arguments:
+             *      bounds: Dictionary of the N, S, E and W bounds of the area.
+             *      queryFields: Fields to be filled upon changing the area.
+             */
+            function addRectangleOnMap(bounds, queryFields) {
+                // Add the rectangle on the map.
                 rectangle = new google.maps.Rectangle({
                     bounds: bounds,
                     editable: true,
                     draggable: true
                 });
                 rectangle.setMap(map);
+
+                // Add infoWindow listener.
+                var infoWindow = new google.maps.InfoWindow();
                 ne = rectangle.getBounds().getNorthEast();
                 sw = rectangle.getBounds().getSouthWest();
-                // Add an event listener on the rectangle.
-                rectangle.addListener('bounds_changed', showNewRect);
 
-                // Define an info window on the map.
-                infoWindow = new google.maps.InfoWindow();
+                // Add an event listener on the rectangle.
+                rectangle.addListener('bounds_changed', function() {
+                    var ne = this.getBounds().getNorthEast();
+                    var sw = this.getBounds().getSouthWest();
+                    var contentString = '<b>Rectangle changed.</b><br>' +
+                            'NE: ' + ne.lat() + ', ' + ne.lng() + '<br>' +
+                            'SW: ' + sw.lat() + ', ' + sw.lng();
+                    // Set the info window's content and position.
+                    infoWindow.setContent(contentString);
+                    infoWindow.setPosition(ne);
+                    infoWindow.open(map);
+                    var coordinates = [sw.lng(), ne.lng(), sw.lat(), ne.lat()];
+                    fillRectangleCoordinates(coordinates, queryFields);
+                });
             }
 
+            /** Creates the map view. Fetches a Google map of London. */
             function getSyntacticMap() {
+                // Render the map.
                 var mapDiv = document.getElementById('map');
                 map = new google.maps.Map(mapDiv, {
                     center: {lat: 51.508226, lng: -0.128404},
                     zoom: 12
                 });
-                addAreaOptions(map);
             }
 
+            /** Creates the view for a syntactic query with one area. */
             function getSyntacticOneArea() {
-                $(function(){
-                    $("#query-form").load("templates/syntactic_query_1");
-                });
+                // Render the form.
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('GET', '/get_syntactic_query_form_1', false);
+                xhttp.send();
+                var formElement = document.getElementById('query-form');
+                formElement.innerHTML = xhttp.responseText;
+                // Render the map.
                 getSyntacticMap();
+                // Add the datetime form options.
+                loadDateTimePickers('#datetimepicker5', '#datetimepicker6');
+                // Add one rectangle for the query.
+                var bounds = {
+                    north: 51.50295659940793,
+                    south: 51.49004560059794,
+                    east: -0.15713320190434388,
+                    west: -0.18968685180664124
+                };
+                var queryFields = ['a1', 'a2', 'b1', 'b2'];
+                addRectangleOnMap(bounds, queryFields);
             }
 
+            /** Creates the view for a syntactic query of two areas. */
             function getSyntacticTwoAreas() {
-                $(function(){
-                    $("#query-form").load("templates/syntactic_query_2");
-                });
+                // Render the form.
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('GET', '/get_syntactic_query_form_2', false);
+                xhttp.send();
+                var formElement = document.getElementById('query-form');
+                formElement.innerHTML = xhttp.responseText;
+                // Render the map.
                 getSyntacticMap();
+                // Add the datetime form options.
+                loadDateTimePickers('#datetimepicker7', '#datetimepicker8');
+                // Add two rectangles for the query.
+                var bounds1 = {
+                    north: 51.50295659940793,
+                    south: 51.49004560059794,
+                    east: -0.15713320190434388,
+                    west: -0.18968685180664124
+                };
+                var bounds2 = {
+                    north: 51.51695242669733,
+                    south: 51.50564814854554,
+                    east: -0.06220446044926575,
+                    west: -0.10128124267578187
+                };
+                var queryFields1 = ['a1', 'a2', 'b1', 'b2'];
+                var queryFields2 = ['c1', 'c2', 'd1', 'd2'];
+                addRectangleOnMap(bounds1, queryFields1);
+                addRectangleOnMap(bounds2, queryFields2);
             }
 
+            /** Adds a new listener for every given pin to fill the form.
+             *
+             *  Each pin will have a new listener that colors the pin
+             *  differently, and fills the query form with its name.
+             *
+             *  Arguments:
+             *      markers: A set of markers to have listeners added to them.
+             *      colour: Hex string of the colour of the pin upon selection.
+             *      type: Type of event trigger that adds the pin into the form.
+             */
+            function addQueryPins(parentId, markers, colour, type) {
+                var parentElement = document.getElementById(parentId);
+                var children = parentElement.children;
+                var numberMarkers = markers.length;
+                var selectedPin = getNewPin('000000');
+                for (var i = 0; i < numberMarkers; ++i) {
+                    markers[i].addListener(type, function () {
+                        this.setIcon(selectedPin);
+                        this.setOpacity(1);
+                        this.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
+                        children[this.title].selected = true;
+                        var pinType = getNewPin(colour)
+                        this.addListener('mouseout', function() {
+                            setPinTypeForPinMarker(this, pinType, 1)
+                        });
+                    });
+                    markers[i].addListener('rightclick', function () {
+                        var pinType = getNewPin("BDBDBF");
+                        this.addListener('mouseout', function() {
+                            setPinTypeForPinMarker(this, pinType, 0.3)
+                        });
+                    });
+
+                }
+            }
+
+            /** Updates the specified drop-down element with the tube stops.
+             *
+             *  It adds all the available tube stops given by the back-end
+             *  into the given drop-down element.
+             *
+             *  Arguments:
+             *      parentId: String of the id of the drop-down element.
+             */
+            function updateStopOptions(parentElement) {
+                {% for stop in stop_points %}
+                    var option = document.createElement('option');
+                    option.html = '{{ stop[1] }}';
+                    option.value = '{{ stop[0] }}';
+                    parentElement.add(option);
+                {% endfor %}
+            }
+
+            /** Creates the view for a semantic query with one tube stop. */
             function getSemanticOneArea() {
-                $(function(){
-                    $("#query-form").load("templates/semantic_query_1");
-                });
-                getSemanticMap();
+                // Render the form.
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('GET', '/get_semantic_query_form_1', false);
+                xhttp.send();
+                var formElement = document.getElementById('query-form');
+                formElement.innerHTML = xhttp.responseText;
+                // Render the map.
+                var markers = getSemanticMap();
+                // Add the datetime form options.
+                loadDateTimePickers('#datetimepicker1', '#datetimepicker2');
+                // Add the pin listener for the query.
+                addQueryPins('select_one', markers, '32cd32', 'click');
             }
 
             function getSemanticTwoAreas() {
-                $(function(){
-                    $("#query-form").load("templates/semantic_query_2");
-                });
-                getSemanticMap();
+                // Render the form.
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('GET', '/get_semantic_query_form_2', false);
+                xhttp.send();
+                var formElement = document.getElementById('query-form');
+                formElement.innerHTML = xhttp.responseText;
+                // Render the map.
+                var markers = getSemanticMap();
+                // Add the datetime form options.
+                loadDateTimePickers('#datetimepicker3', '#datetimepicker4');
+                // Add the pin listeners for the query.
+                addQueryPins('select_from', markers, '32cd32', 'dblclick');
+                addQueryPins('select_to', markers, 'ffff00', 'click');
             }
 
-            // Show the new coordinates for the rectangle in an info window.
-            /** @this {google.maps.Rectangle} */
-            function showNewRect(event) {
-                var ne = rectangle.getBounds().getNorthEast();
-                var sw = rectangle.getBounds().getSouthWest();
-                var contentString = '<b>Rectangle moved.</b><br>' +
-                        'NE: ' + ne.lat() + ', ' + ne.lng() + '<br>' +
-                        'SW: ' + sw.lat() + ', ' + sw.lng();
-                // Set the info window's content and position.
-                infoWindow.setContent(contentString);
-                infoWindow.setPosition(ne);
-                infoWindow.open(map);
-                fillRectangleCoordinates(ne, sw);
-            }
-
+            /** Displays the given value in the 'results' element.
+             *
+             *  Arguments:
+             *      value: String value to be displayed.
+             */
             function showResult(value) {
                 var resDiv = document.getElementBYId('result-div');
-                resDiv.html = value;
+                resDiv.html = ('The result of the query is: <b>' +
+                               value +
+                               '</b>');
+            }
+
+            /** Sends a POST request based on the specified form fields.
+             *
+             *
+             *  Arguments:
+             *      formFields: Array of the ids of the fields' whose
+             *      values are to be collected.
+             *      url: String url to which the POST request is sent.
+             */
+            function issuePOSTRequest(formFields, url) {
+                // Render all form values.
+                var numberFields = formFields.length;
+                var vars = '';
+                for (var i = 0; i < numberFields; i++) {
+                    var fieldValue = document.getElementById(formFields[i]).value;
+                    if (i > 0) {
+                        vars += '&';
+                    }
+                    vars += formFields[i] + '=' + fieldValue;
+                }
+                // Send them via POST request.
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('POST', url, false);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send(vars);
+                window.alert(xhttp.responseText);
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9j7cn2KqYk6cmlmDcXEJmpxSUzEPUWw&callback=getSemanticMap" async defer>

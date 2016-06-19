@@ -1,73 +1,38 @@
 <div class="cointainer form-wrapper-div">
-        <h4>Syntactic Query 1 Area</h4>
-        <div class="input-group">
-            <label class="query-form-label">Area defined by:</label>
-            <div class="input-group query-form">
-                <span class="input-group-addon form-addon-point">NE:</span>
-                <input type="text" class="form-control" name="b2" id="b2" placeholder="51.50295659940793" aria-describedby="basic-addon1">
-                <input type="text" class="form-control" name="a2" id="a2" placeholder="-0.15713320190434388" aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group query-form">
-                <span class="input-group-addon form-addon-point">SW:</span>
-                <input type="text" class="form-control" name="b1" id="b1" placeholder="51.49004560059794" aria-describedby="basic-addon1">
-                <input type="text" class="form-control" name="a1" id="a1" placeholder="-0.18968685180664124" aria-describedby="basic-addon2">
-            </div>
-            <label class="query-form-label">Time interval:</label>
-            <div class="input-group query-form">
-                <span class="input-group-addon form-addon">From:</span>
-                <div class='input-group date' id='datetimepicker5'>
-                    <input type='text' class="form-control" id="from_time"/>
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-            <div class="input-group query-form">
-                <span class="input-group-addon form-addon">To:</span>
-                <div class='input-group date' id='datetimepicker6'>
-                    <input type='text' class="form-control" id="to_time"/>
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
+    <h4>Syntactic Query 1 Area</h4>
+    <div class="input-group">
+        <label class="query-form-label">Area defined by:</label>
+        <div class="input-group query-form">
+            <span class="input-group-addon form-addon-point">NE:</span>
+            <input type="text" class="form-control" name="b2" id="b2" placeholder="51.50295659940793" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" name="a2" id="a2" placeholder="-0.15713320190434388" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group query-form">
+            <span class="input-group-addon form-addon-point">SW:</span>
+            <input type="text" class="form-control" name="b1" id="b1" placeholder="51.49004560059794" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" name="a1" id="a1" placeholder="-0.18968685180664124" aria-describedby="basic-addon2">
+        </div>
+        <label class="query-form-label">Time interval:</label>
+        <div class="input-group query-form">
+            <span class="input-group-addon form-addon">From:</span>
+            <div class='input-group date' id='datetimepicker5'>
+                <input type='text' class="form-control" id="from_time"/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
             </div>
         </div>
-        <button type="button" onclick="doThis()" class="btn btn-info query-button">
-            <span class="glyphicon glyphicon-star" id="synQuery1Button" aria-hidden="true"></span> Send Query
-        </button>
+        <div class="input-group query-form">
+            <span class="input-group-addon form-addon">To:</span>
+            <div class='input-group date' id='datetimepicker6'>
+                <input type='text' class="form-control" id="to_time"/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
     </div>
+    <button type="button" onclick="issuePOSTRequest(formFields1, url1);" class="btn btn-info query-button">
+        <span class="glyphicon glyphicon-star" id="synQuery1Button" aria-hidden="true"></span> Send Query
+    </button>
 </div>
-<div class="result-wrapper-div" id="result-div">
-</div>
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker5').datetimepicker();
-        $('#datetimepicker6').datetimepicker({
-            useCurrent: false //Important! See issue #1075
-        });
-        $("#datetimepicker5").on("dp.change", function (e) {
-            $('#datetimepicker6').data("DateTimePicker").minDate(e.date);
-        });
-        $("#datetimepicker6").on("dp.change", function (e) {
-            $('#datetimepicker5').data("DateTimePicker").maxDate(e.date);
-        });
-    });
-
-    function doThis() {
-        console.log('does it get here at least?');
-        var xhttp = new XMLHttpRequest();
-        var a1 = document.getElementById('a1').value;
-        var a2 = document.getElementById('a2').value;
-        var b1 = document.getElementById('b1').value;
-        var b2 = document.getElementById('b2').value;
-        var from_time = document.getElementById('from_time').value;
-        var to_time = document.getElementById('to_time').value;
-        var vars = 'a1='+ a1 + '&a2=' + a2 + '&b1=' + b1 + '&b2=' + b2 +
-                   '&from_time=' + from_time + '&to_time=' + to_time;
-        window.alert('preparing to send request!')
-        xhttp.open('POST', '/get_syntactic_query_1', false);
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send(vars);
-        window.alert(xhttp.responseText);
-    }
-</script>
