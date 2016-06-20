@@ -18,7 +18,7 @@ files = ['daily_0_2016_05_01.csv', 'daily_0_2016_05_02.csv',
 
 def main():
     try:
-        cryptdb = cryptdb_manager.CryptDBManager()
+        cryptdb = cryptdb_manager.CryptDBManager(table='generated_1')
         logger = datalib.get_new_logger('quick_fix', 'quick_fix.log')
         for fl in files:
             if fl != 'daily_0_2016_05_02.csv':

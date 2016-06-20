@@ -60,6 +60,13 @@ class CryptDBManager:
             sys.exit(1)
         return db, cursor
 
+    def execute_void_query(self, sql_query):
+        try:
+            self._cursor.execute(sql_query)
+            self._db.commit()
+        except MySQLdb.Error, e:
+            self._logger.error("Error %d: %s" % (e.args[0], e.args[1]))
+
     """ Executes the given count query over CryptDB.
 
     Arguments:
@@ -78,6 +85,38 @@ class CryptDBManager:
             self._logger.error("Error %d: %s" % (e.args[0], e.args[1]))
             return -1
 
+    def insert_daily(self, csv_file_path):
+        try:
+            csv_file = file(csv_file_path, 'rb')
+            reader = csv.reader(csv_file,
+                                delimiter=';',
+                                quotechar='"',
+                                quoting=csv.QUOTE_MINIMAL)
+            for row in reader:
+                if int(row[0]) > 500:
+                    break
+                self._logger.info('Now row: %s' % row)
+                insert_csv_query = (
+                    datalib.MYSQL_INSERT_GEN_VALUES % (self._table,
+                                                       row[0],
+                                                       row[1],
+                                                       row[2],
+                                                       row[3]))
+                self._cursor.execute(insert_csv_query)
+            self._db.commit()
+            self._logger.info('Inserted CSV file: %s' % csv_file_path)
+
+        except MySQLdb.Error, e:
+            self._logger.error("Error %d: %s" % (e.args[0], e.args[1]))
+
+        finally:
+            csv_file.close()
+        lat1, lat2 = datalib.prepare_coordinate(a1)
+        lat3, lat4 = datalib.prepare_coordinate(a2)
+        lng1, lng2 = datalib.prepare_coordinate(b1)
+        lng3, lng4 = datalib.prepare_coordinate(b2)
+        from_timestamp = datalib.get_timestamp_from_request_string(from_time)
+        to_timestamp = datalib.get_timestamp_from_request_string(to_time)
     """ Inserts the given CSV file into CryptDB.
 
     Arguments:

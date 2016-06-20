@@ -43,8 +43,9 @@ def daily_paths(query_date):
         query_date: Datetime object, representing the date to be queried.
     """
     for weekday_file_counter in range(1, 10):
-	msg = 'Generating daily for %s, date %s' % (weekday_file_counter,
-                                                    query_date.strftime('%Y-%m-%d'))
+        msg = 'Generating daily for %s, date %s' % (weekday_file_counter,
+                                                    query_date.strftime(
+                                                        '%Y-%m-%d'))
         logging.info(msg)
         weekday_file = 'paths/weekday_' + str(weekday_file_counter) + '.csv'
         weekend_file = 'paths/weekend_' + str(weekday_file_counter) + '_%s.csv'
@@ -80,7 +81,7 @@ def date_range(str_start_date, str_end_date):
     end_date = datetime.date(int(end_tokens[2]),
                              int(end_tokens[1]),
                              int(end_tokens[0]))
-    for n in range(int ((end_date - start_date).days)):
+    for n in range(int((end_date - start_date).days)):
         yield start_date + datetime.timedelta(n)
 
 

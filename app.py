@@ -91,7 +91,7 @@ def get_query_1():
             '<br>b2: ' + str(b2) +
             '<br>from time: ' + from_time +
             '<br>to time: ' + str(to_time) +
-            '<br><br> query: ' + res)
+            '<br><br> result is: ' + str(res))
 
 
 @app.route('/get_syntactic_query_2', methods=['POST'])
@@ -136,7 +136,7 @@ def get_query_3():
     return ('tube stop: ' + tube_stop +
             '<br>from time: ' + str(from_time) +
             '<br>to time: ' + str(to_time) +
-            '<br><br>query: ' + res)
+            '<br><br><b>result</b>is: ' + res)
 
 
 @app.route('/get_semantic_query_form_2')
@@ -170,4 +170,4 @@ def get_query_4():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader=True)
+    app.run(debug=True, use_reloader=False)

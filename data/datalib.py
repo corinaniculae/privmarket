@@ -269,8 +269,7 @@ def get_datetime_from_string(str_time):
                              int(date_tokens[1]),    # Month
                              int(date_tokens[2]),    # Day
                              int(time_tokens[0]),    # Hour
-                             int(time_tokens[1]),    # Minute
-                             int(time_tokens[2]))    # Second
+                             int(time_tokens[1]))    # Minute
 
 
 def get_next_time(curr_time, duration):
@@ -340,6 +339,9 @@ def get_timestamp_from_request_string(str_time):
 
 
 def prepare_coordinate(coord_str):
+    if 'e' in coord_str:
+        print 'got another one: ' + coord_str
+        return 0, 0
     # Remove the digits before the point.
     tokens = coord_str.split('.')
     decimals = tokens[1].ljust(18, '0')
