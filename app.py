@@ -3,7 +3,7 @@
 import flask
 import sys
 
-sys.path.append('data/')
+sys.path.append('src/')
 import query_agent
 import tfl_manager
 
