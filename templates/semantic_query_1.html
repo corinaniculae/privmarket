@@ -8,7 +8,7 @@
             <select class="form-control" id="select_one">
                 <option selected disabled>Select one</option>
                 {% for stop in stop_points %}
-                <option id="{{ stop[0] }}">{{ stop[1] }}</option>
+                <option id="{{ stop[0] }}" value="{{ stop[0] }}">{{ stop[1] }}</option>
                 {% endfor %}
             </select><br><br>
             <label class="query-form-label" onload="loadDateTimePickers();">Time interval:</label>

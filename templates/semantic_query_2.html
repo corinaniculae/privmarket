@@ -9,7 +9,7 @@
             <select class="form-control" id="select_from">
                 <option selected disabled>Select one</option>
                 {% for stop in stop_points %}
-                <option id="{{ stop[0] }}">{{ stop[1] }}</option>
+                <option id="{{ stop[0] }}" value="{{ stop[0] }}">{{ stop[1] }}</option>
                 {% endfor %}
             </select><br><br>
             <label class="query-form-label">To TFL stop: </label>

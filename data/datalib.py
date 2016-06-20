@@ -338,3 +338,11 @@ def get_timestamp_from_request_string(str_time):
     dt = datetime.datetime(year, month, day, hour, minute)
     return int(time.mktime(dt.timetuple()))
 
+
+def prepare_coordinate(coord_str):
+    # Remove the digits before the point.
+    tokens = coord_str.split('.')
+    decimals = tokens[1].ljust(18, '0')
+    coord1 = 1000000000 - int(decimals[:9])
+    coord2 = 1000000000 - int(decimals[9:])
+    return coord1, coord2

@@ -78,21 +78,20 @@ def get_possible_forms():
 
 @app.route('/get_syntactic_query_1', methods=['POST'])
 def get_query_1():
-    a1 = float(flask.request.form.get('a1'))
-    a2 = float(flask.request.form.get('a2'))
-    b1 = float(flask.request.form.get('b1'))
-    b2 = float(flask.request.form.get('b2'))
+    a1 = flask.request.form.get('a1')
+    a2 = flask.request.form.get('a2')
+    b1 = flask.request.form.get('b1')
+    b2 = flask.request.form.get('b2')
     from_time = flask.request.form.get('from_time')
     to_time = flask.request.form.get('to_time')
-    query = agent.get_syntactic_count_one_area(a1, a2, b1, b2, from_time, to_time)
+    res = agent.get_syntactic_count_one_area(a1, a2, b1, b2, from_time, to_time)
     return ('a1: ' + str(a1) +
             '<br>a2: ' + str(a2) +
             '<br>b1: ' + str(b1) +
             '<br>b2: ' + str(b2) +
             '<br>from time: ' + from_time +
             '<br>to time: ' + str(to_time) +
-            'aaaand ' +
-            '<br><br> query: ' + query)
+            '<br><br> query: ' + res)
 
 
 @app.route('/get_syntactic_query_2', methods=['POST'])
@@ -105,8 +104,10 @@ def get_query_2():
     c2 = flask.request.form.get('c2')
     d1 = flask.request.form.get('d1')
     d2 = flask.request.form.get('d2')
+    coords = [a1, a2, b1, b2, c1, c2, d1, d2]
     from_time = flask.request.form.get('from_time')
     to_time = flask.request.form.get('to_time')
+    res = agent.get_syntactic_count_two_areas(coords, from_time, to_time)
     return ('a1: ' + str(a1) +
             '<br>a2: ' + str(a2) +
             '<br>b1: ' + str(b1) +
@@ -116,7 +117,8 @@ def get_query_2():
             '<br>d1: ' + str(d1) +
             '<br>d2: ' + str(d2) +
             '<br>from time: ' + str(from_time) +
-            '<br>to time: ' + str(to_time))
+            '<br>to time: ' + str(to_time) +
+            '<br><br> query: ' + res)
 
 
 @app.route('/get_semantic_query_form_1')
@@ -130,9 +132,12 @@ def get_query_3():
     tube_stop = flask.request.form.get('select_one')
     from_time = flask.request.form.get('from_time')
     to_time = flask.request.form.get('to_time')
+    res = agent.get_semantic_count_one_stop(tube_stop, from_time, to_time)
     return ('tube stop: ' + tube_stop +
             '<br>from time: ' + str(from_time) +
-            '<br>to time: ' + str(to_time))
+            '<br>to time: ' + str(to_time) +
+            '<br><br>query: ' + res)
+
 
 @app.route('/get_semantic_query_form_2')
 def get_form_4():
@@ -156,10 +161,12 @@ def get_query_4():
     to_tube_stop = flask.request.form.get('select_to')
     from_time = flask.request.form.get('from_time')
     to_time = flask.request.form.get('to_time')
+    res = agent.get_semantic_count_two_stops(from_tube_stop, to_tube_stop, from_time, to_time)
     return ('from tube stop: ' + from_tube_stop +
             '<br>to tube stop: ' + to_tube_stop +
             '<br>from time: ' + str(from_time) +
-            '<br>to time: ' + str(to_time))
+            '<br>to time: ' + str(to_time) +
+            '<br><br>query: ' + res)
 
 
 if __name__ == "__main__":
