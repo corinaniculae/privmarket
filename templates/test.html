@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="row">
-                        <div class="btn-group" data-toggle="buttons">
+                        <div class="btn-group query-buttons" data-toggle="buttons">
                             <label class="btn btn-info active query-button">
                                 <input type="radio" name="options" id="opt_stop" onchange="getSemanticMap()" autocomplete="off">
                                 Stop points
@@ -50,6 +50,10 @@
                             </label>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
                     <div class="row">
                         <div id="map">
                         </div>
@@ -68,7 +72,7 @@
                 <div class="col-lg-4">
                     <div id="query-form">
                     </div>
-                </div>
+                 </div>
             </div>
         </div>
         <script>
@@ -384,7 +388,7 @@
              */
             function showResult(value) {
                 var resDiv = document.getElementById('results-div');
-                resDiv.innerHTML = ('<h5>Current stop points:</h5>' + value);
+                resDiv.innerHTML = ('<h5>Query results:</h5>' + value);
             }
 
             /** Sends a POST request based on the specified form fields.
@@ -417,5 +421,5 @@
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9j7cn2KqYk6cmlmDcXEJmpxSUzEPUWw&callback=getSemanticMap" async defer>
         </script>
-  </body>
+    </body>
 </html>

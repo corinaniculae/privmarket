@@ -1,7 +1,8 @@
 
 #map {
-    width: 810px;
+    width: 790px;
     height: 490px;
+    margin-left: 15px;
 }
 
 .query-button {
@@ -11,22 +12,30 @@
     bottom: 0;
 }
 
+.query-buttons {
+    margin-left: 15px;
+}
+
 .mygrid-wrapper-div {
     border: solid #337AB7 2px;
     overflow: scroll;
     height: 200px;
-    width: 810px;
+    width: 90%;
     margin-top: 20px;
     margin-botton: 20px;
+    margin-left: 15px;
+    margin-right: 0px;
 }
 
 .result-wrapper-div {
     border: solid black 2px;
-    margin-left: 40px;
+    margin-left: -47px;
+    margin-right: 0px;
+    padding-right: 0px;
     margin-top: 20px;
     overflow: scroll;
     height: 200px;
-    width: 100%;
+    width: 122%;
     margin-bottom: 20px;
     padding-left: 10px;
 }
@@ -42,7 +51,7 @@
 .form-wrapper-div {
     border: solid black 2px;
     height: 490px;
-    margin-top: 80px;
+    margin-top: 0px;
     margin-left: 40px;
     overflow: scroll;
     padding: 10px;
