@@ -322,7 +322,6 @@ def get_timestamp_from_request_string(str_time):
     Returns:
         The equivalent datetime.datetime object of the given string.
     """
-    print 'so, we have: ' + str_time
     tokens = str_time.split(' ')
     type = tokens[2]
     date_tokens = tokens[0].split('/')

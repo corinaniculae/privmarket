@@ -19,7 +19,7 @@
 .mygrid-wrapper-div {
     border: solid #337AB7 2px;
     overflow: scroll;
-    height: 200px;
+    height: 260px;
     width: 90%;
     margin-top: 20px;
     margin-botton: 20px;
@@ -34,7 +34,7 @@
     padding-right: 0px;
     margin-top: 20px;
     overflow: scroll;
-    height: 200px;
+    height: 260px;
     width: 122%;
     margin-bottom: 20px;
     padding-left: 10px;
