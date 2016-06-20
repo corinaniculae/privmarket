@@ -2,7 +2,6 @@
 
 import flask
 import sys
-#import pysftp
 
 sys.path.append('data/')
 import query_agent
@@ -11,7 +10,7 @@ import tfl_manager
 
 app = flask.Flask(__name__)
 tfl_man = tfl_manager.TFLManager()
-#agent = query_agent.QueryAgent(tfl_man.get_all_tube_stops())
+agent = query_agent.QueryAgent(tfl_man.get_all_tube_stops())
 
 
 # Routing the webapp's main URL GET request.
@@ -79,18 +78,21 @@ def get_possible_forms():
 
 @app.route('/get_syntactic_query_1', methods=['POST'])
 def get_query_1():
-    a1 = flask.request.form.get('a1')
-    a2 = flask.request.form.get('a2')
-    b1 = flask.request.form.get('b1')
-    b2 = flask.request.form.get('b2')
+    a1 = float(flask.request.form.get('a1'))
+    a2 = float(flask.request.form.get('a2'))
+    b1 = float(flask.request.form.get('b1'))
+    b2 = float(flask.request.form.get('b2'))
     from_time = flask.request.form.get('from_time')
     to_time = flask.request.form.get('to_time')
+    query = agent.get_syntactic_count_one_area(a1, a2, b1, b2, from_time, to_time)
     return ('a1: ' + str(a1) +
             '<br>a2: ' + str(a2) +
             '<br>b1: ' + str(b1) +
             '<br>b2: ' + str(b2) +
-            '<br>from time: ' + str(from_time) +
-            '<br>to time: ' + str(to_time))
+            '<br>from time: ' + from_time +
+            '<br>to time: ' + str(to_time) +
+            'aaaand ' +
+            '<br><br> query: ' + query)
 
 
 @app.route('/get_syntactic_query_2', methods=['POST'])

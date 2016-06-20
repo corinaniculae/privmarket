@@ -18,6 +18,7 @@ import calendar
 import datetime
 import logging
 import random
+import time
 
 
 # CSV Files.
@@ -311,3 +312,29 @@ def get_new_logger(logger_name, file_name=None):
     logger.addHandler(console_handler)
 
     return logger
+
+
+def get_timestamp_from_request_string(str_time):
+    """ Parses a timestamp from TFL and returns a datetime.datetime object.
+
+    Attributes:
+        str_time: String YYYY/MM/DD HH:MM (AM|PM) from TFL's API response.
+
+    Returns:
+        The equivalent datetime.datetime object of the given string.
+    """
+    print 'so, we have: ' + str_time
+    tokens = str_time.split(' ')
+    type = tokens[2]
+    date_tokens = tokens[0].split('/')
+    time_tokens = tokens[1].split(':')
+    year = int(date_tokens[2])
+    month = int(date_tokens[0])
+    day = int(date_tokens[1])
+    hour = int(time_tokens[0])
+    if type is 'PM':
+        hour += 12
+    minute = int(time_tokens[1])
+    dt = datetime.datetime(year, month, day, hour, minute)
+    return int(time.mktime(dt.timetuple()))
+

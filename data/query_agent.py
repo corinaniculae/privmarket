@@ -1,20 +1,25 @@
 
+
 import cryptdb_manager
+import datalib
 import mysql_manager
 
 
-TYPE_A = """SELECT count(*) FROM generated WHERE Latitude > %d AND
-                                                 Latitude < %d AND
-                                                 Longitude > %d AND
-                                                 Longitude < %d AND
-                                                 Timestamp > %d AND
-                                                 Timestamp < %d
+TYPE_1 = """SELECT count(DISTINCT RecordId) FROM generated WHERE
+                          Latitude BETWEEN %f AND %f AND
+                          Longitude BETWEEN %f AND %f AND
+                          Timestamp BETWEEN %d AND %d;
          """
-TYPE_B = """SELECT count(*) FROM generated WHERE Latitude IS %d AND
-                                                 Longitude IS %d AND
-                                                 Timestamp > %d AND
-                                                 Timestamp < %d
-         """
+TYPE_2 = """ SELECT count(DISTINCT L.RecordId) FROM generated L
+                      INNER JOIN generated R
+                      ON L.RecordId = R.RecordId AND L.Timestamp < R.Timestamp
+                      WHERE L.Latitude BETWEEN %d AND %d AND
+                            L.Longitude BETWEEN %d AND %d AND
+                            L.Timestamp BETWEEN %d AND %d AND
+                            R.Latitude BETWEEN %d AND %d AND
+                            R.Longitude BETWEEN %d AND %d AND
+                            R.Timestamp BETWEEN %d AND %d;
+        """
 
 class QueryAgent:
 
@@ -37,8 +42,11 @@ class QueryAgent:
         from_time: Timestamp of lower bound of the given time interval.
         to_time: Timestamp of upper bound of the given time interval.
     """
-    def get_syntactic_count_one_area(self, a1, a2, b1, b2):
-        print 'we got: ' + a1 + ' and ' + a2 + ' and ' + b1 + ' aaand ' + b2
+    def get_syntactic_count_one_area(self, a1, a2, b1, b2, from_time, to_time):
+        from_timestamp = datalib.get_timestamp_from_request_string(from_time)
+        to_timestamp = datalib.get_timestamp_from_request_string(to_time)
+        query = TYPE_1 % (b1, b2, a1, a2, from_timestamp, to_timestamp)
+        return query
 
     def get_syntactic_count_two_areas(self):
         return
