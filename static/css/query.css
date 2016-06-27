@@ -19,8 +19,8 @@
 .mygrid-wrapper-div {
     border: solid #337AB7 2px;
     overflow: scroll;
-    height: 260px;
-    width: 90%;
+    height: 560px;
+    width: 80%;
     margin-top: 20px;
     margin-botton: 20px;
     margin-left: 15px;
@@ -29,13 +29,13 @@
 
 .result-wrapper-div {
     border: solid black 2px;
-    margin-left: -47px;
+    margin-left: -126px;
     margin-right: 0px;
     padding-right: 0px;
     margin-top: 20px;
     overflow: scroll;
-    height: 260px;
-    width: 122%;
+    height: 560px;
+    width: 142%;
     margin-bottom: 20px;
     padding-left: 10px;
 }

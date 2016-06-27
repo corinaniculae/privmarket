@@ -4,7 +4,9 @@
 
 
 import csv
+import os
 import sys
+import time
 
 import MySQLdb
 
@@ -80,7 +82,7 @@ class CryptDBManager:
         try:
             self._cursor.execute(sql_query)
             self._db.commit()
-            return self._cursor.fetchone()
+            return self._cursor.fetchone()[0]
         except MySQLdb.Error, e:
             self._logger.error("Error %d: %s" % (e.args[0], e.args[1]))
             return -1
@@ -151,6 +153,28 @@ class CryptDBManager:
 
         finally:
             csv_file.close()
+
+    def load_mysql_files(self):
+        start_time = time.time()
+        for day in range(2, 3):
+            for counter in range(1, 3):
+                if day < 10:
+                    file_name = 'mysql_daily_%s_2016_05_0%s.sql' % (counter, day)
+                else:
+                    file_name = 'mysql_daily_%s_2016_05_%s.sql' % (counter, day)
+                print 'now will source file: ' + file_name
+                file_path = os.path.join('src/csv_files/generated', file_name)
+                sql_file = file(file_path, 'rb')
+                reader = csv.reader(sql_file,
+                                    delimiter=';',
+                                    quotechar='"',
+                                    quoting=csv.QUOTE_MINIMAL)
+                for row in reader:
+                    self._cursor.execute(str(row[0]) + ';')
+                self._db.commit()
+                sql_file.close()
+        elapsed_time = time.time() - start_time
+        print 'and it took: ' + str(elapsed_time)
 
 
 class MySQLError(Exception):

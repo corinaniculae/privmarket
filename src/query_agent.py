@@ -35,15 +35,24 @@ TYPE_2 = """ SELECT count(DISTINCT L.RecordId) FROM generated_1 L
                             R.Timestamp BETWEEN %d AND %d;
          """
 TYPE_3 = """SELECT count(DISTINCT RecordId) FROM generated_1 WHERE
-                          StopID LIKE '%s' AND
+                          Lat1 = %d AND
+                          Lat2 = %d AND
+                          Lng1 = %d AND
+                          Lng2 = %d AND
                           Timestamp BETWEEN %d AND %d;
          """
 TYPE_4 = """ SELECT count(DISTINCT L.RecordId) FROM generated_1 L
               INNER JOIN generated_1 R
               ON L.RecordId = R.RecordId AND L.Timestamp < R.Timestamp
-              WHERE L.StopID LIKE '%s' AND
+              WHERE L.Lat1 = %d AND
+                    L.Lat2 = %d AND
+                    L.Lng1 = %d AND
+                    L.Lng2 = %d AND
                     L.Timestamp BETWEEN %d AND %d AND
-                    R.StopID LIKE '%s' AND
+                    R.Lat1 = %d AND
+                    R.Lat2 = %d AND
+                    R.Lng1 = %d AND
+                    R.Lng2 = %d AND
                     R.Timestamp BETWEEN %d AND %d;
          """
 class QueryAgent:
@@ -58,7 +67,7 @@ class QueryAgent:
     def __init__(self, stop_set):
         self._stop_set = stop_set
         self._cryptdb = cryptdb_manager.CryptDBManager()
-        self._cryptdb.execute_void_query(CREATE_GENERATED_1)
+        #self._cryptdb.execute_void_query(CREATE_GENERATED_1)
         #self._mysqldb = mysql_manager.MySQLManager()
 
     """ Counts the number of travelers in a given rectangle area
@@ -84,7 +93,7 @@ class QueryAgent:
                           min(lng2, lng4), max(lng2, lng4),
                           from_timestamp, to_timestamp)
         count = self._cryptdb.execute_count_query(query)
-        return query + '<br> and result is: ' + str(count)
+        return query, count
 
     def get_syntactic_count_two_areas(self, coord_arr, from_time, to_time):
         pairs = []
@@ -93,17 +102,32 @@ class QueryAgent:
             pairs.append((coord_1, coord_2))
         from_timestamp = datalib.get_timestamp_from_request_string(from_time)
         to_timestamp = datalib.get_timestamp_from_request_string(to_time)
-        query = TYPE_2 % (pairs[0][0], pairs[0][1],
-                          pairs[1][0], pairs[1][1],
-                          pairs[2][0], pairs[2][1],
-                          pairs[3][0], pairs[3][1],
+        query = TYPE_2 % (min(pairs[0][0], pairs[1][0]),
+                          max(pairs[0][0], pairs[1][0]),
+                          min(pairs[0][1], pairs[1][1]),
+                          max(pairs[0][1], pairs[1][1]),
+                          min(pairs[2][0], pairs[3][0]),
+                          max(pairs[2][0], pairs[3][0]),
+                          min(pairs[2][1], pairs[3][1]),
+                          max(pairs[2][1], pairs[3][1]),
                           from_timestamp, to_timestamp,
-                          pairs[4][0], pairs[4][1],
-                          pairs[5][0], pairs[5][1],
-                          pairs[6][0], pairs[6][1],
-                          pairs[7][0], pairs[7][1],
+                          min(pairs[4][0], pairs[5][0]),
+                          max(pairs[4][0], pairs[5][0]),
+                          min(pairs[4][1], pairs[5][1]),
+                          max(pairs[4][1], pairs[5][1]),
+                          min(pairs[6][0], pairs[7][0]),
+                          max(pairs[6][0], pairs[7][0]),
+                          min(pairs[6][1], pairs[7][1]),
+                          max(pairs[6][1], pairs[7][1]),
                           from_timestamp, to_timestamp)
-        #return self._cryptdb.execute_count_query(query)
+        count = self._cryptdb.execute_count_query(query)
+        return query, count
+
+    def _get_stop_by_id(self, stop_id):
+        matched_stops = [stop for stop in self._stop_set if stop[0] == stop_id]
+        if len(matched_stops) == 0:
+            return list(self._stop_set)[0]
+        return matched_stops[0]
 
     """ Counts the number of travelers in a given tube stop.
 
@@ -115,8 +139,12 @@ class QueryAgent:
     def get_semantic_count_one_stop(self, stop_id, from_time, to_time):
         from_timestamp = datalib.get_timestamp_from_request_string(from_time)
         to_timestamp = datalib.get_timestamp_from_request_string(to_time)
-        query = TYPE_3 % (stop_id, from_timestamp, to_timestamp)
-        return query
+        stop = self._get_stop_by_id(stop_id)
+        lat1, lat2 = datalib.prepare_coordinate(str(stop[2]))
+        lng1, lng2 = datalib.prepare_coordinate(str(stop[3]))
+        query = TYPE_3 % (lat1, lat2, lng1, lng2, from_timestamp, to_timestamp)
+        count = self._cryptdb.execute_count_query(query)
+        return query, count
 
     """ Counts the number of travelers between 2 given tube stops.
 
@@ -129,5 +157,13 @@ class QueryAgent:
     def get_semantic_count_two_stops(self, from_stop_id, to_stop_id, from_time, to_time):
         from_timestamp = datalib.get_timestamp_from_request_string(from_time)
         to_timestamp = datalib.get_timestamp_from_request_string(to_time)
-        query = TYPE_4 % (from_stop_id, from_timestamp, to_timestamp, to_stop_id, from_timestamp, to_timestamp)
-        return query
+        from_stop = self._get_stop_by_id(from_stop_id)
+        lat1, lat2 = datalib.prepare_coordinate(str(from_stop[2]))
+        lng1, lng2 = datalib.prepare_coordinate(str(from_stop[3]))
+        to_stop = self._get_stop_by_id(to_stop_id)
+        lat3, lat4 = datalib.prepare_coordinate(str(to_stop[2]))
+        lng3, lng4 = datalib.prepare_coordinate(str(to_stop[3]))
+        query = TYPE_4 % (lat1, lat2, lng1, lng2, from_timestamp, to_timestamp,
+                          lat3, lat4, lng3, lng4, from_timestamp, to_timestamp)
+        count = self._cryptdb.execute_count_query(query)
+        return query, count

@@ -27,9 +27,9 @@ WEEKEND_PATHS_CSV = 'weekend_%d_%s.csv'  # Generic name for weekend paths file.
 STOP_POINTS_FILE = 'stop_points.csv'     # List of all used map network stops.
 
 # CSV Folder.
-CSV_FOLDER = 'data/csv_files/'                      # Main CSV folder.
-CSV_GENERATED_FOLDER = 'data/csv_files/generated/'  # Daily CSV data folder.
-CSV_PATH_FOLDER = 'data/csv_files/paths'            # Path CSV data folder.
+CSV_FOLDER = 'src/csv_files/'                      # Main CSV folder.
+CSV_GENERATED_FOLDER = 'src/csv_files/generated/'  # Daily CSV data folder.
+CSV_PATH_FOLDER = 'src/csv_files/paths'            # Path CSV data folder.
 
 # CSV Miscellaneous.
 DURATION = 3                    # Minimum time spent travelling in a cycle, pp.
@@ -338,12 +338,24 @@ def get_timestamp_from_request_string(str_time):
 
 
 def prepare_coordinate(coord_str):
+    # Reformat e-notation numbers. (Such as -7.721184e-05)
     if 'e' in coord_str:
-        print 'got another one: ' + coord_str
-        return 0, 0
+        print 'got: ' + coord_str
+        tokens = coord_str.split('.')
+        negative = '-' in tokens[0]
+        initial_decimals = tokens[1].split('e')
+        first = tokens[0][1:] if negative else tokens[0]
+        second = initial_decimals[0]
+        shift = int(initial_decimals[1][1:])
+        decimals = str(first + second)  # All decimals of the number.
+        coord_str = '0.' + decimals.rjust(len(decimals) + shift, '0')
+        if negative:
+            coord_str = '-' + coord_str
+        print 'transformed into: ' + coord_str + '\n'
+
     # Remove the digits before the point.
     tokens = coord_str.split('.')
     decimals = tokens[1].ljust(18, '0')
     coord1 = 1000000000 - int(decimals[:9])
-    coord2 = 1000000000 - int(decimals[9:])
+    coord2 = 1000000000 - int(decimals[9:18])
     return coord1, coord2

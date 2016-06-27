@@ -161,8 +161,13 @@
 
             function loadDateTimePickers(dateTimePicker1, dateTimePicker2) {
                 $(function () {
-                    $(dateTimePicker1).datetimepicker();
+                    $(dateTimePicker1).datetimepicker({
+                         defaultDate: "5/1/2016 7:00 AM",
+                        //defaultTime: "7:00 AM"
+                    });
                     $(dateTimePicker2).datetimepicker({
+                        defaultDate: "5/1/2016 11:00 PM",
+                        //defaultTime: "11:00 PM",
                         useCurrent: false //Important! See issue #1075
                     });
                     $(dateTimePicker1).on("dp.change", function (e) {
@@ -256,10 +261,10 @@
                 loadDateTimePickers('#datetimepicker5', '#datetimepicker6');
                 // Add one rectangle for the query.
                 var bounds = {
-                    north: 51.50295659940793,
-                    south: 51.49004560059794,
-                    east: -0.15713320190434388,
-                    west: -0.18968685180664124
+                    north: 51.505307344089964,
+                    south: 51.49047313882747,
+                    east: -0.14477358276371888,
+                    west: -0.19346340209961
                 };
                 var queryFields = ['a1', 'a2', 'b1', 'b2'];
                 addRectangleOnMap(bounds, queryFields, '#32cd32');
@@ -279,10 +284,10 @@
                 loadDateTimePickers('#datetimepicker7', '#datetimepicker8');
                 // Add two rectangles for the query.
                 var bounds1 = {
-                    north: 51.50295659940793,
-                    south: 51.49004560059794,
-                    east: -0.15713320190434388,
-                    west: -0.18968685180664124
+                    north: 51.505307344089964,
+                    south: 51.49047313882747,
+                    east: -0.14477358276371888,
+                    west: -0.19346340209961
                 };
                 var bounds2 = {
                     north: 51.51695242669733,
